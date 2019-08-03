@@ -213,8 +213,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_CUT] =
     {
         .effect = EFFECT_HIT,
-        .power = 50,
-        .type = TYPE_NORMAL,
+        .power = 60,
+        .type = TYPE_GRASS,
         .accuracy = 95,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -3490,7 +3490,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ROCK_SMASH] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 40,
+        .power = 60,
         .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 15,
