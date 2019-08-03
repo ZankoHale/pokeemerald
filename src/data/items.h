@@ -1264,7 +1264,7 @@ const struct Item gItems[] =
     {
         .name = _("Moon Stone"),
         .itemId = ITEM_MOON_STONE,
-        .price = 0,
+        .price = 2100,
         .description = sMoonStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
@@ -1322,7 +1322,7 @@ const struct Item gItems[] =
 
     [ITEM_DAWN_STONE] =
     {
-        .name = _("Dawn Stone"),
+        .name = _("MidlightStone"),
         .itemId = ITEM_DAWN_STONE,
         .price = 2100,
         .description = sDawnStoneDesc,
@@ -1346,7 +1346,7 @@ const struct Item gItems[] =
 
     [ITEM_SHINY_STONE] =
     {
-        .name = _("Shiny Stone"),
+        .name = _("Dawn Stone"),
         .itemId = ITEM_SHINY_STONE,
         .price = 2100,
         .description = sShinyStoneDesc,

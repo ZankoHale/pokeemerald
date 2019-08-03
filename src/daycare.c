@@ -228,7 +228,7 @@ static void ApplyDaycareExperience(struct Pokemon *mon)
         {
             // Teach the mon new moves it learned while in the daycare.
             firstMove = TRUE;
-            while ((learnedMove = MonTryLearningNewMove(mon, firstMove)) != 0)
+            while ((learnedMove = MonTryLearningNewMove(mon, firstMove, 0)) != 0)
             {
                 firstMove = FALSE;
                 if (learnedMove == 0xFFFF)
@@ -727,24 +727,24 @@ void RejectEggFromDayCare(void)
     RemoveEggFromDayCare(&gSaveBlock1Ptr->daycare);
 }
 
-static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare)
-{
-    u16 motherItem, fatherItem;
-    if (*species == SPECIES_WYNAUT || *species == SPECIES_AZURILL)
-    {
-        motherItem = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_HELD_ITEM);
-        fatherItem = GetBoxMonData(&daycare->mons[1].mon, MON_DATA_HELD_ITEM);
-        if (*species == SPECIES_WYNAUT && motherItem != ITEM_LAX_INCENSE && fatherItem != ITEM_LAX_INCENSE)
-        {
-            *species = SPECIES_WOBBUFFET;
-        }
-
-        if (*species == SPECIES_AZURILL && motherItem != ITEM_SEA_INCENSE && fatherItem != ITEM_SEA_INCENSE)
-        {
-            *species = SPECIES_MARILL;
-        }
-    }
-}
+//static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare)
+//{
+//    u16 motherItem, fatherItem;
+//    if (*species == SPECIES_WYNAUT || *species == SPECIES_AZURILL)
+//    {
+//        motherItem = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_HELD_ITEM);
+//        fatherItem = GetBoxMonData(&daycare->mons[1].mon, MON_DATA_HELD_ITEM);
+//        if (*species == SPECIES_WYNAUT && motherItem != ITEM_LAX_INCENSE && fatherItem != ITEM_LAX_INCENSE)
+//        {
+//            *species = SPECIES_WOBBUFFET;
+//        }
+//
+//        if (*species == SPECIES_AZURILL && motherItem != ITEM_SEA_INCENSE && fatherItem != ITEM_SEA_INCENSE)
+//        {
+//            *species = SPECIES_MARILL;
+//        }
+//   }
+//}
 
 static void GiveVoltTackleIfLightBall(struct Pokemon *mon, struct DayCare *daycare)
 {
@@ -787,9 +787,25 @@ static u16 DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u8 *parent
     {
         eggSpecies = SPECIES_NIDORAN_M;
     }
+    if (eggSpecies == SPECIES_NIDORAN_M && daycare->offspringPersonality & 0x8000)
+    {
+        eggSpecies = SPECIES_NIDORAN_F;
+    }
     if (eggSpecies == SPECIES_ILLUMISE && daycare->offspringPersonality & 0x8000)
     {
         eggSpecies = SPECIES_VOLBEAT;
+    }
+    if (eggSpecies == SPECIES_VOLBEAT && daycare->offspringPersonality & 0x8000)
+    {
+        eggSpecies = SPECIES_ILLUMISE;
+    }
+    if (eggSpecies == SPECIES_MILTANK && daycare->offspringPersonality & 0x8000)
+    {
+        eggSpecies = SPECIES_TAUROS;
+    }
+    if (eggSpecies == SPECIES_TAUROS && daycare->offspringPersonality & 0x8000)
+    {
+        eggSpecies = SPECIES_MILTANK;
     }
 
     // Make Ditto the "mother" slot if the other daycare mon is male.
@@ -811,7 +827,7 @@ static void _GiveEggFromDaycare(struct DayCare *daycare) // give_egg
     bool8 isEgg;
 
     species = DetermineEggSpeciesAndParentSlots(daycare, parentSlots);
-    AlterEggSpeciesWithIncenseItem(&species, daycare);
+//    AlterEggSpeciesWithIncenseItem(&species, daycare);
     SetInitialEggData(&egg, species, daycare);
     InheritIVs(&egg, daycare);
     BuildEggMoveset(&egg, &daycare->mons[parentSlots[1]].mon, &daycare->mons[parentSlots[0]].mon);
