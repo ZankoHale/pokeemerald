@@ -1035,3 +1035,42 @@ LittlerootTown_Text_1E8DA2: @ 81E8DA2
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+Script_ItemDemonstration::
+	lock
+	faceplayer
+	msgbox Text_ItemGiveaway, MSGBOX_DEFAULT
+	checkitem ITEM_AURORA_TICKET, 1
+	compare VAR_RESULT, 1
+	goto_if_ge Script_HasPotionsAlready
+	msgbox Text_GivingPotion, MSGBOX_DEFAULT
+	giveitem_std ITEM_AURORA_TICKET, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Script_BagIsFull
+	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
+	setflag FLAG_RECEIVED_AURORA_TICKET
+	release
+	end
+
+Script_HasPotionsAlready::
+	msgbox Text_HasPotionsAlready, MSGBOX_DEFAULT
+	release
+	end
+
+Script_BagIsFull::
+	msgbox Text_BagIsFull, MSGBOX_DEFAULT
+	release
+	end
+
+Text_ItemGiveaway:
+	.string "Our POKéMART is running a\n"
+	.string "POTION giveaway today.$"
+
+Text_GivingPotion:
+	.string "Here you go!$"
+
+Text_HasPotionsAlready:
+	.string "You already have a POTION.\n"
+	.string "Don't be greedy!$"
+
+Text_BagIsFull:
+	.string "Your BAG is full.$"

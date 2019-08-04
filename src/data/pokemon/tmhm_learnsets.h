@@ -2034,6 +2034,8 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM47_STEEL_WING)
 											| TMHM(TM11_SUNNY_DAY)
 											| TMHM(TM46_THIEF)
+											| TMHM(TM08_BULK_UP)
+											| TMHM(TM31_BRICK_BREAK)
 											| TMHM(TM06_TOXIC)),
 
     [SPECIES_DODUO]       = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
@@ -8982,7 +8984,8 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM12_TAUNT)
 											| TMHM(TM41_TORMENT)
 											| TMHM(TM06_TOXIC)
-											| TMHM(TM03_WATER_PULSE)),
+											| TMHM(TM03_WATER_PULSE)
+											| TMHM(TM39_ROCK_TOMB)),
 
     [SPECIES_SPHEAL]      = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM14_BLIZZARD)
