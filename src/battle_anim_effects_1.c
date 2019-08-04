@@ -6338,19 +6338,21 @@ static void sub_8102D8C(s16 a, s16 b, s16* c, s16* d, s8 e)
 
 static void sub_8102DE4(struct Sprite* sprite)
 {
-    s16 y, yDelta;
+    int b;
+    s16 a;
+    int c;
     u8 index;
-
     sprite->data[0]++;
-    yDelta = sprite->data[0] * 5 - ((sprite->data[0] * 5 / 256) << 8);
+    b = sprite->data[0] * 5 - ((sprite->data[0] * 5 / 256) << 8);
     sprite->data[4] += sprite->data[6];
     sprite->data[5] += sprite->data[7];
     sprite->pos1.x = sprite->data[4] >> 4;
     sprite->pos1.y = sprite->data[5] >> 4;
-    sprite->pos2.y = Sin(yDelta, 15);
+    sprite->pos2.y = Sin(b, 15);
+    a = (u16)sprite->pos1.y;
+    c = (u16)sprite->pos1.x;
 
-    y = sprite->pos1.y;
-    if (sprite->pos1.x < -16 || sprite->pos1.x > 256 || y < -16 || y > 128)
+    if ((u32)((c + 16) << 16) > (0x110) << 16 || a < -16 || a > 0x80)
     {
         DestroySpriteAndMatrix(sprite);
     }
@@ -6371,8 +6373,12 @@ static void sub_8102DE4(struct Sprite* sprite)
 
 void sub_8102EB0(struct Sprite* sprite)
 {
+    int a;
     if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_OPPONENT)
-        gBattleAnimArgs[1] *= -1;
+    {
+        a = gBattleAnimArgs[1];
+        (u16)gBattleAnimArgs[1] = -a;
+    }
 
     sprite->pos1.x = GetBattlerSpriteCoord(gBattleAnimAttacker, 2) + gBattleAnimArgs[1];
     sprite->pos1.y = GetBattlerSpriteCoord(gBattleAnimAttacker, 3) + gBattleAnimArgs[2];
@@ -6558,8 +6564,8 @@ static void sub_8103300(struct Sprite* sprite)
 
 static void sub_8103320(struct Sprite* sprite)
 {
-    s16 x1, x2;
-
+    s16 temp;
+    s16 temp2;
     sprite->data[1] += 4;
     if (sprite->data[1] > 254)
     {
@@ -6581,21 +6587,20 @@ static void sub_8103320(struct Sprite* sprite)
     if (sprite->data[1] > 0x9F)
         sprite->subpriority = sprite->data[2];
 
-    x1 = gSineTable[sprite->data[1]];
-    x2 = x1 >> 3;
-    sprite->pos2.x = (x1 >> 3) + (x2 >> 1);
+    temp = gSineTable[sprite->data[1]];
+    sprite->pos2.x = (temp2 = temp >> 3) + (temp2 >> 1);
 }
 
 void sub_8103390(struct Sprite* sprite)
 {
-    u8 battler;
+    u8 bank;
     if (gBattleAnimArgs[0] == 0)
-        battler = gBattleAnimAttacker;
+        bank = gBattleAnimAttacker;
     else
-        battler = gBattleAnimTarget;
+        bank = gBattleAnimTarget;
 
-    sub_810310C(battler, sprite);
-    if (GetBattlerSide(battler) == B_SIDE_PLAYER)
+    sub_810310C(bank, sprite);
+    if (GetBattlerSide(bank) == B_SIDE_PLAYER)
     {
         StartSpriteAnim(sprite, 0);
         sprite->data[0] = 2;

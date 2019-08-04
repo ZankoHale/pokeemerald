@@ -1,8 +1,6 @@
 #include "global.h"
 #include "librfu.h"
 
-struct RfuStruct *gRfuState;
-
 extern IntrFunc IntrSIO32(void);
 
 extern void STWI_stop_timer(void);

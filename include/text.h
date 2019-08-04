@@ -166,11 +166,7 @@ struct TextPrinter
 
     void (*callback)(struct TextPrinterTemplate *, u16); // 0x10
 
-    union
-#if !MODERN
-    __attribute__((packed))
-#endif
-    {
+    union __attribute__((packed)) {
         struct TextPrinterSubStruct sub;
         u8 fields[7];
     } subUnion;

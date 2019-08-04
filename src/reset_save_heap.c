@@ -14,7 +14,7 @@ void sub_81700F8(void)
 
     imeBackup = REG_IME;
     REG_IME = 0;
-    RegisterRamReset(RESET_EWRAM);
+    RegisterRamReset(0x00000001);
     ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_FORCED_BLANK);
     REG_IME = imeBackup;
     gMain.inBattle = FALSE;

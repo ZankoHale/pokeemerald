@@ -8,7 +8,7 @@
 #define DMA_REQUEST_COPY16 3
 #define DMA_REQUEST_FILL16 4
 
-BSS_DATA struct
+IWRAM_DATA struct
 {
     const u8 *src;
     u8 *dest;
@@ -17,7 +17,7 @@ BSS_DATA struct
     u32 value;
 } gDma3Requests[MAX_DMA_REQUESTS];
 
-static volatile bool8 gDma3ManagerLocked;
+static bool8 gDma3ManagerLocked;
 static u8 gDma3RequestCursor;
 
 void ClearDma3Requests(void)
