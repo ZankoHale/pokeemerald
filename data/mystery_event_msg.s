@@ -261,16 +261,16 @@ MysticTicket_Obtained: @ 8675578
 	end
 
 sText_MysticTicket2:
-	.string "Thank you for using the MYSTERY\nGIFT System.\pYou must be {PLAYER}.\nThere is a ticket here for you.$"
+	.string "Thank you for using the Mystery\nGift System.\pYou must be {PLAYER}.\nThere is a ticket here for you.$"
 
 sText_MysticTicket1:
-	.string "It appears to be for use at the\nLILYCOVE CITY port.\pWhy not give it a try and see what\nit is about?$"
+	.string "It appears to be for use at the\nLilycove City port.\pWhy not give it a try and see what\nit is about?$"
 
 sText_MysticTicketGot:
-	.string "Thank you for using the MYSTERY\nGIFT System.$"
+	.string "Thank you for using the Mystery\nGift System.$"
 
 sText_MysticTicketNoPlace:
-	.string "Oh, I'm sorry, {PLAYER}.\nYour BAG's KEY ITEMS POCKET is full.\pPlease store something on your PC,\nthen come back for this.$"
+	.string "Oh, I'm sorry, {PLAYER}.\nYour Bag's Key Items Pocket is full.\pPlease store something on your PC,\nthen come back for this.$"
 
 MysteryEventScript_AlteringCave:: @ 86756E3
 	setvaddress MysteryEventScript_AlteringCave
@@ -288,7 +288,7 @@ MysteryEventScript_AlteringCave_: @ 86756FD
 	end
 
 sText_MysteryGiftAlteringCave::
-	.string "Thank you for using the MYSTERY\nGIFT System.\pThere appears to be a rumor about\nrare POKéMON sightings.\pThe sightings reportedly came from\nthe ALTERING CAVE on ROUTE 103.\pPerhaps it would be worthwhile for\nyou to investigate this rumor.$"
+	.string "Thank you for using the Mystery\nGift System.\pThere appears to be a rumor about\nrare Pokémon sightings.\pThe sightings reportedly came from\nthe Altering Cave on Route 103.\pPerhaps it would be worthwhile for\nyou to investigate this rumor.$"
 
 MysteryEventScript_OldSeaMap:: @ 86757F4
 	setvaddress MysteryEventScript_OldSeaMap
@@ -331,13 +331,13 @@ OldSeaMap_Obtained: @ 8675858
 	end
 
 sText_MysteryGiftOldSeaMap:
-	.string "Thank you for using the MYSTERY\nGIFT System.\pLet me confirm--you are {PLAYER}?\pWe received this OLD SEA MAP\naddressed to you.$"
+	.string "Thank you for using the Mystery\nGift System.\pLet me confirm--you are {PLAYER}?\pWe received this Old Sea Map\naddressed to you.$"
 
 sText_MysteryGiftOldSeaMap_1:
-	.string "It appears to be for use at the\nLILYCOVE CITY port.\pWhy not give it a try and see what\nit is about?$"
+	.string "It appears to be for use at the\nLilycove City port.\pWhy not give it a try and see what\nit is about?$"
 
 sText_MysteryGiftOldSeaMap_2:
-	.string "Thank you for using the MYSTERY\nGIFT System.$"
+	.string "Thank you for using the Mystery\nGift System.$"
 
 sText_MysteryGiftOldSeaMap_3:
-	.string "Oh, I'm sorry, {PLAYER}.\nYour BAG's KEY ITEMS POCKET is full.\pPlease store something on your PC,\nthen come back for this.$"
+	.string "Oh, I'm sorry, {PLAYER}.\nYour Bag's Key Items Pocket is full.\pPlease store something on your PC,\nthen come back for this.$"
