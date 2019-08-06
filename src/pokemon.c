@@ -50,6 +50,7 @@
 #include "constants/trainers.h"
 #include "constants/weather.h"
 #include "constants/maps.h" 
+#include "constants/map_groups.h" 
 
 struct SpeciesItem
 {
@@ -5387,6 +5388,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     u8 beauty = GetMonData(mon, MON_DATA_BEAUTY, 0);
     u16 upperPersonality = personality >> 16;
     u8 holdEffect;
+	u8 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+	u8 mapNum = gSaveBlock1Ptr->location.mapNum;
 
     if (heldItem == ITEM_ENIGMA_BERRY)
         holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
@@ -5541,8 +5544,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_MAP:
-                if (gEvolutionTable[species][i].param <= level && gMapHeader.regionMapSectionId == gEvolutionTable[species][i].param)
-                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+				if (EVO_MAP_GROUP(gEvolutionTable[species][i].param) == mapGroup && EVO_MAP_NUM(gEvolutionTable[species][i].param) == mapNum)
+					targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             }
         }

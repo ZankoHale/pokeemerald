@@ -7793,7 +7793,7 @@ static void atk7C_trymirrormove(void)
 
 static void atk7D_setrain(void)
 {
-    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_RAIN, FALSE))
+    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_RAIN, TRUE))
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;
@@ -8758,7 +8758,7 @@ static void atk94_damagetohalftargethp(void) // super fang
 
 static void atk95_setsandstorm(void)
 {
-    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_SANDSTORM, FALSE))
+    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_SANDSTORM, TRUE))
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;
@@ -9916,7 +9916,7 @@ static void atkBA_jumpifnopursuitswitchdmg(void)
 
 static void atkBB_setsunny(void)
 {
-    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_SUN, FALSE))
+    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_SUN, TRUE))
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;
@@ -10184,7 +10184,7 @@ static void atkC7_setminimize(void)
 
 static void atkC8_sethail(void)
 {
-    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_HAIL, FALSE))
+    if (!TryChangeBattleWeather(gBattlerAttacker, ENUM_WEATHER_HAIL, TRUE))
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;

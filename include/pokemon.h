@@ -4,6 +4,9 @@
 #include "constants/pokemon.h"
 #include "sprite.h"
 
+#define EVO_MAP_GROUP(map) (map >> 8) //Code to add
+#define EVO_MAP_NUM(map) (map & 0xFF) //Code to add
+
 #define MON_DATA_PERSONALITY        0
 #define MON_DATA_OT_ID              1
 #define MON_DATA_NICKNAME           2
