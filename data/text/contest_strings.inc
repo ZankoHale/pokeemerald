@@ -10,7 +10,7 @@ gContestEffect02hDescription:: @ 827CBCE
 	.string "Makes a great appeal, but\nallows no more to the end.$"
 
 gContestEffect03hDescription:: @ 827CC03
-	.string "Can be repeatedly used\nwithout boring the JUDGE.$"
+	.string "Can be repeatedly used\nwithout boring the Judge.$"
 
 gContestEffect04hDescription:: @ 827CC34
 	.string "Can avoid being startled\nby others once.$"
@@ -49,10 +49,10 @@ gContestEffect0FhDescription:: @ 827CE2C
 	.string "Startles all Pokémon that\nhave done their appeals.$"
 
 gContestEffect10hDescription:: @ 827CE5F
-	.string "Shifts the JUDGE's\nattention from others.$"
+	.string "Shifts the Judge's\nattention from others.$"
 
 gContestEffect11hDescription:: @ 827CE89
-	.string "Startles the Pokémon that\nhas the JUDGE's attention.$"
+	.string "Startles the Pokémon that\nhas the Judge's attention.$"
 
 gContestEffect12hDescription:: @ 827CEBE
 	.string "Jams the others, and misses\none turn of appeals.$"
@@ -238,7 +238,7 @@ gText_0827D612:: @ 827D612
 	.string "usual.$"
 
 gText_0827D62D:: @ 827D62D
-	.string "The JUDGE looked away\n"
+	.string "The Judge looked away\n"
 	.string "for some reason.$"
 
 gText_0827D654:: @ 827D654
@@ -258,7 +258,7 @@ gText_0827D6BA:: @ 827D6BA
 	.string "standout Pokémon.$"
 
 gText_0827D6E5:: @ 827D6E5
-	.string "The JUDGE looked on\n"
+	.string "The Judge looked on\n"
 	.string "expectantly.$"
 
 gText_0827D706:: @ 827D706
@@ -300,7 +300,7 @@ gText_0827D830:: @ 827D830
 	.string "$"
 
 gText_0827D831:: @ 827D831
-	.string "The JUDGE 's views on\n"
+	.string "The Judge 's views on\n"
 	.string "{STR_VAR_1} held firm.$"
 
 gText_0827D855:: @ 827D855
@@ -348,7 +348,7 @@ gText_0827D9B1:: @ 827D9B1
 	.string "of those ahead.$"
 
 gText_0827D9D9:: @ 827D9D9
-	.string "It cheapened the JUDGE's\n"
+	.string "It cheapened the Judge's\n"
 	.string "favorite appeal.$"
 
 gText_0827DA03:: @ 827DA03
@@ -364,7 +364,7 @@ gText_0827DA5B:: @ 827DA5B
 	.string "appeals any more.$"
 
 gText_0827DA85:: @ 827DA85
-	.string "It touched the JUDGE for\n"
+	.string "It touched the Judge for\n"
 	.string "a fantastic appeal.$"
 
 gText_0827DAB2:: @ 827DAB2
@@ -420,7 +420,7 @@ gText_827DCE7:: @ 827DCE7
 	.string "others.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$"
 
 gText_827DD12:: @ 827DD12
-	.string "The JUDGE looked away\n"
+	.string "The Judge looked away\n"
 	.string "from {STR_VAR_1}.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$"
 
 gText_827DD3D:: @ 827DD3D
@@ -548,7 +548,7 @@ gText_827E2C5:: @ 827E2C5
 	.string "order for the next turn.{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$"
 
 gText_0827E2FE:: @ 827E2FE
-	.string "The JUDGE looked at\n"
+	.string "The Judge looked at\n"
 	.string "{STR_VAR_1} expectantly.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}$"
 
 gText_0827E32E:: @ 827E32E
@@ -696,22 +696,22 @@ gText_0827E882:: @ 827E882
 	.string "toughness$"
 
 gText_0827E88C:: @ 827E88C
-	.string "TENSION$"
+	.string "Tension$"
 
 gText_0827E894:: @ 827E894
-	.string "COOL Move$"
+	.string "Cool Move$"
 
 gText_0827E89E:: @ 827E89E
-	.string "BEAUTY Move$"
+	.string "Beauty Move$"
 
 gText_0827E8AA:: @ 827E8AA
-	.string "CUTE Move$"
+	.string "Cute Move$"
 
 gText_0827E8B4:: @ 827E8B4
-	.string "SMART Move$"
+	.string "Smart Move$"
 
 gText_0827E8BF:: @ 827E8BF
-	.string "TOUGH Move$"
+	.string "Tough Move$"
 
 gText_0827E8CA:: @ 827E8CA
 	.string "???$"
