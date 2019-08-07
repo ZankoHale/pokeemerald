@@ -429,8 +429,8 @@ static const u8 sMaxRepelDesc[] = _(
     "steps.");
 
 static const u8 sAbilityCapsuleDesc[] = _(
-    "Switches a POKé-\n"
-    "MON's ability.");
+    "Switches a Poké-\n"
+    "mon's ability.");
 
 static const u8 sEscapeRopeDesc[] = _(
     "Use to escape\n"
