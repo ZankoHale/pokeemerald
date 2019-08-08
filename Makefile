@@ -1,4 +1,26 @@
-include $(DEVKITARM)/base_tools
+TOOLCHAIN := $(DEVKITARM)
+
+ifeq ($(CC),)
+HOSTCC := gcc
+else
+HOSTCC := $(CC)
+endif
+
+ifeq ($(CXX),)
+HOSTCXX := g++
+else
+HOSTCXX := $(CXX)
+endif
+
+ifneq (,$(wildcard $(TOOLCHAIN)/base_tools))
+include $(TOOLCHAIN)/base_tools
+else
+export PATH := $(TOOLCHAIN)/bin:$(PATH)
+PREFIX := arm-none-eabi-
+OBJCOPY := $(PREFIX)objcopy
+export CC := $(PREFIX)gcc
+export AS := $(PREFIX)as
+endif
 export CPP := $(PREFIX)cpp
 export LD := $(PREFIX)ld
 
@@ -92,6 +114,13 @@ AUTO_GEN_TARGETS :=
 
 $(shell mkdir -p $(SUBDIRS))
 
+all: rom
+
+tools: $(TOOLDIRS)
+
+$(TOOLDIRS):
+	@$(MAKE) -C $@ CC=$(HOSTCC) CXX=$(HOSTCXX)
+
 rom: $(ROM)
 
 # For contributors to make sure a change didn't affect the contents of the ROM.
@@ -110,6 +139,10 @@ clean: tidy
 tidy:
 	rm -f $(ROM) $(ELF) $(MAP)
 	rm -r build/*
+
+ifneq ($(MODERN),0)
+$(C_BUILDDIR)/berry_crush.o: override CFLAGS += -Wno-address-of-packed-member
+endif
 
 include graphics_file_rules.mk
 include map_data_rules.mk
