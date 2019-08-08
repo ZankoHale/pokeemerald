@@ -26,7 +26,7 @@
 
 extern const u8 EventScript_RepelWoreOff[];
 
-#define NUM_FEEBAS_SPOTS    400
+#define NUM_FEEBAS_SPOTS    200
 
 // this file's functions
 static u16 FeebasRandom(void);
@@ -107,7 +107,7 @@ static bool8 CheckFeebas(void)
         if (y >= gRoute119WaterTileData[3 * 2 + 0] && y <= gRoute119WaterTileData[3 * 2 + 1])
             route119Section = 2;
 
-        if (Random() % 100 > 49) // 50% chance of encountering Feebas
+        if (Random() % 100 > 49) //49 50% chance of encountering Feebas
             return FALSE;
 
         FeebasSeedRng(gSaveBlock1Ptr->easyChatPairs[0].unk2);

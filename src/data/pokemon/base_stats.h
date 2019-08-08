@@ -8849,6 +8849,7 @@ const struct BaseStats gBaseStats[] =
         .expYield = 40,
         .evYield_Speed     = 1,
         .evYield_SpAttack  = 0,
+        .item1 = ITEM_PRISM_SCALE,
         .item2 = ITEM_PRISM_SCALE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,

@@ -59,6 +59,7 @@ OldaleTown_Mart_Pokemart_1FC27C: @ 81FC27C
 	.2byte ITEM_DRAGON_SCALE
 	.2byte ITEM_KINGS_ROCK
 	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_HEART_SCALE
 	.2byte ITEM_NONE
 	release
 	end
