@@ -26,7 +26,7 @@ RustboroCity_Mart_Pokemart_214F30: @ 8214F30
 	.2byte ITEM_REPEL
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_NONE
 	release
 	end
@@ -50,7 +50,7 @@ RustboroCity_Mart_Pokemart_214F58: @ 8214F58
 	.2byte ITEM_REPEL
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_NONE
 	release
 	end
@@ -84,4 +84,3 @@ RustboroCity_Mart_Text_21505C: @ 821505C
 	.string "case I get lost in a cave.\p"
 	.string "I just need to use it to get back to\n"
 	.string "the entrance.$"
-

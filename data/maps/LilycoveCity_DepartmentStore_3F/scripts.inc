@@ -18,6 +18,7 @@ LilycoveCity_DepartmentStore_3F_Pokemart_21FC7C: @ 821FC7C
 	.2byte ITEM_ZINC
 	.2byte ITEM_CARBOS
 	.2byte ITEM_HP_UP
+	.2byte ITEM_PP_UP
 	.2byte ITEM_NONE
 	release
 	end
@@ -35,9 +36,10 @@ LilycoveCity_DepartmentStore_3F_EventScript_21FC8C:: @ 821FC8C
 	.align 2
 LilycoveCity_DepartmentStore_3F_Pokemart_21FCA4: @ 821FCA4
 	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
+	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_X_ACCURACY
@@ -72,4 +74,3 @@ LilycoveCity_DepartmentStore_3F_Text_21FD3B: @ 821FD3B
 LilycoveCity_DepartmentStore_3F_Text_21FDB4: @ 821FDB4
 	.string "I gave a Carbos to my Pokémon,\n"
 	.string "and its Speed went up.$"
-

@@ -21,7 +21,7 @@ MauvilleCity_Mart_Pokemart_211100: @ 8211100
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_X_ACCURACY
@@ -50,4 +50,3 @@ MauvilleCity_Mart_Text_2111D8: @ 82111D8
 	.string "instead…\p"
 	.string "The Trainer's decisions determine how\n"
 	.string "battles turn out, I think.$"
-

@@ -21,7 +21,7 @@ MossdeepCity_Mart_Pokemart_2223E0: @ 82223E0
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_NONE
 	release
 	end
@@ -57,4 +57,3 @@ MossdeepCity_Mart_Text_2224FA: @ 82224FA
 	.string "Bug-type and Water-type Pokémon.\p"
 	.string "A Dive Ball works best on Pokémon\n"
 	.string "at the bottom of the sea.$"
-

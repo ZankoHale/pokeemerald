@@ -1373,4 +1373,3 @@ SlateportCity_Text_1DF28C: @ 81DF28C
 	.string "After all, a tough Trainer is\n"
 	.string "the perfect fit for the Battle Tent!\p"
 	.string "Give it your best effort!$"
-	

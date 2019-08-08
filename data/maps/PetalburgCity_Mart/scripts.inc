@@ -23,7 +23,7 @@ PetalburgCity_Mart_Pokemart_207D8C: @ 8207D8C
 	.2byte ITEM_REPEL
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_ORANGE_MAIL
 	.2byte ITEM_NONE
 	release
@@ -48,7 +48,7 @@ PetalburgCity_Mart_Pokemart_207DB8: @ 8207DB8
 	.2byte ITEM_REPEL
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_ORANGE_MAIL
 	.2byte ITEM_NONE
 	release
@@ -83,4 +83,3 @@ PetalburgCity_Mart_Text_207EB0: @ 8207EB0
 	.string "If you walk around with a poisoned\n"
 	.string "Pokémon, it will lose HP until it faints.\l"
 	.string "Take some Antidotes with you.$"
-

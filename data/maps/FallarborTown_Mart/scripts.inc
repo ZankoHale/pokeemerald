@@ -19,10 +19,10 @@ FallarborTown_Mart_Pokemart_1FFCD8: @ 81FFCD8
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_X_SPECIAL
+	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_NONE
@@ -63,4 +63,3 @@ FallarborTown_Mart_Text_1FFE09: @ 81FFE09
 	.string "This Nugget I found here…\n"
 	.string "I suppose I'll have to sell it, seeing\l"
 	.string "as how it has no other use.$"
-
