@@ -5,6 +5,9 @@
 
 	.text
 
+
+
+
 	thumb_func_start sub_8021A28
 sub_8021A28: @ 8021A28
 	push {r4-r7,lr}

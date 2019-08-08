@@ -55,7 +55,7 @@ static u8 GetPokenavMainMenuType(void)
     return retVal;
 }
 
-bool32 PokenavCallback_Init_0(void)
+bool32 sub_81C9298(void)
 {
     struct Pokenav1Struct *state = AllocSubstruct(1, sizeof(struct Pokenav1Struct));
     if (!state)
@@ -69,7 +69,7 @@ bool32 PokenavCallback_Init_0(void)
     return TRUE;
 }
 
-bool32 PokenavCallback_Init_4(void)
+bool32 sub_81C92CC(void)
 {
     struct Pokenav1Struct *state = AllocSubstruct(1, sizeof(struct Pokenav1Struct));
     if (!state)
@@ -83,7 +83,7 @@ bool32 PokenavCallback_Init_4(void)
     return TRUE;
 }
 
-bool32 PokenavCallback_Init_5(void)
+bool32 sub_81C9304(void)
 {
     struct Pokenav1Struct *state = AllocSubstruct(1, sizeof(struct Pokenav1Struct));
     if (!state)
@@ -96,7 +96,7 @@ bool32 PokenavCallback_Init_5(void)
     return TRUE;
 }
 
-bool32 PokenavCallback_Init_2(void)
+bool32 sub_81C9338(void)
 {
     struct Pokenav1Struct *state = AllocSubstruct(1, sizeof(struct Pokenav1Struct));
     if (!state)
@@ -110,7 +110,7 @@ bool32 PokenavCallback_Init_2(void)
     return TRUE;
 }
 
-bool32 PokenavCallback_Init_3(void)
+bool32 sub_81C9368(void)
 {
     struct Pokenav1Struct *state = AllocSubstruct(1, sizeof(struct Pokenav1Struct));
     if (!state)
@@ -459,7 +459,7 @@ int sub_81C98B4(void)
     return state->descriptionId;
 }
 
-u16 sub_81C98C4(void)
+int sub_81C98C4(void)
 {
     struct Pokenav1Struct *state = GetSubstructPtr(1);
     return state->helpBarIndex;

@@ -235,7 +235,7 @@ static u8 CheckTrainer(u8 eventObjectId)
     u8 approachDistance;
 
     if (InTrainerHill() == TRUE)
-        scriptPtr = GetTrainerHillTrainerScript();
+        scriptPtr = sub_81D62AC();
     else
         scriptPtr = GetEventObjectScriptPointerByEventObjectId(eventObjectId);
 

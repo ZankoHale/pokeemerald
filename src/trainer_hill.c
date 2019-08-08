@@ -915,7 +915,7 @@ void SetHillTrainerFlag(void)
     }
 }
 
-const u8 *GetTrainerHillTrainerScript(void)
+const u8 *sub_81D62AC(void)
 {
     return EventScript_2C83F0;
 }

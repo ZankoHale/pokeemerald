@@ -1,5 +1,5 @@
-CC ?= gcc
-.PHONY: all clean
+CC = gcc
+.PHONY: clean
 
 SRCS = gbafix.c
 

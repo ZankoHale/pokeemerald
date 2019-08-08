@@ -2723,39 +2723,4 @@ extern const u8 gText_NumberOfBattles[];
 extern const u8 gText_Unknown[];
 extern const u8 gText_TrainerCloseBy[];
 
-// pokenav_unk_2
-extern const u8 gUnknown_085EBCC5[];
-extern const u8 gUnknown_085EBCE8[];
-extern const u8 gUnknown_085EBD01[];
-extern const u8 gUnknown_085EBD1C[];
-extern const u8 gUnknown_085EBD34[];
-extern const u8 gUnknown_085EBD83[];
-extern const u8 gUnknown_085EBDA2[];
-extern const u8 gUnknown_085EBDBF[];
-extern const u8 gUnknown_085EBDDB[];
-extern const u8 gUnknown_085EBDEE[];
-extern const u8 gUnknown_085EBE06[];
-extern const u8 gUnknown_085EBE19[];
-extern const u8 gUnknown_085EBE2D[];
-extern const u8 gUnknown_085EBE41[];
-extern const u8 gText_NoRibbonWinners[];
-
-// pokenav_unk_4
-extern const u8 gUnknown_085EC017[];
-extern const u8 gUnknown_085EC01C[];
-extern const u8 gUnknown_085EC022[];
-
-// pokenav_unk_8
-extern const u8 gText_NumberF700[];
-
-// pokenav_unk_10
-extern const u8 gText_RibbonsF700[];
-
-// use_pokeblock
-extern const u8 gText_Coolness[];
-extern const u8 gText_Toughness[];
-extern const u8 gText_Smartness[];
-extern const u8 gText_Cuteness[];
-extern const u8 gText_Beauty3[];
-
 #endif // GUARD_STRINGS_H

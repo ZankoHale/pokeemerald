@@ -126,7 +126,7 @@ bool32 sub_81CB260(void)
     return TRUE;
 }
 
-void sub_81CB29C(s32 index)
+void sub_81CB29C(int index)
 {
     struct Pokenav4Struct *state = GetSubstructPtr(6);
     state->unk4 = CreateLoopedTask(gUnknown_08622798[index], 1);
@@ -706,7 +706,7 @@ u32 sub_81CBB74(int taskState)
 static void sub_81CBBB8(void)
 {
     struct MatchCallListTemplate template;
-    template.unk0 = sub_81CAE94();
+    template.unk0 = (u32)sub_81CAE94();
     template.unk4 = sub_81CAE38();
     template.unk8 = 4;
     template.unk6 = 0;
