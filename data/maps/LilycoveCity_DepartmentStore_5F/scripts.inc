@@ -28,19 +28,8 @@ LilycoveCity_DepartmentStore_5F_Pokemart_Dolls: @ 821FFC0
 	.2byte DECOR_PICHU_DOLL
 	.2byte DECOR_PIKACHU_DOLL
 	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_TOGEPI_DOLL
-	.2byte DECOR_CYNDAQUIL_DOLL
-	.2byte DECOR_CHIKORITA_DOLL
-	.2byte DECOR_TOTODILE_DOLL
 	.2byte DECOR_JIGGLYPUFF_DOLL
-	.2byte DECOR_MEOWTH_DOLL
-	.2byte DECOR_CLEFAIRY_DOLL
-	.2byte DECOR_DITTO_DOLL
-	.2byte DECOR_SMOOCHUM_DOLL
-	.2byte DECOR_TREECKO_DOLL
-	.2byte DECOR_TORCHIC_DOLL
-	.2byte DECOR_MUDKIP_DOLL
-	.2byte DECOR_DUSKULL_DOLL
+	.2byte DECOR_DUSKULL_DOLL 
 	.2byte DECOR_WYNAUT_DOLL
 	.2byte DECOR_BALTOY_DOLL
 	.2byte DECOR_KECLEON_DOLL
@@ -48,18 +37,6 @@ LilycoveCity_DepartmentStore_5F_Pokemart_Dolls: @ 821FFC0
 	.2byte DECOR_SKITTY_DOLL
 	.2byte DECOR_SWABLU_DOLL
 	.2byte DECOR_GULPIN_DOLL
-	.2byte DECOR_LOTAD_DOLL
-	.2byte DECOR_SEEDOT_DOLL
-	.2byte DECOR_SNORLAX_DOLL
-	.2byte DECOR_RHYDON_DOLL
-	.2byte DECOR_LAPRAS_DOLL
-	.2byte DECOR_VENUSAUR_DOLL
-	.2byte DECOR_CHARIZARD_DOLL
-	.2byte DECOR_BLASTOISE_DOLL
-	.2byte DECOR_WAILMER_DOLL
-	.2byte DECOR_REGIROCK_DOLL
-	.2byte DECOR_REGICE_DOLL
-	.2byte DECOR_REGISTEEL_DOLL
 	.2byte DECOR_NONE
 	release
 	end
@@ -174,16 +151,16 @@ LilycoveCity_DepartmentStore_5F_EventScript_2200BC:: @ 82200BC
 	end
 
 LilycoveCity_DepartmentStore_5F_Text_2200C5: @ 82200C5
-	.string "This place is full of cute DOLLS.\p"
+	.string "This place is full of cute Dolls.\p"
 	.string "I should buy some for me, instead of\n"
 	.string "just for my children.$"
 
 LilycoveCity_DepartmentStore_5F_Text_220122: @ 8220122
-	.string "I'm not big enough to raise POKéMON,\n"
-	.string "so I'm getting a cute DOLL instead.$"
+	.string "I'm not big enough to raise Pokémon,\n"
+	.string "so I'm getting a cute Doll instead.$"
 
 LilycoveCity_DepartmentStore_5F_Text_22016B: @ 822016B
-	.string "They sell many cute MATS here.\p"
+	.string "They sell many cute Mats here.\p"
 	.string "I wonder which one I should get?\n"
 	.string "Maybe I'll buy them all…$"
 

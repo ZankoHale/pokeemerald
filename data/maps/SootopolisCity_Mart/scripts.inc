@@ -19,7 +19,7 @@ SootopolisCity_Mart_Pokemart_2267AC: @ 82267AC
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_DEFEND
 	.2byte ITEM_SHADOW_MAIL
 	.2byte ITEM_NONE
 	release
@@ -57,8 +57,8 @@ SootopolisCity_Mart_EventScript_22680C:: @ 822680C
 
 SootopolisCity_Mart_Text_226816: @ 8226816
 	.string "PP UP is great!\p"
-	.string "It raises the POWER POINTS, the PP,\n"
-	.string "of a POKéMON move.$"
+	.string "It raises the Power Points, the PP,\n"
+	.string "of a Pokémon move.$"
 
 SootopolisCity_Mart_Text_22685D: @ 822685D
 	.string "What…\n"
@@ -67,7 +67,7 @@ SootopolisCity_Mart_Text_22685D: @ 822685D
 	.string "scary to go outside.$"
 
 SootopolisCity_Mart_Text_2268AF: @ 82268AF
-	.string "Do you know FULL RESTORE?\p"
+	.string "Do you know Full Restore?\p"
 	.string "Full restoration of HP!\n"
 	.string "Eradication of all status problems!\p"
 	.string "It's truly an item of your dreams!$"
