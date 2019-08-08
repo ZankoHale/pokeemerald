@@ -172,7 +172,7 @@ const struct Item gItems[] =
     {
         .name = _("Premier Ball"),
         .itemId = ITEM_PREMIER_BALL,
-        .price = 200,
+        .price = 2000,
         .description = sPremierBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = 11,
@@ -284,7 +284,7 @@ const struct Item gItems[] =
     {
         .name = _("Heal Ball"),
         .itemId = ITEM_HEAL_BALL,
-        .price = 300,
+        .price = 3000,
         .description = sHealBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = 11,
@@ -1086,7 +1086,7 @@ const struct Item gItems[] =
     {
         .name = _("X Defend"),
         .itemId = ITEM_X_DEFENSE,
-        .price = 2000,
+        .price = 1000,
         .description = sXDefendDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
@@ -1142,7 +1142,7 @@ const struct Item gItems[] =
     {
         .name = _("X Sp. Def."),
         .itemId = ITEM_X_SP_DEF,
-        .price = 2000,
+        .price = 1000,
         .description = sXSpecialDefenseDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
@@ -2608,7 +2608,7 @@ const struct Item gItems[] =
     {
         .name = _("White Herb"),
         .itemId = ITEM_WHITE_HERB,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_RESTORE_STATS,
         .description = sWhiteHerbDesc,
         .pocket = POCKET_ITEMS,
@@ -2647,7 +2647,7 @@ const struct Item gItems[] =
     {
         .name = _("Quick Claw"),
         .itemId = ITEM_QUICK_CLAW,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_QUICK_CLAW,
         .holdEffectParam = 20,
         .description = sQuickClawDesc,
@@ -2674,7 +2674,7 @@ const struct Item gItems[] =
     {
         .name = _("Mental Herb"),
         .itemId = ITEM_MENTAL_HERB,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_CURE_ATTRACT,
         .description = sMentalHerbDesc,
         .pocket = POCKET_ITEMS,
@@ -2687,7 +2687,7 @@ const struct Item gItems[] =
     {
         .name = _("Choice Band"),
         .itemId = ITEM_CHOICE_BAND,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_CHOICE_BAND,
         .description = sChoiceBandDesc,
         .pocket = POCKET_ITEMS,
@@ -2700,7 +2700,7 @@ const struct Item gItems[] =
     {
         .name = _("King's Rock"),
         .itemId = ITEM_KINGS_ROCK,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_FLINCH,
         .holdEffectParam = 10,
         .description = sKingsRockDesc,
@@ -2714,7 +2714,7 @@ const struct Item gItems[] =
     {
         .name = _("SilverPowder"),
         .itemId = ITEM_SILVER_POWDER,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_BUG_POWER,
         .holdEffectParam = 10,
         .description = sSilverPowderDesc,
@@ -2742,7 +2742,7 @@ const struct Item gItems[] =
     {
         .name = _("Cleanse Tag"),
         .itemId = ITEM_CLEANSE_TAG,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_REPEL,
         .description = sCleanseTagDesc,
         .pocket = POCKET_ITEMS,
@@ -2768,7 +2768,7 @@ const struct Item gItems[] =
     {
         .name = _("DeepSeaTooth"),
         .itemId = ITEM_DEEP_SEA_TOOTH,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_DEEP_SEA_TOOTH,
         .description = sDeepSeaToothDesc,
         .pocket = POCKET_ITEMS,
@@ -2781,7 +2781,7 @@ const struct Item gItems[] =
     {
         .name = _("DeepSeaScale"),
         .itemId = ITEM_DEEP_SEA_SCALE,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_DEEP_SEA_SCALE,
         .description = sDeepSeaScaleDesc,
         .pocket = POCKET_ITEMS,
@@ -2807,7 +2807,7 @@ const struct Item gItems[] =
     {
         .name = _("Everstone"),
         .itemId = ITEM_EVERSTONE,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_PREVENT_EVOLVE,
         .description = sEverstoneDesc,
         .pocket = POCKET_ITEMS,
@@ -2834,7 +2834,7 @@ const struct Item gItems[] =
     {
         .name = _("Lucky Egg"),
         .itemId = ITEM_LUCKY_EGG,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_LUCKY_EGG,
         .description = sLuckyEggDesc,
         .pocket = POCKET_ITEMS,
@@ -2847,7 +2847,7 @@ const struct Item gItems[] =
     {
         .name = _("Scope Lens"),
         .itemId = ITEM_SCOPE_LENS,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_SCOPE_LENS,
         .description = sScopeLensDesc,
         .pocket = POCKET_ITEMS,
@@ -2860,7 +2860,7 @@ const struct Item gItems[] =
     {
         .name = _("Metal Coat"),
         .itemId = ITEM_METAL_COAT,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_STEEL_POWER,
         .holdEffectParam = 10,
         .description = sMetalCoatDesc,
@@ -2874,7 +2874,7 @@ const struct Item gItems[] =
     {
         .name = _("Leftovers"),
         .itemId = ITEM_LEFTOVERS,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_LEFTOVERS,
         .holdEffectParam = 10,
         .description = sLeftoversDesc,
@@ -3037,7 +3037,7 @@ const struct Item gItems[] =
     {
         .name = _("Light Ball"),
         .itemId = ITEM_LIGHT_BALL,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_LIGHT_BALL,
         .description = sLightBallDesc,
         .pocket = POCKET_ITEMS,
@@ -3050,7 +3050,7 @@ const struct Item gItems[] =
     {
         .name = _("Soft Sand"),
         .itemId = ITEM_SOFT_SAND,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_GROUND_POWER,
         .holdEffectParam = 10,
         .description = sSoftSandDesc,
@@ -3064,7 +3064,7 @@ const struct Item gItems[] =
     {
         .name = _("Hard Stone"),
         .itemId = ITEM_HARD_STONE,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_ROCK_POWER,
         .holdEffectParam = 10,
         .description = sHardStoneDesc,
@@ -3078,7 +3078,7 @@ const struct Item gItems[] =
     {
         .name = _("Miracle Seed"),
         .itemId = ITEM_MIRACLE_SEED,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_GRASS_POWER,
         .holdEffectParam = 10,
         .description = sMiracleSeedDesc,
@@ -3092,7 +3092,7 @@ const struct Item gItems[] =
     {
         .name = _("BlackGlasses"),
         .itemId = ITEM_BLACK_GLASSES,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_DARK_POWER,
         .holdEffectParam = 10,
         .description = sBlackGlassesDesc,
@@ -3106,7 +3106,7 @@ const struct Item gItems[] =
     {
         .name = _("Black Belt"),
         .itemId = ITEM_BLACK_BELT,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_FIGHTING_POWER,
         .holdEffectParam = 10,
         .description = sBlackBeltDesc,
@@ -3120,7 +3120,7 @@ const struct Item gItems[] =
     {
         .name = _("Magnet"),
         .itemId = ITEM_MAGNET,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_ELECTRIC_POWER,
         .holdEffectParam = 10,
         .description = sMagnetDesc,
@@ -3134,7 +3134,7 @@ const struct Item gItems[] =
     {
         .name = _("Mystic Water"),
         .itemId = ITEM_MYSTIC_WATER,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_WATER_POWER,
         .holdEffectParam = 10,
         .description = sMysticWaterDesc,
@@ -3148,7 +3148,7 @@ const struct Item gItems[] =
     {
         .name = _("Sharp Beak"),
         .itemId = ITEM_SHARP_BEAK,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_FLYING_POWER,
         .holdEffectParam = 10,
         .description = sSharpBeakDesc,
@@ -3162,7 +3162,7 @@ const struct Item gItems[] =
     {
         .name = _("Poison Barb"),
         .itemId = ITEM_POISON_BARB,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_POISON_POWER,
         .holdEffectParam = 10,
         .description = sPoisonBarbDesc,
@@ -3176,7 +3176,7 @@ const struct Item gItems[] =
     {
         .name = _("NeverMeltIce"),
         .itemId = ITEM_NEVER_MELT_ICE,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_ICE_POWER,
         .holdEffectParam = 10,
         .description = sNeverMeltIceDesc,
@@ -3190,7 +3190,7 @@ const struct Item gItems[] =
     {
         .name = _("Spell Tag"),
         .itemId = ITEM_SPELL_TAG,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_GHOST_POWER,
         .holdEffectParam = 10,
         .description = sSpellTagDesc,
@@ -3204,7 +3204,7 @@ const struct Item gItems[] =
     {
         .name = _("Twistedspoon"),
         .itemId = ITEM_TWISTED_SPOON,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_PSYCHIC_POWER,
         .holdEffectParam = 10,
         .description = sTwistedSpoonDesc,
@@ -3218,7 +3218,7 @@ const struct Item gItems[] =
     {
         .name = _("Charcoal"),
         .itemId = ITEM_CHARCOAL,
-        .price = 9800,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_FIRE_POWER,
         .holdEffectParam = 10,
         .description = sCharcoalDesc,
@@ -3232,7 +3232,7 @@ const struct Item gItems[] =
     {
         .name = _("Dragon Fang"),
         .itemId = ITEM_DRAGON_FANG,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_DRAGON_POWER,
         .holdEffectParam = 10,
         .description = sDragonFangDesc,
@@ -3246,7 +3246,7 @@ const struct Item gItems[] =
     {
         .name = _("Silk Scarf"),
         .itemId = ITEM_SILK_SCARF,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_NORMAL_POWER,
         .holdEffectParam = 10,
         .description = sSilkScarfDesc,
@@ -3273,7 +3273,7 @@ const struct Item gItems[] =
     {
         .name = _("Shell Bell"),
         .itemId = ITEM_SHELL_BELL,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_SHELL_BELL,
         .holdEffectParam = 8,
         .description = sShellBellDesc,
@@ -3385,7 +3385,7 @@ const struct Item gItems[] =
     {
         .name = _("Lax Incense"),
         .itemId = ITEM_LAX_INCENSE,
-        .price = 5000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_EVASION_UP,
         .holdEffectParam = 10,
         .description = sLaxIncenseDesc,
@@ -3427,7 +3427,7 @@ const struct Item gItems[] =
     {
         .name = _("Full Incense"),
         .itemId = ITEM_FULL_INCENSE,
-        .price = 5000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_LAGGING_TAIL,
         .holdEffectParam = 5,
         .description = sFullIncenseDesc,
@@ -3469,7 +3469,7 @@ const struct Item gItems[] =
     {
         .name = _("Luck Incense"),
         .itemId = ITEM_LUCK_INCENSE,
-        .price = 11000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_DOUBLE_PRIZE,
         .holdEffectParam = 10,
         .description = sLuckIncenseDesc,
@@ -3483,7 +3483,7 @@ const struct Item gItems[] =
     {
         .name = _("Pure Incense"),
         .itemId = ITEM_PURE_INCENSE,
-        .price = 6000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_REPEL,
         .description = sPureIncenseDesc,
         .pocket = POCKET_ITEMS,
@@ -3522,7 +3522,7 @@ const struct Item gItems[] =
     {
         .name = _("Thick Club"),
         .itemId = ITEM_THICK_CLUB,
-        .price = 500,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_THICK_CLUB,
         .description = sThickClubDesc,
         .pocket = POCKET_ITEMS,
@@ -3535,7 +3535,7 @@ const struct Item gItems[] =
     {
         .name = _("Stick"),
         .itemId = ITEM_STICK,
-        .price = 200,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_STICK,
         .description = sStickDesc,
         .pocket = POCKET_ITEMS,
@@ -4022,7 +4022,7 @@ const struct Item gItems[] =
     {
         .name = _("TM05"),
         .itemId = ITEM_TM05_ROAR,
-        .price = 1000,
+        .price = 3000,
         .description = sTM05Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
@@ -4100,7 +4100,7 @@ const struct Item gItems[] =
     {
         .name = _("TM11"),
         .itemId = ITEM_TM11_SUNNY_DAY,
-        .price = 2000,
+        .price = 3000,
         .description = sTM11Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
@@ -4230,7 +4230,7 @@ const struct Item gItems[] =
     {
         .name = _("TM21"),
         .itemId = ITEM_TM21_FRUSTRATION,
-        .price = 1000,
+        .price = 3000,
         .description = sTM21Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
@@ -4308,7 +4308,7 @@ const struct Item gItems[] =
     {
         .name = _("TM27"),
         .itemId = ITEM_TM27_RETURN,
-        .price = 1000,
+        .price = 3000,
         .description = sTM27Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
