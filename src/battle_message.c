@@ -665,7 +665,7 @@ static const u8 sText_AirBalloonPop[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_IT
 static const u8 sText_IncinerateBurn[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nwas burnt up!");
 static const u8 sText_BugBite[] = _("{B_ATK_NAME_WITH_PREFIX} stole and ate\n{B_EFF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}!");
 static const u8 sText_IllusionWoreOff[] = _("{B_DEF_NAME_WITH_PREFIX}'s Illusion wore off!");
-static const u8 sText_ItIsSnowing[] = _("Snow is falling.");
+static const u8 sText_ItIsSnowing[] = _("It started to hail.");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
