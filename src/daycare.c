@@ -761,74 +761,74 @@ void RejectEggFromDayCare(void)
     RemoveEggFromDayCare(&gSaveBlock1Ptr->daycare);
 }
 
-//static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare)
-//{
-//    u16 motherItem, fatherItem;
-//    if (*species == SPECIES_WYNAUT || *species == SPECIES_AZURILL || *species == SPECIES_BUDEW || *species == SPECIES_MUNCHLAX || *species == SPECIES_CHINGLING || *species == SPECIES_MIMEJR || *species == SPECIES_HAPPINY || *species == BONSLY || *species == SPECIES_MANTYKE || *species == SPECIES_PICHU || *species == SPECIES_CLEFFA || *species == SPECIES_IGGLYBUFF)
-//    {
-//        motherItem = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_HELD_ITEM);
-//        fatherItem = GetBoxMonData(&daycare->mons[1].mon, MON_DATA_HELD_ITEM);
-//        if (*species == SPECIES_WYNAUT && motherItem = ITEM_LAX_INCENSE && fatherItem = ITEM_LAX_INCENSE)
-//        {
-//            *species = SPECIES_WOBBUFFET;
-//        }
-//
-//        if (*species == SPECIES_AZURILL && motherItem = ITEM_SEA_INCENSE && fatherItem = ITEM_SEA_INCENSE)
-//        {
-//            *species = SPECIES_MARILL;
-//        }
-//
-//        if (*species == SPECIES_BUDEW && motherItem = ITEM_ROSE_INCENSE && fatherItem = ITEM_ROSE_INCENSE)
-//        {
-//            *species = SPECIES_ROSELIA;
-//        }
-//
-//        if (*species == SPECIES_MUNCHLAX && motherItem = ITEM_FULL_INCENSE && fatherItem = ITEM_FULL_INCENSE)
-//        {
-//            *species = SPECIES_SNORLAX;
-//        }
-//
-//        if (*species == SPECIES_CHINGLING && motherItem = ITEM_PURE_INCENSE && fatherItem = ITEM_PURE_INCENSE)
-//        {
-//            *species = SPECIES_CHIMECHO;
-//        }
-//
-//        if (*species == SPECIES_MIMEJR && motherItem = ITEM_ODD_INCENSE && fatherItem = ITEM_ODD_INCENSE)
-//        {
-//            *species = SPECIES_MR_MIME;
-//        }
-//
-//        if (*species == SPECIES_HAPPINY && motherItem = ITEM_LUCK_INCENSE && fatherItem = ITEM_LUCK_INCENSE)
-//        {
-//            *species = SPECIES_CHANSEY;
-//        }
-//
-//        if (*species == SPECIES_BONSLY && motherItem = ITEM_ROCK_INCENSE && fatherItem = ITEM_ROCK_INCENSE)
-//        {
-//            *species = SPECIES_SUDOWOODO;
-//        }
-//
-//        if (*species == SPECIES_MANTYKE && motherItem = ITEM_WAVE_INCENSE && fatherItem = ITEM_WAVE_INCENSE)
-//        {
-//            *species = SPECIES_MANTINE;
-//        }
-//
-//        if (*species == SPECIES_PICHU && motherItem = ITEM_PURE_INCENSE && fatherItem = ITEM_PURE_INCENSE)
-//        {
-//            *species = SPECIES_PIKACHU;
-//        }
-//
-//        if (*species == SPECIES_CLEFFA && motherItem = ITEM_PURE_INCENSE && fatherItem = ITEM_PURE_INCENSE)
-//        {
-//            *species = SPECIES_CLEFAIRY;
-//        }
-//
-//        if (*species == SPECIES_IGGLYBUFF && motherItem = ITEM_PURE_INCENSE && fatherItem = ITEM_PURE_INCENSE)
-//        {
-//            *species = SPECIES_JIGGLYPUFF;
-//        }
-//   }
-//}
+static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare)
+{
+    u16 motherItem, fatherItem;
+    if (*species == SPECIES_WYNAUT || *species == SPECIES_AZURILL || *species == SPECIES_BUDEW || *species == SPECIES_MUNCHLAX || *species == SPECIES_CHINGLING || *species == SPECIES_MIMEJR || *species == SPECIES_HAPPINY || *species == SPECIES_BONSLY || *species == SPECIES_MANTYKE || *species == SPECIES_PICHU || *species == SPECIES_CLEFFA || *species == SPECIES_IGGLYBUFF)
+    {
+        motherItem = GetBoxMonData(&daycare->mons[0].mon, MON_DATA_HELD_ITEM);
+        fatherItem = GetBoxMonData(&daycare->mons[1].mon, MON_DATA_HELD_ITEM);
+        if (*species == SPECIES_WYNAUT && ( motherItem == ITEM_LAX_INCENSE || fatherItem == ITEM_LAX_INCENSE) )
+        {
+            *species = SPECIES_WOBBUFFET;
+        }
+
+	if (*species == SPECIES_AZURILL && ( motherItem == ITEM_SEA_INCENSE || fatherItem == ITEM_SEA_INCENSE) )
+        {
+            *species = SPECIES_MARILL;
+        }
+
+        if (*species == SPECIES_BUDEW && ( motherItem == ITEM_ROSE_INCENSE || fatherItem == ITEM_ROSE_INCENSE) )
+        {
+            *species = SPECIES_ROSELIA;
+        }
+
+        if (*species == SPECIES_MUNCHLAX && ( motherItem == ITEM_FULL_INCENSE || fatherItem == ITEM_FULL_INCENSE) )
+        {
+            *species = SPECIES_SNORLAX;
+        }
+
+        if (*species == SPECIES_CHINGLING && ( motherItem == ITEM_PURE_INCENSE || fatherItem == ITEM_PURE_INCENSE) )
+        {
+            *species = SPECIES_CHIMECHO;
+        }
+
+        if (*species == SPECIES_MIMEJR && ( motherItem == ITEM_ODD_INCENSE || fatherItem == ITEM_ODD_INCENSE) )
+        {
+            *species = SPECIES_MR_MIME;
+        }
+
+        if (*species == SPECIES_HAPPINY && ( motherItem == ITEM_LUCK_INCENSE || fatherItem == ITEM_LUCK_INCENSE) )
+        {
+            *species = SPECIES_CHANSEY;
+        }
+
+        if (*species == SPECIES_BONSLY && ( motherItem == ITEM_ROCK_INCENSE || fatherItem == ITEM_ROCK_INCENSE) )
+        {
+            *species = SPECIES_SUDOWOODO;
+        }
+
+        if (*species == SPECIES_MANTYKE && ( motherItem == ITEM_WAVE_INCENSE || fatherItem == ITEM_WAVE_INCENSE) )
+        {
+            *species = SPECIES_MANTINE;
+        }
+
+        if (*species == SPECIES_PICHU && ( motherItem == ITEM_PURE_INCENSE || fatherItem == ITEM_PURE_INCENSE) )
+        {
+            *species = SPECIES_PIKACHU;
+        }
+
+        if (*species == SPECIES_CLEFFA && ( motherItem == ITEM_PURE_INCENSE || fatherItem == ITEM_PURE_INCENSE) )
+        {
+            *species = SPECIES_CLEFAIRY;
+        }
+
+        if (*species == SPECIES_IGGLYBUFF && ( motherItem == ITEM_PURE_INCENSE || fatherItem == ITEM_PURE_INCENSE) )
+        {
+            *species = SPECIES_JIGGLYPUFF;
+        }
+   }
+}
 
 static void GiveVoltTackleIfLightBall(struct Pokemon *mon, struct DayCare *daycare)
 {
@@ -911,7 +911,7 @@ static void _GiveEggFromDaycare(struct DayCare *daycare) // give_egg
     bool8 isEgg;
 
     species = DetermineEggSpeciesAndParentSlots(daycare, parentSlots);
-//    AlterEggSpeciesWithIncenseItem(&species, daycare);
+    AlterEggSpeciesWithIncenseItem(&species, daycare);
     SetInitialEggData(&egg, species, daycare);
     InheritIVs(&egg, daycare);
     BuildEggMoveset(&egg, &daycare->mons[parentSlots[1]].mon, &daycare->mons[parentSlots[0]].mon);
