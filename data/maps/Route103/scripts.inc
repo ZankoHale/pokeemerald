@@ -9,7 +9,8 @@ Route103_OnTransition: @ 81EC399
 	end
 
 Route103_MapScript1_1EC3A4: @ 81EC3A4
-	call_if_set FLAG_SYS_GAME_CLEAR, Route103_EventScript_1EC3AE
+	compare VAR_RAYQUAZA_STATE, 4
+	call_if_ge Route103_EventScript_1EC3AE
 	end
 
 Route103_EventScript_1EC3AE:: @ 81EC3AE

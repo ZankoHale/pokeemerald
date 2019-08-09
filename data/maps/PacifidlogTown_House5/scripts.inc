@@ -4,9 +4,8 @@ PacifidlogTown_House5_MapScripts:: @ 8204110
 PacifidlogTown_House5_EventScript_204111:: @ 8204111
 	lock
 	faceplayer
-	specialvar VAR_RESULT, IsMirageIslandPresent
-	compare VAR_RESULT, 1
-	goto_if_eq PacifidlogTown_House5_EventScript_20412D
+	compare VAR_RAYQUAZA_STATE, 4
+	call_if_ge PacifidlogTown_House5_EventScript_20412D
 	msgbox PacifidlogTown_House5_Text_204140, MSGBOX_DEFAULT
 	release
 	end

@@ -5401,6 +5401,7 @@ extern const u32 gItemIcon_TimerBall[];
 extern const u32 gItemIcon_LuxuryBall[];
 extern const u32 gItemIconPalette_LuxuryBall[];
 extern const u32 gItemIcon_PremierBall[];
+extern const u32 gItemIconPalette_PremierBall[];
 extern const u32 gItemIcon_LevelBall[];
 extern const u32 gItemIconPalette_LevelBall[];
 extern const u32 gItemIcon_LureBall[];

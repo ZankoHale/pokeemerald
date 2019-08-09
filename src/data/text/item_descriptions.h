@@ -1011,7 +1011,7 @@ static const u8 sKingsRockDesc[] = _(
 static const u8 sSilverPowderDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "BUG-type moves.");
+    "Bug-type moves.");
 
 static const u8 sAmuletCoinDesc[] = _(
     "Doubles money in\n"
@@ -1066,7 +1066,7 @@ static const u8 sScopeLensDesc[] = _(
 static const u8 sMetalCoatDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "STEEL-type moves.");
+    "Steel-type moves.");
 
 static const u8 sLeftoversDesc[] = _(
     "A hold item that\n"
@@ -1075,7 +1075,7 @@ static const u8 sLeftoversDesc[] = _(
 
 static const u8 sDragonScaleDesc[] = _(
     "A strange scale\n"
-    "held by DRAGON-\n"
+    "held by Dragon-\n"
     "type Pokémon.");
 
 static const u8 sOvalStoneDesc[] = _(
@@ -1136,86 +1136,86 @@ static const u8 sSachetDesc[] = _(
 static const u8 sLightBallDesc[] = _(
     "A hold item that\n"
     "raises the SP. ATK\n"
-    "of PIKACHU.");
+    "of Pikachu.");
 
 static const u8 sSoftSandDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "GROUND-type moves.");
+    "Ground-type moves.");
 
 static const u8 sHardStoneDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "ROCK-type moves.");
+    "Rock-type moves.");
 
 static const u8 sMiracleSeedDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "GRASS-type moves.");
+    "Grass-type moves.");
 
 static const u8 sBlackGlassesDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "DARK-type moves.");
+    "Dark-type moves.");
 
 static const u8 sBlackBeltDesc[] = _(
     "A hold item that\n"
-    "boosts FIGHTING-\n"
+    "boosts Fighting-\n"
     "type moves.");
 
 static const u8 sMagnetDesc[] = _(
     "A hold item that\n"
-    "boosts ELECTRIC-\n"
+    "boosts Electric-\n"
     "type moves.");
 
 static const u8 sMysticWaterDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "WATER-type moves.");
+    "Water-type moves.");
 
 static const u8 sSharpBeakDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "FLYING-type moves.");
+    "Flying-type moves.");
 
 static const u8 sPoisonBarbDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "POISON-type moves.");
+    "Poison-type moves.");
 
 static const u8 sNeverMeltIceDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "ICE-type moves.");
+    "Ice-type moves.");
 
 static const u8 sSpellTagDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "GHOST-type moves.");
+    "Ghost-type moves.");
 
 static const u8 sTwistedSpoonDesc[] = _(
     "A hold item that\n"
-    "boosts PSYCHIC-\n"
+    "boosts Psychic-\n"
     "type moves.");
 
 static const u8 sCharcoalDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "FIRE-type moves.");
+    "Fire-type moves.");
 
 static const u8 sDragonFangDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "DRAGON-type moves.");
+    "Dragon-type moves.");
 
 static const u8 sSilkScarfDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "NORMAL-type moves.");
+    "Normal-type moves.");
 
 static const u8 sUpGradeDesc[] = _(
     "A peculiar box made\n"
-    "by SILPH CO.");
+    "by Silph Co.");
 
 static const u8 sShellBellDesc[] = _(
     "A hold item that\n"
@@ -1224,38 +1224,38 @@ static const u8 sShellBellDesc[] = _(
 
 static const u8 sPowerBracerDesc[] = _(
     "A hold item that\n"
-    "promotes ATK gain,\n"
-    "but reduces SPEED.");
+    "promotes Atk gain,\n"
+    "but reduces Speed.");
 
 static const u8 sPowerBeltDesc[] = _(
     "A hold item that\n"
-    "promotes DEF gain,\n"
-    "but reduces SPEED.");
+    "promotes Def gain,\n"
+    "but reduces Speed.");
 
 static const u8 sPowerLensDesc[] = _(
     "Hold item that pro-\n"
-    "motes SP. ATK gain,\n"
-    "but reduces SPEED.");
+    "motes Sp. Atk gain,\n"
+    "but reduces Speed.");
 
 static const u8 sPowerBandDesc[] = _(
     "Hold item that pro-\n"
-    "motes SP. DEF gain,\n"
-    "but reduces SPEED.");
+    "motes Sp. Def gain,\n"
+    "but reduces Speed.");
 
 static const u8 sPowerAnkletDesc[] = _(
     "A hold item that\n"
-    "promotes SPD gain,\n"
-    "but reduces SPEED.");
+    "promotes Spd gain,\n"
+    "but reduces Speed.");
 
 static const u8 sPowerWeightDesc[] = _(
     "A hold item that\n"
     "promotes HP gain,\n"
-    "but reduces SPEED.");
+    "but reduces Speed.");
 
 static const u8 sSeaIncenseDesc[] = _(
     "A hold item that\n"
     "slightly boosts\n"
-    "WATER-type moves.");
+    "Water-type moves.");
 
 static const u8 sLaxIncenseDesc[] = _(
     "A hold item that\n"
@@ -1264,13 +1264,13 @@ static const u8 sLaxIncenseDesc[] = _(
 
 static const u8 sOddIncenseDesc[] = _(
     "A hold item that\n"
-    "boosts PSYCHIC-\n"
+    "boosts Psychic-\n"
     "type moves.");
 
 static const u8 sRockIncenseDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "ROCK-type moves.");
+    "Rock-type moves.");
 
 static const u8 sFullIncenseDesc[] = _(
     "A held item that\n"
@@ -1280,12 +1280,12 @@ static const u8 sFullIncenseDesc[] = _(
 static const u8 sWaveIncenseDesc[] = _(
     "A hold item that\n"
     "slightly boosts\n"
-    "WATER-type moves.");
+    "Water-type moves.");
 
 static const u8 sRoseIncenseDesc[] = _(
     "A hold item that\n"
     "raises the power of\n"
-    "GRASS-type moves.");
+    "Grass-type moves.");
 
 static const u8 sLuckIncenseDesc[] = _(
     "Doubles money in\n"
@@ -1299,48 +1299,48 @@ static const u8 sPureIncenseDesc[] = _(
 
 static const u8 sLuckyPunchDesc[] = _(
     "A hold item that\n"
-    "raises CHANSEY's\n"
+    "raises Chansey's\n"
     "critical-hit rate.");
 
 static const u8 sMetalPowderDesc[] = _(
     "A hold item that\n"
-    "raises DITTO's\n"
-    "DEFENSE.");
+    "raises Ditto's\n"
+    "Defense.");
 
 static const u8 sThickClubDesc[] = _(
     "A hold item that \n"
-    "raises CUBONE or\n"
-    "MAROWAK's ATTACK.");
+    "raises Cubone or\n"
+    "Marowak's Attack.");
 
 static const u8 sStickDesc[] = _(
     "A hold item that\n"
-    "raises FARFETCH'D's\n"
+    "raises Farfetch'd's\n"
     "critical-hit ratio.");
 
 static const u8 sRedScarfDesc[] = _(
     "A hold item that\n"
-    "raises COOL in\n"
-    "CONTESTS.");
+    "raises Cool in\n"
+    "Contests.");
 
 static const u8 sBlueScarfDesc[] = _(
     "A hold item that\n"
-    "raises BEAUTY in\n"
-    "CONTESTS.");
+    "raises Beauty in\n"
+    "Contests.");
 
 static const u8 sPinkScarfDesc[] = _(
     "A hold item that\n"
-    "raises CUTE in\n"
-    "CONTESTS.");
+    "raises Cute in\n"
+    "Contests.");
 
 static const u8 sGreenScarfDesc[] = _(
     "A hold item that\n"
-    "raises SMART in\n"
-    "CONTESTS.");
+    "raises Smart in\n"
+    "Contests.");
 
 static const u8 sYellowScarfDesc[] = _(
     "A hold item that\n"
-    "raises TOUGH in\n"
-    "CONTESTS.");
+    "raises Tough in\n"
+    "Contests.");
 
 // Key items
 static const u8 sMachBikeDesc[] = _(
@@ -1350,7 +1350,7 @@ static const u8 sMachBikeDesc[] = _(
 
 static const u8 sCoinCaseDesc[] = _(
     "A case that holds\n"
-    "up to 9,999 COINS.");
+    "up to 9,999 Coins.");
 
 static const u8 sItemfinderDesc[] = _(
     "A device that\n"
@@ -1380,16 +1380,16 @@ static const u8 sSSTicketDesc[] = _(
 static const u8 sContestPassDesc[] = _(
     "The pass required\n"
     "for entering\n"
-    "Pokémon CONTESTS.");
+    "Pokémon Contests.");
 
 static const u8 sWailmerPailDesc[] = _(
     "A tool used for\n"
-    "watering BERRIES\n"
+    "watering Berries\n"
     "and plants.");
 
 static const u8 sDevonGoodsDesc[] = _(
     "A package that\n"
-    "contains DEVON's\n"
+    "contains Devon's\n"
     "machine parts.");
 
 static const u8 sSootSackDesc[] = _(
@@ -1398,9 +1398,9 @@ static const u8 sSootSackDesc[] = _(
     "volcanic ash.");
 
 static const u8 sBasementKeyDesc[] = _(
-    "The key for NEW\n"
-    "MAUVILLE beneath\n"
-    "MAUVILLE CITY.");
+    "The key for New\n"
+    "Mauville beneath\n"
+    "Mauville CITY.");
 
 static const u8 sAcroBikeDesc[] = _(
     "A folding bicycle\n"
@@ -1410,12 +1410,12 @@ static const u8 sAcroBikeDesc[] = _(
 static const u8 sPokeblockCaseDesc[] = _(
     "A case for holding\n"
     "{POKEBLOCK}S made with\n"
-    "a BERRY BLENDER.");
+    "a Berry Blender.");
 
 static const u8 sLetterDesc[] = _(
-    "A letter to STEVEN\n"
-    "from the PRESIDENT\n"
-    "of the DEVON CORP.");
+    "A letter to Steven\n"
+    "from the President\n"
+    "of the Devon Corp.");
 
 static const u8 sEonTicketDesc[] = _(
     "The ticket for a\n"
@@ -1435,7 +1435,7 @@ static const u8 sBlueOrbDesc[] = _(
 static const u8 sScannerDesc[] = _(
     "A device found\n"
     "inside the\n"
-    "ABANDONED SHIP.");
+    "Abandoned Ship.");
 
 static const u8 sGoGogglesDesc[] = _(
     "Nifty goggles that\n"
@@ -1444,32 +1444,32 @@ static const u8 sGoGogglesDesc[] = _(
 
 static const u8 sMeteoriteDesc[] = _(
     "A meteorite found\n"
-    "at METEOR FALLS.");
+    "at Meteor Falls.");
 
 static const u8 sRoom1KeyDesc[] = _(
     "A key that opens a\n"
     "door inside the\n"
-    "ABANDONED SHIP.");
+    "Abandoned Ship.");
 
 static const u8 sRoom2KeyDesc[] = _(
     "A key that opens a\n"
     "door inside the\n"
-    "ABANDONED SHIP.");
+    "Abandoned Ship.");
 
 static const u8 sRoom4KeyDesc[] = _(
     "A key that opens a\n"
     "door inside the\n"
-    "ABANDONED SHIP.");
+    "Abandoned Ship.");
 
 static const u8 sRoom6KeyDesc[] = _(
     "A key that opens a\n"
     "door inside the\n"
-    "ABANDONED SHIP.");
+    "Abandoned Ship.");
 
 static const u8 sStorageKeyDesc[] = _(
     "The key to the\n"
     "storage inside the\n"
-    "ABANDONED SHIP.");
+    "Abandoned Ship.");
 
 static const u8 sRootFossilDesc[] = _(
     "A fossil of an\n"
@@ -1482,7 +1482,7 @@ static const u8 sClawFossilDesc[] = _(
     "dwelling Pokémon.");
 
 static const u8 sDevonScopeDesc[] = _(
-    "A device by DEVON\n"
+    "A device by Devon\n"
     "that signals any\n"
     "unseeable Pokémon.");
 
@@ -1503,8 +1503,8 @@ static const u8 sTM03Desc[] = _(
     "that may confuse.");
 
 static const u8 sTM04Desc[] = _(
-    "Raises SP. ATK and\n"
-    "SP. DEF by focusing\n"
+    "Raises Sp. Atk and\n"
+    "Sp. Def by focusing\n"
     "the mind.");
 
 static const u8 sTM05Desc[] = _(
@@ -1520,12 +1520,12 @@ static const u8 sTM06Desc[] = _(
 static const u8 sTM07Desc[] = _(
     "Creates a hailstorm\n"
     "that damages all\n"
-    "types except ICE.");
+    "types except Ice.");
 
 static const u8 sTM08Desc[] = _(
     "Bulks up the body\n"
     "to boost both\n"
-    "ATTACK & DEFENSE.");
+    "Attack & Defense.");
 
 static const u8 sTM09Desc[] = _(
     "Shoots 2 to 5 seeds\n"
@@ -1565,7 +1565,7 @@ static const u8 sTM15Desc[] = _(
 static const u8 sTM16Desc[] = _(
     "Creates a wall of\n"
     "light that lowers\n"
-    "SP. ATK damage.");
+    "Sp. Atk damage.");
 
 static const u8 sTM17Desc[] = _(
     "Negates all damage,\n"
@@ -1574,7 +1574,7 @@ static const u8 sTM17Desc[] = _(
 
 static const u8 sTM18Desc[] = _(
     "Raises the power of\n"
-    "WATER-type moves\n"
+    "Water-type moves\n"
     "for 5 turns.");
 
 static const u8 sTM19Desc[] = _(
@@ -1600,7 +1600,7 @@ static const u8 sTM22Desc[] = _(
 static const u8 sTM23Desc[] = _(
     "Slams the foe with\n"
     "a hard tail. It may\n"
-    "lower DEFENSE.");
+    "lower Defense.");
 
 static const u8 sTM24Desc[] = _(
     "A powerful electric\n"
@@ -1630,16 +1630,16 @@ static const u8 sTM28Desc[] = _(
 static const u8 sTM29Desc[] = _(
     "A powerful psychic\n"
     "attack that may\n"
-    "lower SP. DEF.");
+    "lower Sp. Def.");
 
 static const u8 sTM30Desc[] = _(
     "Hurls a dark lump\n"
     "at the foe. It may\n"
-    "lower SP. DEF.");
+    "lower Sp. Def.");
 
 static const u8 sTM31Desc[] = _(
     "Destroys barriers\n"
-    "like LIGHT SCREEN\n"
+    "like Light Screen\n"
     "and causes damage.");
 
 static const u8 sTM32Desc[] = _(
@@ -1680,7 +1680,7 @@ static const u8 sTM38Desc[] = _(
 static const u8 sTM39Desc[] = _(
     "Stops the foe from\n"
     "moving with rocks.\n"
-    "May lower SPEED.");
+    "May lower Speed.");
 
 static const u8 sTM40Desc[] = _(
     "An extremely fast\n"
@@ -1693,7 +1693,7 @@ static const u8 sTM41Desc[] = _(
     "move in a row.");
 
 static const u8 sTM42Desc[] = _(
-    "Raises ATTACK when\n"
+    "Raises Attack when\n"
     "poisoned, burned,\n"
     "or paralyzed.");
 
@@ -1735,7 +1735,7 @@ static const u8 sTM49Desc[] = _(
 static const u8 sTM50Desc[] = _(
     "Enables full-power\n"
     "attack, but sharply\n"
-    "lowers SP. ATK.");
+    "lowers Sp. Atk.");
 
 
 static const u8 sHM01Desc[] = _(
@@ -1766,7 +1766,7 @@ static const u8 sHM05Desc[] = _(
 static const u8 sHM06Desc[] = _(
     "A rock-crushingly\n"
     "tough attack that\n"
-    "may lower DEFENSE.");
+    "may lower Defense.");
 
 static const u8 sHM07Desc[] = _(
     "Attacks the foe\n"
@@ -1821,13 +1821,13 @@ static const u8 sLiftKeyDesc[] = _(
 
 static const u8 sArmorFossilDesc[] = _(
     "A piece of a\n"
-    "prehistoric POKé-\n"
-    "MON's head.");
+    "prehistoric Poké-\n"
+    "mon's head.");
 
 static const u8 sSkullFossilDesc[] = _(
     "A piece of a\n"
-    "prehistoric POKé-\n"
-    "MON's head.");
+    "prehistoric Poké-\n"
+    "mon's head.");
 
 static const u8 sHelixFossilDesc[] = _(
     "A piece of an\n"
@@ -1841,13 +1841,13 @@ static const u8 sDomeFossilDesc[] = _(
 
 static const u8 sCoverFossilDesc[] = _(
     "A piece of a\n"
-    "prehistoric POKé-\n"
-    "MON's back.");
+    "prehistoric Poké-\n"
+    "mon's back.");
 
 static const u8 sPlumeFossilDesc[] = _(
     "A piece of a\n"
-    "prehistoric POKé-\n"
-    "MON's wing.");
+    "prehistoric Poké-\n"
+    "mon's wing.");
 
 static const u8 sJawFossilDesc[] = _(
     "A piece of a prehis-\n"
@@ -1860,14 +1860,14 @@ static const u8 sSailFossilDesc[] = _(
     "skin sail.");
 
 static const u8 sSilphScopeDesc[] = _(
-    "SILPH CO's scope\n"
+    "Silph Co's scope\n"
     "makes unseeable\n"
     "Pokémon visible.");
 
 static const u8 sBicycleDesc[] = _(
     "A folding bicycle\n"
     "that is faster than\n"
-    "the RUNNING SHOES.");
+    "the Running Shoes.");
 
 static const u8 sTownMapDesc[] = _(
     "Can be viewed\n"
@@ -1877,7 +1877,7 @@ static const u8 sTownMapDesc[] = _(
 static const u8 sVSSeekerDesc[] = _(
     "A rechargeable unit\n"
     "that flags battle-\n"
-    "ready TRAINERS.");
+    "ready Trainers.");
 
 static const u8 sFameCheckerDesc[] = _(
     "Stores information\n"
@@ -1892,22 +1892,22 @@ static const u8 sTMCaseDesc[] = _(
 static const u8 sBerryPouchDesc[] = _(
     "A convenient\n"
     "container that\n"
-    "holds BERRIES.");
+    "holds Berries.");
 
 static const u8 sTeachyTVDesc[] = _(
     "A TV set tuned to\n"
     "an advice program\n"
-    "for TRAINERS.");
+    "for Trainers.");
 
 static const u8 sTriPassDesc[] = _(
     "A pass for ferries\n"
-    "between ONE, TWO,\n"
-    "and THREE ISLAND.");
+    "between One, Two,\n"
+    "and Three Island.");
 
 static const u8 sRainbowPassDesc[] = _(
     "For ferries serving\n"
-    "VERMILION and the\n"
-    "SEVII ISLANDS.");
+    "Vermilion and the\n"
+    "Sevii Islands.");
 
 static const u8 sTeaDesc[] = _(
     "A thirst-quenching\n"
@@ -1917,17 +1917,17 @@ static const u8 sTeaDesc[] = _(
 static const u8 sMysticTicketDesc[] = _(
     "A ticket required\n"
     "to board the ship\n"
-    "to NAVEL ROCK.");
+    "to Navel Rock.");
 
 static const u8 sAuroraTicketDesc[] = _(
     "A ticket required\n"
     "to board the ship\n"
-    "to BIRTH ISLAND.");
+    "to Birth Island.");
 
 static const u8 sPowderJarDesc[] = _(
     "Stores BERRY\n"
     "POWDER made using\n"
-    "a BERRY CRUSHER.");
+    "a Berry Crusher.");
 
 static const u8 sRubyDesc[] = _(
     "An exquisite, red-\n"
@@ -1943,7 +1943,7 @@ static const u8 sSapphireDesc[] = _(
 static const u8 sMagmaEmblemDesc[] = _(
     "A medal-like item in\n"
     "the same shape as\n"
-    "TEAM MAGMA's mark.");
+    "Team Magma's mark.");
 
 static const u8 sOldSeaMapDesc[] = _(
     "A faded sea chart\n"

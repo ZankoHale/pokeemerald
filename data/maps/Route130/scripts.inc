@@ -5,24 +5,7 @@ Route130_MapScripts:: @ 81F735F
 Route130_OnTransition: @ 81F7365
 	compare VAR_RAYQUAZA_STATE, 4
 	call_if_ge Route130_EventScript_1F73B5
-	specialvar VAR_RESULT, IsMirageIslandPresent
-	compare VAR_RESULT, 1
-	goto_if_eq Route130_EventScript_1F73B1
-	setflag FLAG_TEMP_11
-	setflag FLAG_TEMP_12
-	setflag FLAG_TEMP_13
-	setflag FLAG_TEMP_14
-	setflag FLAG_TEMP_15
-	setflag FLAG_TEMP_16
-	setflag FLAG_TEMP_17
-	setflag FLAG_TEMP_18
-	setflag FLAG_TEMP_19
-	setflag FLAG_TEMP_1A
-	setflag FLAG_TEMP_1B
-	setflag FLAG_TEMP_1C
-	setflag FLAG_TEMP_1D
-	setflag FLAG_TEMP_1E
-	setflag FLAG_TEMP_1F
+	call_if_set FLAG_SYS_GAME_CLEAR, Route130_EventScript_1F73B1
 	setmaplayoutindex LAYOUT_ROUTE130
 	end
 
