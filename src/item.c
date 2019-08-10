@@ -197,10 +197,7 @@ bool8 CheckBagHasSpace(u16 itemId, u16 count)
         u16 ownedCount;
 
         pocket = ItemId_GetPocket(itemId) - 1;
-        if (pocket != BERRIES_POCKET)
-            slotCapacity = 99;
-        else
-            slotCapacity = 999;
+        slotCapacity = 999;
 
         // Check space in any existing item slots that already contain this item
         for (i = 0; i < gBagPockets[pocket].capacity; i++)
@@ -417,9 +414,6 @@ bool8 AddBagItem(u16 itemId, u16 count)
         newItems = AllocZeroed(itemPocket->capacity * sizeof(struct ItemSlot));
         memcpy(newItems, itemPocket->itemSlots, itemPocket->capacity * sizeof(struct ItemSlot));
 
-        if (pocket != BERRIES_POCKET)
-            slotCapacity = 99;
-        else
             slotCapacity = 999;
 
         for (i = 0; i < itemPocket->capacity; i++)
