@@ -35,6 +35,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_22960A:: @ 822960A
 	.align 2
 EverGrandeCity_PokemonLeague_1F_Pokemart_229624: @ 8229624
 	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_PREMIER_BALL
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_MAX_POTION
 	.2byte ITEM_FULL_RESTORE
@@ -47,32 +48,32 @@ EverGrandeCity_PokemonLeague_1F_Pokemart_229624: @ 8229624
 
 EverGrandeCity_PokemonLeague_1F_EventScript_229636:: @ 8229636
 	special SavePlayerParty
-	
+
 	fadescreen 1
     special ChooseHalfPartyForBattle
     waitstate
 	@ Check here to see if the player didn't choose Cancel.
-	
+
 	special ReducePlayerPartyToSelectedMons
     setvar VAR_0x8004, 2
     setvar VAR_0x8005, 4
     special CallFrontierUtilFunc
-	
+
 	trainerbattle 10, 1, 0, NULL, EverGrandeCity_PokemonLeague_1F_Text_2296E8
 	trainerbattle 11, TRAINER_ALEXA, 0, NULL, EverGrandeCity_PokemonLeague_1F_Text_2297EF
-	
+
 	setvar VAR_0x8004, SPECIAL_BATTLE_MULTI
 	setvar VAR_0x8005, 2 | 0x80
 	setvar VAR_0x8006, TRAINER_EDWARDO
 	setvar VAR_0x8007, TRAINER_BACK_PIC_LEAF
 	special DoSpecialTrainerBattle
 	waitstate
-	
+
 	setvar VAR_0x8004, 6
     special CallFrontierUtilFunc
-	
+
 	special LoadPlayerParty
-	
+
 	lockall
 	goto_if_set FLAG_ENTERED_ELITE_FOUR, EverGrandeCity_PokemonLeague_1F_EventScript_2296BB
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
@@ -163,4 +164,3 @@ EverGrandeCity_PokemonLeague_1F_Text_229787: @ 8229787
 EverGrandeCity_PokemonLeague_1F_Text_2297EF: @ 82297EF
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "POKéMON, and go forth!$"
-

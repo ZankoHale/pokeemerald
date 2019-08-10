@@ -30,6 +30,35 @@ BattleFrontier_Mart_Pokemart_267AE4: @ 8267AE4
 	release
 	end
 
+BattleFrontier_Mart_EventScript_267ACC_n:: @ 8267ACC
+	lock
+	faceplayer
+	message gUnknown_08272A21
+	waitmessage
+	pokemart BattleFrontier_Mart_Pokemart_267AE4_n
+	msgbox gUnknown_08272A3F, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+BattleFrontier_Mart_Pokemart_267AE4_n: @ 8267AE4
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_MAX_POTION
+	.2byte ITEM_FULL_RESTORE
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_IRON
+	.2byte ITEM_ZINC
+	.2byte ITEM_CARBOS
+	.2byte ITEM_HP_UP
+	.2byte ITEM_NONE
+	release
+	end
+
 BattleFrontier_Mart_EventScript_267B02:: @ 8267B02
 	msgbox BattleFrontier_Mart_Text_267B29, MSGBOX_NPC
 	end

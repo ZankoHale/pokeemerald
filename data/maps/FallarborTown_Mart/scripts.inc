@@ -14,6 +14,7 @@ FallarborTown_Mart_EventScript_1FFCBF:: @ 81FFCBF
 	.align 2
 FallarborTown_Mart_Pokemart_1FFCD8: @ 81FFCD8
 	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_MOON_BALL
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
