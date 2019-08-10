@@ -896,15 +896,12 @@ static void RemoveScrollArrows(void)
     }
 }
 
-u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves);
-
 static void CreateLearnableMovesList(void)
 {
     s32 i;
     u8 nickname[POKEMON_NAME_LENGTH + 1];
 
     sMoveRelearnerStruct->numMenuChoices = GetMoveRelearnerMoves(&gPlayerParty[sMoveRelearnerStruct->partyMon], sMoveRelearnerStruct->movesToLearn);
-	sMoveRelearnerStruct->numMenuChoices += GetEggMoves(&gPlayerParty[sMoveRelearnerStruct->partyMon], sMoveRelearnerStruct->movesToLearn + sMoveRelearnerStruct->numMenuChoices);
 
     for (i = 0; i < sMoveRelearnerStruct->numMenuChoices; i++)
     {
