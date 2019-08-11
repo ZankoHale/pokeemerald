@@ -2,13 +2,14 @@ Route101_MapScripts:: @ 81EBCBA
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_MapScript2_1EBCCB
 	map_script MAP_SCRIPT_ON_LOAD, Route101_MapScript1_1
+	map_script MAP_SCRIPT_ON_RESUME, Route101_MapScript1_1
 	.byte 0
 
 Route101_OnTransition: @ 81EBCC5
 	call Route101_EventScript_2720AD
 	end
 
-Route123_MapScript1_1:
+Route101_MapScript1_1:
 	call_if_set FLAG_BADGE05_GET, Route101_EventScript_01
 	end
 	
