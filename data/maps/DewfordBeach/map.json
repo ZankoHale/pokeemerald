@@ -1,0 +1,129 @@
+{
+    "allow_bike": true,
+    "allow_escape_rope": false,
+    "allow_running": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "bg_events": [
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "NULL",
+            "type": "sign",
+            "x": 37,
+            "y": 20
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "NULL",
+            "type": "sign",
+            "x": 38,
+            "y": 20
+        }
+    ],
+    "connections": [
+        {
+            "direction": "right",
+            "map": "MAP_DEWFORD_TOWN",
+            "offset": 0
+        },
+        {
+            "direction": "up",
+            "map": "MAP_ROUTE106",
+            "offset": 0
+        }
+    ],
+    "coord_events": [
+    ],
+    "id": "MAP_DEWFORD_BEACH",
+    "layout": "LAYOUT_DEWFORD_BEACH",
+    "map_type": "MAP_TYPE_ROUTE",
+    "music": "MUS_NEXTROAD",
+    "name": "DewfordBeach",
+    "object_events": [
+        {
+            "elevation": 3,
+            "flag": "FLAG_TEMP_1",
+            "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "EventScript_RockSmash",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 29,
+            "y": 23
+        },
+        {
+            "elevation": 3,
+            "flag": "FLAG_TEMP_2",
+            "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "EventScript_RockSmash",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 28,
+            "y": 21
+        },
+        {
+            "elevation": 3,
+            "flag": "FLAG_TEMP_3",
+            "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "EventScript_RockSmash",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 23,
+            "y": 25
+        },
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "EventScript_RockSmash",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 25,
+            "y": 26
+        },
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "EventScript_RockSmash",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 27,
+            "y": 27
+        },
+        {
+            "elevation": 3,
+            "flag": "0",
+            "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "script": "EventScript_RockSmash",
+            "trainer_sight_or_berry_tree_id": "0",
+            "trainer_type": "0",
+            "x": 19,
+            "y": 24
+        }
+    ],
+    "region_map_section": "MAPSEC_ROUTE_106",
+    "requires_flash": false,
+    "show_map_name": true,
+    "warp_events": [
+    ],
+    "weather": "WEATHER_SUNNY"
+}
