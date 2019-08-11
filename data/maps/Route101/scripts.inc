@@ -1,10 +1,27 @@
 Route101_MapScripts:: @ 81EBCBA
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_MapScript2_1EBCCB
+	map_script MAP_SCRIPT_ON_LOAD, Route101_MapScript1_1
 	.byte 0
 
 Route101_OnTransition: @ 81EBCC5
 	call Route101_EventScript_2720AD
+	end
+
+Route123_MapScript1_1:
+	call_if_set FLAG_BADGE05_GET, Route101_EventScript_01
+	end
+	
+Route101_EventScript_01:
+	setmetatile 6, 6, METATILE_General_Grass, 0
+	setmetatile 7, 6, METATILE_General_Grass, 0
+	setmetatile 8, 6, METATILE_General_Grass, 0
+	setmetatile 9, 6, METATILE_General_Grass, 0
+	setmetatile 10, 6, METATILE_General_Grass, 0
+	setmetatile 8, 13, METATILE_General_Grass, 0
+	setmetatile 9, 13, METATILE_General_Grass, 0
+	setmetatile 10, 13, METATILE_General_Grass, 0
+	setmetatile 11, 13, METATILE_General_Grass, 0
 	end
 
 Route101_MapScript2_1EBCCB: @ 81EBCCB

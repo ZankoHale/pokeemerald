@@ -1,9 +1,21 @@
 Route123_MapScripts:: @ 81F6147
 	map_script MAP_SCRIPT_ON_TRANSITION, Route123_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, Route123_MapScript1_1
 	.byte 0
 
 Route123_OnTransition: @ 81F614D
 	special SetRoute123Weather
+	end
+
+Route123_MapScript1_1:
+	call_if_set FLAG_BADGE06_GET, Route123_EventScript_01
+	end
+	
+Route123_EventScript_01:
+	setmetatile 118, 10, METATILE_General_Grass, 0
+	setmetatile 119, 10, METATILE_General_Grass, 0
+	setmetatile 120, 10, METATILE_General_Grass, 0
+	setmetatile 121, 10, METATILE_General_Grass, 0
 	end
 
 Route123_EventScript_1F6151:: @ 81F6151
