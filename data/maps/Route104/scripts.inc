@@ -1052,10 +1052,10 @@ Route104_Text_1ED838: @ 81ED838
 
 Route104_Text_1ED8E7: @ 81ED8E7
 	.string "A word of advice!\p"
-	.string "A TM, Technical Machine, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	.string "A TM, Technical Machine, can be used\n"
+	.string "as many times as you like.\p"
+	.string "Once you use it, it's stays.\n"
+	.string "Experient with different pokémon!$"
 
 Route104_Text_1ED96A: @ 81ED96A
 	.string "This Flower Shop started selling\n"

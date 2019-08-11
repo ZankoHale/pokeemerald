@@ -491,7 +491,7 @@ SlateportCity_EventScript_1DD16A:: @ 81DD16A
 	faceplayer
 	message gUnknown_08272A21
 	waitmessage
-	pokemartdecoration SlateportCity_PokemartDecor_Dolls
+	pokemart SlateportCity_PokemartDecor_Dolls
 	msgbox gUnknown_08272A3F, MSGBOX_DEFAULT
 	release
 	end
