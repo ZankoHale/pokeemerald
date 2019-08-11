@@ -217,8 +217,8 @@ RustboroCity_Gym_Text_2138B1: @ 82138B1
 	.string "rocks, it also lowers Speed.\p"
 	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a Pokémon.\p"
-	.string "Remember, a TM can be as much as,\n"
-	.string "you like.$"
+	.string "Remember, a TM can be used many\n"
+	.string "times as you like.$"
 
 RustboroCity_Gym_Text_2139A7: @ 82139A7
 	.string "Since you are so strong, you should\n"
