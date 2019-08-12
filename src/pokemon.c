@@ -6216,13 +6216,13 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
     u16 learnedMoves[4];
     u8 numMoves = 0;
     u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
-    u8 level = GetMonData(mon, MON_DATA_LEVEL, 0) +100;
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, 0);
     int i, j, k;
 
     for (i = 0; i < MAX_MON_MOVES; i++)
         learnedMoves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, 0);
 
-    for (i = 0; i < 60; i++)
+    for (i = 0; i < 100; i++)
     {
         u16 moveLevel;
 
@@ -6255,7 +6255,7 @@ u8 GetLevelUpMovesBySpecies(u16 species, u16 *moves)
     u8 numMoves = 0;
     int i;
 
-    for (i = 0; i < 60 && gLevelUpLearnsets[species][i].move != 0xFFFF; i++)
+    for (i = 0; i < 100 && gLevelUpLearnsets[species][i].move != 0xFFFF; i++)
          moves[numMoves++] = gLevelUpLearnsets[species][i].move;
 
      return numMoves;
@@ -6267,7 +6267,7 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
     u16 moves[50];
     u8 numMoves = 0;
     u16 species = GetMonData(mon, MON_DATA_SPECIES2, 0);
-    u8 level = GetMonData(mon, MON_DATA_LEVEL, 0) +100;
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, 0);
     int i, j, k;
 
     if (species == SPECIES_EGG)
@@ -6276,7 +6276,7 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
     for (i = 0; i < MAX_MON_MOVES; i++)
         learnedMoves[i] = GetMonData(mon, MON_DATA_MOVE1 + i, 0);
 
-    for (i = 0; i < 60; i++)
+    for (i = 0; i < 100; i++)
     {
         u16 moveLevel;
 

@@ -11,7 +11,7 @@
     "id": "MAP_CAPE_LILYCOVE",
     "layout": "LAYOUT_CAPE_LILYCOVE",
     "map_type": "MAP_TYPE_ROUTE",
-    "music": "MUS_DAN02",
+    "music": "MUS_DOORO_X4",
     "name": "CapeLilycove",
     "object_events": [
     ],
