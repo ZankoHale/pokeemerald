@@ -275,7 +275,6 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_NAVEL_ROCK]                = {0, 0, 1, 1, sMapName_NavelRock},
     [MAPSEC_NAVEL_ROCK2]               = {0, 0, 1, 1, sMapName_NavelRock},
     [MAPSEC_NEW_MAUVILLE]              = {8, 7, 1, 1, sMapName_NewMauville},
-    [MAPSEC_NONE]                      = {0, 0, 1, 1, sMapName_},
     [MAPSEC_OLDALE_TOWN]               = {4, 9, 1, 1, sMapName_OldaleTown},
     [MAPSEC_ONE_ISLAND]                = {0, 0, 1, 1, sMapName_OneIsland},
     [MAPSEC_OUTCAST_ISLAND]            = {0, 0, 1, 1, sMapName_OutcastIsland},
