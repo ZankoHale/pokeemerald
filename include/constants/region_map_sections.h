@@ -214,9 +214,9 @@
 #define MAPSEC_ALTERING_CAVE_2              0xD2
 #define MAPSEC_NAVEL_ROCK2                  0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
-#define MAPSEC_NONE                         0xD5
-#define MAPSEC_DEWFORD_BEACH                0xD6
-#define MAPSEC_CAPE_LILYCOVE                0xD7
+#define MAPSEC_DEWFORD_BEACH                0xD5
+#define MAPSEC_CAPE_LILYCOVE                0xD6
+#define MAPSEC_NONE                         0xD7
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
