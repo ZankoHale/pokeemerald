@@ -199,7 +199,7 @@ Route120_EventScript_ItemFullHeal:: @ 8290F55
 	end
 
 Route120_EventScript_ItemHyperPotion:: @ 8290F62
-	giveitem_std ITEM_HYPER_POTION, 1, 1
+	giveitem_std ITEM_LIGHT_BALL, 1, 1
 	end
 
 Route120_EventScript_ItemNestBall:: @ 8290F6F
