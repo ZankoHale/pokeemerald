@@ -177,7 +177,7 @@ EventScript_CancelHeadbutt::
 	end
 
 Text_WantToHeadbutt:
-	.string "This tree appears to house Pokémon\n.\n"
+	.string "This tree might contain Pokémon.\n"
 	.string "Would you like to use Headbutt?$"
 
 Text_CantHeadbutt:
