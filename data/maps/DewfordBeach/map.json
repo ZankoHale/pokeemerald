@@ -7,7 +7,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "EventScript_Headbutt",
+            "script": "NULL",
             "type": "sign",
             "x": 37,
             "y": 20
@@ -15,7 +15,7 @@
         {
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-            "script": "EventScript_Headbutt",
+            "script": "NULL",
             "type": "sign",
             "x": 38,
             "y": 20

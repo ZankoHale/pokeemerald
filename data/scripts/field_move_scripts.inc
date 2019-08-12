@@ -124,67 +124,6 @@ Text_CantSmash: @ 829087F
 	.string "It's a rugged rock, but a Pokémon\n"
 	.string "may be able to smash it.$"
 
-
-EventScript_Headbutt::
-	lockall
-	goto_if_unset FLAG_BADGE03_GET, EventScript_CantHeadbutt
-	checkpartymove MOVE_HEADBUTT
-	compare VAR_RESULT, 6
-	goto_if_eq EventScript_CantHeadbutt
-	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick 0, VAR_RESULT
-	buffermovename 1, MOVE_HEADBUTT
-	msgbox Text_WantToHeadbutt, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_eq EventScript_CancelSmash
-	msgbox Text_MonUsedHM, MSGBOX_DEFAULT
-	closemessage
-	dofieldeffect FLDEFF_USE_ROCK_SMASH
-	waitstate
-	goto EventScript_Headbutttree
-	end
-
-EventScript_Headbutttree::
-	applymovement VAR_LAST_TALKED, Movement_SmashRock
-	waitmovement 0
-	removeobject VAR_LAST_TALKED
-	specialvar VAR_RESULT, TryUpdateRusturfTunnelState
-	compare VAR_RESULT, 1
-	goto_if_eq EventScript_EndHead
-	special HeadbuttWildEncounter
-	compare VAR_RESULT, 0
-	goto_if_eq EventScript_EndHead
-	waitstate
-	releaseall
-	end
-
-EventScript_EndHead::
-	releaseall
-	end
-
-Movement_Headbutt:
-	rock_smash_break
-	step_end
-
-EventScript_CantHeadbutt::
-	msgbox Text_CantHeadbutt, MSGBOX_DEFAULT
-	releaseall
-	end
-
-EventScript_CancelHeadbutt::
-	closemessage
-	releaseall
-	end
-
-Text_WantToHeadbutt:
-	.string "This tree appears to house Pokémon\n.\n"
-	.string "Would you like to use Headbutt?$"
-
-Text_CantHeadbutt:
-	.string "It's a special tree, but a Pokémon\n"
-	.string "may be able to headbutt it.$"
-
-
 EventScript_StrengthBoulder:: @ 82908BA
 	lockall
 	goto_if_unset FLAG_BADGE04_GET, EventScript_CantStrength
