@@ -183,6 +183,7 @@ gSpecials:: @ 81DBA64
 	def_special sub_813BA60
 	def_special sub_813BF7C
 	def_special RockSmashWildEncounter
+	def_special HeadbuttWildEncounter
 	def_special GabbyAndTyGetBattleNum
 	def_special GabbyAndTyAfterInterview
 	def_special GabbyAndTyBeforeInterview
