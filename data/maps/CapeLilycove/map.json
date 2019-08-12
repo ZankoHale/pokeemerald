@@ -15,7 +15,7 @@
     "name": "CapeLilycove",
     "object_events": [
     ],
-    "region_map_section": "MAPSEC_ROUTE_123",
+    "region_map_section": "MAPSEC_CAPE_LILYCOVE",
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [
