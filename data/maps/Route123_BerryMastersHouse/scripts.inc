@@ -4,7 +4,7 @@ Route123_BerryMastersHouse_MapScripts:: @ 826F83B
 
 Route123_BerryMastersHouse_OnTransition: @ 826F841
 	setflag FLAG_LANDMARK_BERRY_MASTERS_HOUSE
-	setrespawn HEAL_LOCATION_ROUTE_123
+	setrespawn HEAL_LOCATION_ROUTE123
 	end
 
 Route123_BerryMastersHouse_EventScript_26F845:: @ 826F845

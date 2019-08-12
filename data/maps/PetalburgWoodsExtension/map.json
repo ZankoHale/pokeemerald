@@ -1,0 +1,46 @@
+{
+    "allow_bike": true,
+    "allow_escape_rope": false,
+    "allow_running": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "bg_events": [
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "NULL",
+            "type": "sign",
+            "x": 39,
+            "y": 13
+        },
+        {
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "NULL",
+            "type": "sign",
+            "x": 40,
+            "y": 13
+        }
+    ],
+    "connections": [
+        {
+            "direction": "left",
+            "map": "MAP_PETALBURG_WOODS",
+            "offset": 0
+        }
+    ],
+    "coord_events": [
+    ],
+    "id": "MAP_PETALBURG_WOODS_EXTENSION",
+    "layout": "LAYOUT_PETALBURG_WOODS_EXTENSION",
+    "map_type": "MAP_TYPE_ROUTE",
+    "music": "MUS_DAN01",
+    "name": "PetalburgWoodsExtension",
+    "object_events": [
+    ],
+    "region_map_section": "MAPSEC_PETALBURG_WOODS",
+    "requires_flash": false,
+    "show_map_name": true,
+    "warp_events": [
+    ],
+    "weather": "WEATHER_SHADE"
+}

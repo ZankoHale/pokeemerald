@@ -7146,3 +7146,7 @@ gText_082C877B:: @ 82C877B
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/DewfordBeach/scripts.inc"
+
+	.include "data/maps/PetalburgWoodsExtension/scripts.inc"
+
+	.include "data/maps/CapeLilycove/scripts.inc"

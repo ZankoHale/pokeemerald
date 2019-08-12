@@ -57,7 +57,8 @@
         "Underwater5",
         "Underwater6",
         "Underwater7",
-        "DewfordBeach"
+        "DewfordBeach",
+        "CapeLilycove"
     ],
     "gMapGroup1": [
         "LittlerootTown_BrendansHouse_1F",
@@ -322,7 +323,8 @@
         "TerraCave_Entrance",
         "TerraCave_End",
         "AlteringCave",
-        "MeteorFalls_StevensCave"
+        "MeteorFalls_StevensCave",
+        "PetalburgWoodsExtension"
     ],
     "gMapGroup25": [
         "SecretBase_RedCave1",
