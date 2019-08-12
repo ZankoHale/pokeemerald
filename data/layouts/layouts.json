@@ -4433,7 +4433,7 @@
         {
             "blockdata_filepath": "data/layouts/CapeLilycove/map.bin",
             "border_filepath": "data/layouts/CapeLilycove/border.bin",
-            "height": 40,
+            "height": 60,
             "id": "LAYOUT_CAPE_LILYCOVE",
             "name": "CapeLilycove_Layout",
             "primary_tileset": "gTileset_General",

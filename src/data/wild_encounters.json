@@ -11825,6 +11825,36 @@
                 "species": "SPECIES_NOSEPASS"
               }
             ]
+          },
+          "headbutt_mons": {
+            "encounter_rate": 75,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_PINECO"
+              }
+            ]
           }
         }
       ]
