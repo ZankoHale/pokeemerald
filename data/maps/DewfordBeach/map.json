@@ -82,7 +82,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_TEMP_4",
             "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
             "movement_range_x": 0,
             "movement_range_y": 0,
@@ -95,7 +95,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_TEMP_5",
             "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
             "movement_range_x": 0,
             "movement_range_y": 0,
@@ -108,7 +108,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_TEMP_6",
             "graphics_id": "EVENT_OBJ_GFX_BREAKABLE_ROCK",
             "movement_range_x": 0,
             "movement_range_y": 0,
