@@ -69,7 +69,13 @@
             "y": 23
         }
     ],
-    "connections": null,
+    "connections": [
+        {
+            "direction": "left",
+            "map": "MAP_ROUTE123",
+            "offset": 20
+        }
+    ],
     "coord_events": [
     ],
     "id": "MAP_CAPE_LILYCOVE",
@@ -83,13 +89,6 @@
     "requires_flash": false,
     "show_map_name": true,
     "warp_events": [
-        {
-            "dest_map": "MAP_ROUTE123",
-            "dest_warp_id": 1,
-            "elevation": 0,
-            "x": 18,
-            "y": 13
-        }
     ],
     "weather": "WEATHER_SUNNY"
 }

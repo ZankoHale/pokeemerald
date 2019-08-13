@@ -78,7 +78,7 @@
             "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_PP_UP",
             "item": "ITEM_PP_UP",
             "type": "hidden_item",
-            "x": 139,
+            "x": 138,
             "y": 15
         },
         {
@@ -116,6 +116,11 @@
             "direction": "left",
             "map": "MAP_ROUTE118",
             "offset": 0
+        },
+        {
+            "direction": "right",
+            "map": "MAP_CAPE_LILYCOVE",
+            "offset": -20
         }
     ],
     "coord_events": [
@@ -654,7 +659,7 @@
             "script": "Route123_EventScript_1F620A",
             "trainer_sight_or_berry_tree_id": "7",
             "trainer_type": "1",
-            "x": 138,
+            "x": 131,
             "y": 12
         },
         {
@@ -719,7 +724,7 @@
             "script": "Route123_EventScript_1F6377",
             "trainer_sight_or_berry_tree_id": "1",
             "trainer_type": "1",
-            "x": 138,
+            "x": 131,
             "y": 14
         },
         {
@@ -732,7 +737,7 @@
             "script": "Route123_EventScript_1F6360",
             "trainer_sight_or_berry_tree_id": "1",
             "trainer_type": "1",
-            "x": 138,
+            "x": 131,
             "y": 16
         },
         {
