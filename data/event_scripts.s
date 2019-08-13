@@ -5104,7 +5104,7 @@ LilycoveCity_PokemonCenter_1F_Text_2A9451: @ 82A9451
 	.string "Please, may I have one {POKEBLOCK}?\n"
 	.string "All I'm asking for is one!\p"
 	.string "…Oh, but…\n"
-	.string "Don't you have a {POKEBLOCK} CASE?\l"
+	.string "Don't you have a {POKEBLOCK} Case?\l"
 	.string "That's no good. Next time, then!$"
 
 LilycoveCity_PokemonCenter_1F_Text_2A94E8: @ 82A94E8
@@ -5868,7 +5868,7 @@ LilycoveCity_ContestLobby_Text_2C451B: @ 82C451B
 LilycoveCity_ContestLobby_Text_2C4573: @ 82C4573
 	.string "Hmmm!\p"
 	.string "You don't appear to have gotten\n"
-	.string "the {POKEBLOCK} CASE!\p"
+	.string "the {POKEBLOCK} Case!\p"
 	.string "I shall be here all day!\n"
 	.string "Obtain the {POKEBLOCK} Case and hurry back!$"
 
