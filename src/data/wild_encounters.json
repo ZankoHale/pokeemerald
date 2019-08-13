@@ -11867,17 +11867,27 @@
               {
                 "min_level": 10,
                 "max_level": 20,
-                "species": "SPECIES_NATU"
+                "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_PINSIR"
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_SLAKOTH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_NATU"
               },
               {
                 "min_level": 15,
                 "max_level": 20,
-                "species": "SPECIES_HERACROSS"
+                "species": "SPECIES_PINSIR"
               },
               {
                 "min_level": 15,

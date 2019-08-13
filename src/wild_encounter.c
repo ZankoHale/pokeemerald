@@ -189,6 +189,26 @@ static u8 ChooseWildMonIndex_WaterRock(void)
         return 4;
 }
 
+static u8 ChooseWildMonIndex_Headbutt(void)
+{
+    u8 rand = Random() % 100;
+
+    if (rand < 20)                  // 20% chance
+        return 0;
+    else if (rand >= 20 && rand < 40)    // 20% chance
+        return 1;
+    else if (rand >= 40 && rand < 60)    // 20% chance
+        return 2;
+    else if (rand >= 60 && rand < 70)    // 10% chance
+        return 3;
+    else if (rand >= 70 && rand < 80)    // 10% chance
+        return 4;
+    else if (rand >= 80 && rand < 90)    // 10% chance
+        return 5;
+    else 							    // 10% chance
+        return 6;
+}
+
 enum
 {
     OLD_ROD,
@@ -391,6 +411,7 @@ enum
     WILD_AREA_WATER,
     WILD_AREA_ROCKS,
     WILD_AREA_FISHING,
+	WILD_AREA_HEADBUTT,
 };
 
 #define WILD_CHECK_REPEL    0x1
@@ -419,6 +440,9 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
         break;
     case WILD_AREA_ROCKS:
         wildMonIndex = ChooseWildMonIndex_WaterRock();
+        break;
+    case WILD_AREA_HEADBUTT:
+        wildMonIndex = ChooseWildMonIndex_Headbutt();
         break;
     }
 
@@ -688,23 +712,15 @@ bool8 HeadbuttWildEncounter(void)
 
         if (wildPokemonInfo == NULL)
         {
-            gSpecialVar_Result = FALSE;
-        }
-        else if (DoWildEncounterRateTest(wildPokemonInfo->encounterRate, 1) == TRUE
-         && TryGenerateWildMon(wildPokemonInfo, 2, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
+            return FALSE;
+		}
+        else if (TryGenerateWildMon(gWildMonHeaders[headerId].headbuttMonsInfo, WILD_AREA_HEADBUTT, WILD_CHECK_REPEL | WILD_CHECK_KEEN_EYE) == TRUE)
         {
-            BattleSetup_StartWildBattle();
-            gSpecialVar_Result = TRUE;
-        }
-        else
-        {
-            gSpecialVar_Result = FALSE;
+		BattleSetup_StartWildBattle();
+        return TRUE;
         }
     }
-    else
-    {
-        gSpecialVar_Result = FALSE;
-    }
+	return FALSE;
 }
 
 bool8 SweetScentWildEncounter(void)
