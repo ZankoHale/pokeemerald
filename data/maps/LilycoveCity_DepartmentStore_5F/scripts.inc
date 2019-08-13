@@ -110,6 +110,7 @@ LilycoveCity_DepartmentStore_5F_Pokemart_Posters: @ 8220024
 	.2byte DECOR_LONG_POSTER
 	.2byte DECOR_SEA_POSTER
 	.2byte DECOR_SKY_POSTER
+	.2byte DECOR_KISS_POSTER
 	.2byte DECOR_NONE
 	release
 	end
@@ -126,6 +127,7 @@ LilycoveCity_DepartmentStore_5F_EventScript_22003A:: @ 822003A
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Mats: @ 8220054
+	.2byte DECOR_SOLID_BOARD
 	.2byte DECOR_SURF_MAT
 	.2byte DECOR_THUNDER_MAT
 	.2byte DECOR_FIRE_BLAST_MAT
