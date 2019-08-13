@@ -4,6 +4,7 @@ MauvilleCity_BikeShop_MapScripts:: @ 820EBBB
 MauvilleCity_BikeShop_EventScript_20EBBC:: @ 820EBBC
 	lock
 	faceplayer
+	goto_if_set FLAG_RECEIVED_OTHER_BIKE, MauvilleCity_BikeShop_EventScript_20ECE5
 	goto_if_set FLAG_RECEIVED_BIKE, MauvilleCity_BikeShop_EventScript_20EC94
 	goto_if_set FLAG_DECLINED_BIKE, MauvilleCity_BikeShop_EventScript_20EBF7
 	msgbox MauvilleCity_BikeShop_Text_20EE22, MSGBOX_DEFAULT
@@ -88,17 +89,21 @@ MauvilleCity_BikeShop_EventScript_20ECE5:: @ 820ECE5
 MauvilleCity_BikeShop_EventScript_20ECEF:: @ 820ECEF
 	incrementgamestat 4
 	msgbox MauvilleCity_BikeShop_Text_20F294, MSGBOX_DEFAULT
-	takeitem ITEM_ACRO_BIKE, 1
+	//takeitem ITEM_ACRO_BIKE, 1
 	giveitem_std ITEM_MACH_BIKE
-	goto MauvilleCity_BikeShop_EventScript_20EC87
+	setflag FLAG_RECEIVED_OTHER_BIKE
+//	goto MauvilleCity_BikeShop_EventScript_20EC87
+	goto MauvilleCity_BikeShop_EventScript_20ECE5
 	end
 
 MauvilleCity_BikeShop_EventScript_20ED10:: @ 820ED10
 	incrementgamestat 4
 	msgbox MauvilleCity_BikeShop_Text_20F263, MSGBOX_DEFAULT
 	takeitem ITEM_MACH_BIKE, 1
-	giveitem_std ITEM_ACRO_BIKE
-	goto MauvilleCity_BikeShop_EventScript_20EC87
+	//giveitem_std ITEM_ACRO_BIKE
+	setflag FLAG_RECEIVED_OTHER_BIKE
+//	goto MauvilleCity_BikeShop_EventScript_20EC87
+	goto MauvilleCity_BikeShop_EventScript_20ECE5
 	end
 
 MauvilleCity_BikeShop_EventScript_20ED31:: @ 820ED31
@@ -233,19 +238,17 @@ MauvilleCity_BikeShop_Text_20F1BD: @ 820F1BD
 
 MauvilleCity_BikeShop_Text_20F1FB: @ 820F1FB
 	.string "Rydel: Oh? Were you thinking about\n"
-	.string "switching Bikes?$"
+	.string "having our other Bikes?$"
 
 MauvilleCity_BikeShop_Text_20F22F: @ 820F22F
 	.string "Rydel: Okay, no problem!\n"
-	.string "I'll switch Bikes for you!$"
+	.string "I'll get the other Bike for you!$"
 
 MauvilleCity_BikeShop_Text_20F263: @ 820F263
-	.string "{PLAYER} got the Mach Bike exchanged\n"
-	.string "for an Acro Bike.$"
+	.string "{PLAYER} got Acro Bike.$"
 
 MauvilleCity_BikeShop_Text_20F294: @ 820F294
-	.string "{PLAYER} got the Acro Bike exchanged\n"
-	.string "for a Mach Bike.$"
+	.string "{PLAYER} a Mach Bike.$"
 
 MauvilleCity_BikeShop_Text_20F2C4: @ 820F2C4
 	.string "Rydel: Good, good!\n"
