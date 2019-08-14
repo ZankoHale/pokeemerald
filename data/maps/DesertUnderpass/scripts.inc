@@ -26,6 +26,36 @@ DesertUnderpass_EventScript_23AF68:: @ 823AF68
 	release
 	end
 
+DesertUnderpass_EventScript_23AF68_1:: 
+	giveitem_std ITEM_DOME_FOSSIL
+	removeobject 1
+	release
+	end
+
+DesertUnderpass_EventScript_23AF68_2::
+	giveitem_std ITEM_HELIX_FOSSIL
+	removeobject 1
+	release
+	end
+
+DesertUnderpass_EventScript_23AF68_3::
+	giveitem_std ITEM_OLD_AMBER
+	removeobject 1
+	release
+	end
+
+DesertUnderpass_EventScript_23AF68_4::
+	giveitem_std ITEM_ARMOR_FOSSIL
+	removeobject 1
+	release
+	end
+
+DesertUnderpass_EventScript_23AF68_5::
+	giveitem_std ITEM_SKULL_FOSSIL
+	removeobject 1
+	release
+	end
+
 DesertUnderpass_Text_23AF79:: @ 823AF79
 	.string "{PLAYER} found the Root Fossil.$"
 

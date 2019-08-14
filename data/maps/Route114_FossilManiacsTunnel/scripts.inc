@@ -4,7 +4,8 @@ Route114_FossilManiacsTunnel_MapScripts:: @ 822AF28
 	.byte 0
 
 Route114_FossilManiacsTunnel_OnTransition: @ 822AF33
-	call_if_set FLAG_SYS_GAME_CLEAR, Route114_FossilManiacsTunnel_EventScript_22AF3D
+	compare VAR_RAYQUAZA_STATE, 4
+	call_if_ge Route114_FossilManiacsTunnel_EventScript_22AF3D
 	end
 
 Route114_FossilManiacsTunnel_EventScript_22AF3D:: @ 822AF3D
