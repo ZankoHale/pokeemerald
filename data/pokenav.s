@@ -861,7 +861,7 @@ gUnknown_086217A9:: @ 86217A9
 	.string "Anything. I'll raise it.$"
 
 gUnknown_086217C2:: @ 86217C2
-	.string "I give them {POKEBLOCK}S for$"
+	.string "I give them PokéblockS for$"
 
 gUnknown_086217D9:: @ 86217D9
 	.string "going after Contest titles.$"

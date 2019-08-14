@@ -86,8 +86,8 @@ Text_2A4C56: @ 82A4C56
 	.string "Your Safari Game is over.$"
 
 Text_2A4C90: @ 82A4C90
-	.string "Would you like to place a {POKEBLOCK}\n"
-	.string "on the {POKEBLOCK} Feeder?$"
+	.string "Would you like to place a Pokéblock\n"
+	.string "on the Pokéblock Feeder?$"
 
 Text_2A4CC5: @ 82A4CC5
 	.string "The {STR_VAR_1} you left\n"
@@ -95,7 +95,7 @@ Text_2A4CC5: @ 82A4CC5
 
 Text_2A4CEB: @ 82A4CEB
 	.string "The {STR_VAR_1} was placed\n"
-	.string "on the {POKEBLOCK} Feeder.$"
+	.string "on the Pokéblock Feeder.$"
 
 Route121_SafariZoneEntrance_Text_2A4D12: @ 82A4D12
 	.string "Welcome to the Safari Zone!\p"
@@ -159,11 +159,11 @@ Route121_SafariZoneEntrance_Text_2A50E5: @ 82A50E5
 
 Route121_SafariZoneEntrance_Text_2A5105: @ 82A5105
 	.string "Excuse me!\n"
-	.string "You seem to be without a {POKEBLOCK} Case.\p"
+	.string "You seem to be without a Pokéblock Case.\p"
 	.string "Your Safari Game will be much more\n"
-	.string "fruitful if you use {POKEBLOCK}s.\p"
-	.string "Please come back with a {POKEBLOCK} Case.\p"
-	.string "You may obtain a {POKEBLOCK} Case from\n"
+	.string "fruitful if you use Pokéblocks.\p"
+	.string "Please come back with a Pokéblock Case.\p"
+	.string "You may obtain a Pokéblock Case from\n"
 	.string "the Lilycove Contest Hall.$"
 
 SafariZone_South_Text_2A51D4: @ 82A51D4
@@ -188,7 +188,7 @@ SafariZone_South_Text_2A52AB: @ 82A52AB
 
 SafariZone_South_Text_2A52EF: @ 82A52EF
 	.string "Did you know?\p"
-	.string "If you put a {POKEBLOCK} in that square box,\n"
+	.string "If you put a Pokéblock in that square box,\n"
 	.string "Pokémon gather around.$"
 
 SafariZone_South_Text_2A533B: @ 82A533B
@@ -198,7 +198,7 @@ SafariZone_South_Text_2A533B: @ 82A533B
 	.string "live in the outlying areas.$"
 
 SafariZone_Southwest_Text_2A53B7: @ 82A53B7
-	.string "Sometimes, when I toss a {POKEBLOCK} at \n"
+	.string "Sometimes, when I toss a Pokéblock at \n"
 	.string "Pokémon, it gets ignored.\p"
 	.string "Do Pokémon have likes and dislikes\n"
 	.string "about what they eat?$"
@@ -219,14 +219,14 @@ SafariZone_North_Text_2A54F0: @ 82A54F0
 	.string "here and trade them with my friends!$"
 
 SafariZone_South_Text_2A553E: @ 82A553E
-	.string "I put a {POKEBLOCK} on the {POKEBLOCK} Feeder.\n"
+	.string "I put a Pokéblock on the Pokéblock Feeder.\n"
 	.string "But it seems to have disappeared.\p"
 	.string "I guess Pokémon must have eaten it\n"
 	.string "without me noticing.$"
 
 Route121_SafariZoneEntrance_Text_2A55BB: @ 82A55BB
 	.string "Safari Zone Trainer Tip!\p"
-	.string "Throw {POKEBLOCK}s at wild Pokémon to make\n"
+	.string "Throw Pokéblocks at wild Pokémon to make\n"
 	.string "them less likely to flee.$"
 
 SafariZone_Southwest_Text_2A5613: @ 82A5613
@@ -234,23 +234,23 @@ SafariZone_Southwest_Text_2A5613: @ 82A5613
 	.string "Rest House$"
 
 SafariZone_RestHouse_Text_2A5639: @ 82A5639
-	.string "I don't have any {POKEBLOCK}s, but I caught\n"
+	.string "I don't have any Pokéblocks, but I caught\n"
 	.string "a good number of Pokémon.\p"
 	.string "You can improve your chances of making\n"
 	.string "a catch by getting closer to them\l"
 	.string "before throwing a Safari Ball.$"
 
 SafariZone_RestHouse_Text_2A56E1: @ 82A56E1
-	.string "If you use {POKEBLOCK}s, wild Pokémon won't\n"
+	.string "If you use Pokéblocks, wild Pokémon won't\n"
 	.string "be so quick to run away.\p"
-	.string "It's not much use to give {POKEBLOCK}s to\n"
+	.string "It's not much use to give Pokéblocks to\n"
 	.string "Pokémon that don't flee easily.$"
 
 SafariZone_RestHouse_Text_2A5764: @ 82A5764
-	.string "If you put a {POKEBLOCK} on the Feeder,\n"
+	.string "If you put a Pokéblock on the Feeder,\n"
 	.string "Pokémon are attracted to it.\p"
 	.string "I think Pokémon with the same sort of\n"
-	.string "nature are drawn by a certain {POKEBLOCK}.$"
+	.string "nature are drawn by a certain Pokéblock.$"
 
 SafariZone_South_Text_2A57EE: @ 82A57EE
 	.string "This area is still under construction.\n"

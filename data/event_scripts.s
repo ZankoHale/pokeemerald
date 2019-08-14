@@ -5091,7 +5091,7 @@ LilycoveCity_PokemonCenter_1F_Text_2A93A7: @ 82A93A7
 	.string "I sure do love Contests!$"
 
 LilycoveCity_PokemonCenter_1F_Text_2A93D6: @ 82A93D6
-	.string "Thanks for your {POKEBLOCK} before!$"
+	.string "Thanks for your Pokéblock before!$"
 
 LilycoveCity_PokemonCenter_1F_Text_2A93F4: @ 82A93F4
 	.string "This is my friend {STR_VAR_1}!\n"
@@ -5101,20 +5101,20 @@ LilycoveCity_PokemonCenter_1F_Text_2A93F4: @ 82A93F4
 
 LilycoveCity_PokemonCenter_1F_Text_2A9451: @ 82A9451
 	.string "So, I need your help!\p"
-	.string "Please, may I have one {POKEBLOCK}?\n"
+	.string "Please, may I have one Pokéblock?\n"
 	.string "All I'm asking for is one!\p"
 	.string "…Oh, but…\n"
-	.string "Don't you have a {POKEBLOCK} Case?\l"
+	.string "Don't you have a Pokéblock Case?\l"
 	.string "That's no good. Next time, then!$"
 
 LilycoveCity_PokemonCenter_1F_Text_2A94E8: @ 82A94E8
 	.string "So, I need your help!\p"
-	.string "Please, may I have one {POKEBLOCK}?\n"
+	.string "Please, may I have one Pokéblock?\n"
 	.string "All I'm asking for is one!$"
 
 LilycoveCity_PokemonCenter_1F_Text_2A9537: @ 82A9537
 	.string "Awww!\n"
-	.string "I can't have one {POKEBLOCK}?!$"
+	.string "I can't have one Pokéblock?!$"
 
 LilycoveCity_PokemonCenter_1F_Text_2A9556: @ 82A9556
 	.string "Sheesh!\n"
@@ -5123,7 +5123,7 @@ LilycoveCity_PokemonCenter_1F_Text_2A9556: @ 82A9556
 LilycoveCity_PokemonCenter_1F_Text_2A9571: @ 82A9571
 	.string "Yay!\n"
 	.string "Thank you!\p"
-	.string "I'll feed my Pokémon your {POKEBLOCK}\n"
+	.string "I'll feed my Pokémon your Pokéblock\n"
 	.string "right away.$"
 
 LilycoveCity_PokemonCenter_1F_Text_2A95AD: @ 82A95AD
@@ -5847,7 +5847,7 @@ LilycoveCity_ContestLobby_Text_2C43FA: @ 82C43FA
 	.string "Of course!\n"
 	.string "Of course!\p"
 	.string "Incidentally…\n"
-	.string "You do know how to blend {POKEBLOCK}S\l"
+	.string "You do know how to blend PokéblockS\l"
 	.string "from Berries?$"
 
 LilycoveCity_ContestLobby_Text_2C444C: @ 82C444C
@@ -5868,15 +5868,15 @@ LilycoveCity_ContestLobby_Text_2C451B: @ 82C451B
 LilycoveCity_ContestLobby_Text_2C4573: @ 82C4573
 	.string "Hmmm!\p"
 	.string "You don't appear to have gotten\n"
-	.string "the {POKEBLOCK} Case!\p"
+	.string "the Pokéblock Case!\p"
 	.string "I shall be here all day!\n"
-	.string "Obtain the {POKEBLOCK} Case and hurry back!$"
+	.string "Obtain the Pokéblock Case and hurry back!$"
 
 LilycoveCity_ContestLobby_Text_2C45E8: @ 82C45E8
 	.string "Hmmm!\p"
-	.string "Your {POKEBLOCK} Case appears to be full!\p"
+	.string "Your Pokéblock Case appears to be full!\p"
 	.string "I shall be here all day!\n"
-	.string "Use some {POKEBLOCK}S and hurry back!$"
+	.string "Use some PokéblockS and hurry back!$"
 
 LilycoveCity_ContestLobby_Text_2C464B: @ 82C464B
 	.string "Whoa!\n"
@@ -5890,7 +5890,7 @@ LilycoveCity_ContestLobby_Text_2C4669: @ 82C4669
 
 LilycoveCity_ContestLobby_Text_2C4679: @ 82C4679
 	.string "When I blended with the Master,\n"
-	.string "we made amazing {POKEBLOCK}S!$"
+	.string "we made amazing PokéblockS!$"
 
 LilycoveCity_ContestLobby_Text_2C46B1: @ 82C46B1
 	.string "Eyes that track the arrow with\n"

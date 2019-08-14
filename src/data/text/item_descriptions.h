@@ -733,27 +733,27 @@ static const u8 sIapapaBerryDesc[] = _(
     "may confuse.");
 
 static const u8 sRazzBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow RAZZ.");
 
 static const u8 sBlukBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow BLUK.");
 
 static const u8 sNanabBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow NANAB.");
 
 static const u8 sWepearBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow WEPEAR.");
 
 static const u8 sPinapBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow PINAP.");
 
@@ -788,47 +788,47 @@ static const u8 sTamatoBerryDesc[] = _(
     "base SPEED.");
 
 static const u8 sCornnBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow CORNN.");
 
 static const u8 sMagostBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow MAGOST.");
 
 static const u8 sRabutaBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow RABUTA.");
 
 static const u8 sNomelBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow NOMEL.");
 
 static const u8 sSpelonBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow SPELON.");
 
 static const u8 sPamtreBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow PAMTRE.");
 
 static const u8 sWatmelBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow WATMEL.");
 
 static const u8 sDurinBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow DURIN.");
 
 static const u8 sBelueBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow BELUE.");
 
@@ -868,7 +868,7 @@ static const u8 sStarfBerryDesc[] = _(
     "stat in a pinch.");
 
 static const u8 sEnigmaBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
+    "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
     "to grow a mystery.");
 
@@ -1409,7 +1409,7 @@ static const u8 sAcroBikeDesc[] = _(
 
 static const u8 sPokeblockCaseDesc[] = _(
     "A case for holding\n"
-    "{POKEBLOCK}S made with\n"
+    "PokéblockS made with\n"
     "a Berry Blender.");
 
 static const u8 sLetterDesc[] = _(

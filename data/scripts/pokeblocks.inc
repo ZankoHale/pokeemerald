@@ -13,7 +13,7 @@
 @ 'NoPokeblock' can't blend cause they have no pokeblock case
 
 Text_Pblock1_Ask: @ 8292DEE
-	.string "Oh? Did you want to make some {POKEBLOCK}s\n"
+	.string "Oh? Did you want to make some Pokéblocks\n"
 	.string "with this old-timer?$"
 
 Text_Pblock1_Yes: @ 8292E28
@@ -24,7 +24,7 @@ Text_Pblock1_No: @ 8292E33
 	.string "You've made this old-timer sad…$"
 
 Text_Pblock1_KnowHow: @ 8292E57
-	.string "Do you know how to make a {POKEBLOCK}?$"
+	.string "Do you know how to make a Pokéblock?$"
 
 Text_Pblock1_Start: @ 8292E78
 	.string "Let's get started, then!\p"
@@ -42,13 +42,13 @@ Text_Pblock1_NoBerries: @ 8292F77
 	.string "Oh?\n"
 	.string "You don't have any Berries?\p"
 	.string "If you don't have any Berries,\n"
-	.string "you can't make any {POKEBLOCK}s.$"
+	.string "you can't make any Pokéblocks.$"
 
 LilycoveCity_ContestLobby_Text_292FD1: @ 8292FD1
 	.string "Well, that won't do at all now, will it?\p"
 	.string "If you don't mind leftovers, you can\n"
 	.string "have one of my Berries.\p"
-	.string "That way, we could make some {POKEBLOCK}s\n"
+	.string "That way, we could make some Pokéblocks\n"
 	.string "together using the Berry Blender.$"
 
 LilycoveCity_ContestLobby_Text_29307D: @ 829307D
@@ -58,25 +58,25 @@ LilycoveCity_ContestLobby_Text_29307D: @ 829307D
 	.string "We'll have to do this another time.$"
 
 Text_Pblock1_FullPokeblock: @ 8293101
-	.string "But your {POKEBLOCK} Case is full.\p"
-	.string "You should use some {POKEBLOCK}s before\n"
+	.string "But your Pokéblock Case is full.\p"
+	.string "You should use some Pokéblocks before\n"
 	.string "you come see me again.$"
 
 Text_Pblock1_NoPokeblock: @ 8293157
-	.string "But you don't have a {POKEBLOCK} Case.\p"
-	.string "You should get a {POKEBLOCK} Case and then\n"
+	.string "But you don't have a Pokéblock Case.\p"
+	.string "You should get a Pokéblock Case and then\n"
 	.string "come see me.$"
 
 LilycoveCity_ContestLobby_Text_2931AA: @ 82931AA
 	.string "Let's get blending already!$"
 
 LilycoveCity_ContestLobby_Text_2931C6: @ 82931C6
-	.string "I wonder what kind of {POKEBLOCK} I'll get?\n"
+	.string "I wonder what kind of Pokéblock I'll get?\n"
 	.string "This is so exciting!$"
 
 LilycoveCity_ContestLobby_Text_293201: @ 8293201
 	.string "Hi, there! Did you want to blend some\n"
-	.string "{POKEBLOCK}s with us?$"
+	.string "Pokéblocks with us?$"
 
 LilycoveCity_ContestLobby_Text_293237: @ 8293237
 	.string "Okay!$"
@@ -88,7 +88,7 @@ LilycoveCity_ContestLobby_Text_29323D: @ 829323D
 
 LilycoveCity_ContestLobby_Text_29328C: @ 829328C
 	.string "Of course, you do know how to\n"
-	.string "blend {POKEBLOCK}s, don't you?$"
+	.string "blend Pokéblocks, don't you?$"
 
 LilycoveCity_ContestLobby_Text_2932C3: @ 82932C3
 	.string "Let's get started, then!\p"
@@ -106,26 +106,26 @@ LilycoveCity_ContestLobby_Text_2932F1: @ 82932F1
 LilycoveCity_ContestLobby_Text_293394: @ 8293394
 	.string "Oh, but wait a second here…\n"
 	.string "You don't have any Berries.\p"
-	.string "You can't make any {POKEBLOCK}s without\n"
+	.string "You can't make any Pokéblocks without\n"
 	.string "Berries…\p"
 	.string "We'll always be around whenever you\n"
 	.string "get hold of some Berries to blend.$"
 
 LilycoveCity_ContestLobby_Text_29343E: @ 829343E
 	.string "Oh, but wait a second here…\n"
-	.string "Your {POKEBLOCK} Case is full.\p"
-	.string "You should use some {POKEBLOCK}s and\n"
+	.string "Your Pokéblock Case is full.\p"
+	.string "You should use some Pokéblocks and\n"
 	.string "then come back.$"
 
 LilycoveCity_ContestLobby_Text_2934A2: @ 82934A2
 	.string "Oh, but wait a second here…\n"
-	.string "You don't have a {POKEBLOCK} Case.\p"
-	.string "You should get a {POKEBLOCK} Case and\n"
+	.string "You don't have a Pokéblock Case.\p"
+	.string "You should get a Pokéblock Case and\n"
 	.string "then come back.$"
 
 LilycoveCity_ContestLobby_Text_29350B: @ 829350B
 	.string "Oh, hello! Did you want to make some\n"
-	.string "{POKEBLOCK}s with our little group?$"
+	.string "Pokéblocks with our little group?$"
 
 LilycoveCity_ContestLobby_Text_29354E: @ 829354E
 	.string "Oh, dear!$"
@@ -136,7 +136,7 @@ LilycoveCity_ContestLobby_Text_293558: @ 8293558
 
 LilycoveCity_ContestLobby_Text_29357E: @ 829357E
 	.string "Naturally, you know how to make\n"
-	.string "{POKEBLOCK}s, don't you?$"
+	.string "Pokéblocks, don't you?$"
 
 LilycoveCity_ContestLobby_Text_2935B1: @ 82935B1
 	.string "Okay, dear!\n"
@@ -155,21 +155,21 @@ LilycoveCity_ContestLobby_Text_29367D: @ 829367D
 	.string "You don't have any Berries,\n"
 	.string "do you?\p"
 	.string "If you don't have any Berries,\n"
-	.string "you can't make any {POKEBLOCK}s.\p"
-	.string "We'll always be making {POKEBLOCK}s here,\n"
+	.string "you can't make any Pokéblocks.\p"
+	.string "We'll always be making Pokéblocks here,\n"
 	.string "so let's make some together when\l"
 	.string "you get a Berry or two.$"
 
 LilycoveCity_ContestLobby_Text_293738: @ 8293738
-	.string "Your {POKEBLOCK} Case is full,\n"
+	.string "Your Pokéblock Case is full,\n"
 	.string "it looks like.\p"
-	.string "You should use some {POKEBLOCK}s up\n"
+	.string "You should use some Pokéblocks up\n"
 	.string "and then come back.$"
 
 LilycoveCity_ContestLobby_Text_293792: @ 8293792
-	.string "You haven't gotten a {POKEBLOCK} Case\n"
+	.string "You haven't gotten a Pokéblock Case\n"
 	.string "yet, it looks like.\p"
-	.string "You need to get a {POKEBLOCK} Case before\n"
+	.string "You need to get a Pokéblock Case before\n"
 	.string "you come back.$"
 
 LilycoveCity_ContestLobby_Text_2937F9: @ 82937F9
@@ -182,11 +182,11 @@ LilycoveCity_ContestLobby_Text_293842: @ 8293842
 	.string "Would you like to join us?$"
 
 LilycoveCity_ContestLobby_Text_29388F: @ 829388F
-	.string "I'm going to make delicious {POKEBLOCK}s\n"
+	.string "I'm going to make delicious Pokéblocks\n"
 	.string "and make my Pokémon cuter.$"
 
 Text_PblockLink_Ask: @ 82938CD
-	.string "{POKEBLOCK}s will be made with your friends \n"
+	.string "Pokéblocks will be made with your friends \n"
 	.string "from Berries in the Berry Blender.\p"
 	.string "Is it okay to save the game before\n"
 	.string "linking with your friends?$"
@@ -210,20 +210,20 @@ Text_PblockLink_NoBerries: @ 82939BD
 	.string "The Berry Blender can't be used.$"
 
 Text_PblockLink_FullPokeblock: @ 82939F3
-	.string "Your {POKEBLOCK} Case is full.\n"
+	.string "Your Pokéblock Case is full.\n"
 	.string "The Berry Blender can't be used.$"
 
 Text_PblockLink_NoPokeblock: @ 8293A2D
-	.string "You don't have a {POKEBLOCK} Case.\n"
+	.string "You don't have a Pokéblock Case.\n"
 	.string "The Berry Blender can't be used.$"
 
 Text_Pblock1_Talk_0: @ 8293A6B
-	.string "I love making {POKEBLOCK}s.\p"
+	.string "I love making Pokéblocks.\p"
 	.string "I always have some Berries with me.$"
 
 Text_Pblock1_Talk_1: @ 8293AA5
 	.string "If you'd like, we could make some\n"
-	.string "{POKEBLOCK}s together using the\l"
+	.string "Pokéblocks together using the\l"
 	.string "Berry Blender.$"
 
 LilycoveCity_ContestLobby_Text_293AF0: @ 8293AF0
@@ -234,7 +234,7 @@ LilycoveCity_ContestLobby_Text_293AF0: @ 8293AF0
 	.string "have one of my Berries.$"
 
 LilycoveCity_ContestLobby_Text_293B76: @ 8293B76
-	.string "We'll use it to make {POKEBLOCK}s together\n"
+	.string "We'll use it to make Pokéblocks together\n"
 	.string "using the Berry Blender.$"
 
 LilycoveCity_ContestLobby_Text_293BB4: @ 8293BB4

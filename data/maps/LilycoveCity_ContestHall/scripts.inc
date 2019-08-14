@@ -323,7 +323,7 @@ LilycoveCity_ContestHall_Text_21B7D7: @ 821B7D7
 
 LilycoveCity_ContestHall_Text_21B899: @ 821B899
 	.string "That young man who won earlier had\n"
-	.string "a whole bunch of different {POKEBLOCK}s.\p"
+	.string "a whole bunch of different Pokéblocks.\p"
 	.string "Can you win if you had that many\n"
 	.string "of those things?$"
 

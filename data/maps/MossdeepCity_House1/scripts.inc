@@ -34,9 +34,9 @@ MossdeepCity_House1_Text_22201D: @ 822201D
 
 MossdeepCity_House1_Text_222068: @ 8222068
 	.string "It doesn't appear to like or dislike\n"
-	.string "any {POKEBLOCK}s.$"
+	.string "any Pokéblocks.$"
 
 MossdeepCity_House1_Text_222099: @ 8222099
 	.string "My husband can tell what kind of\n"
-	.string "{POKEBLOCK}s a Pokémon likes at a glance.$"
+	.string "Pokéblocks a Pokémon likes at a glance.$"
 

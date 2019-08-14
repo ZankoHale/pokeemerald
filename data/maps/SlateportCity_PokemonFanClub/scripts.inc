@@ -320,7 +320,7 @@ SlateportCity_PokemonFanClub_Text_20A66E: @ 820A66E
 	.string "You, the Trainer, must put more\n"
 	.string "effort into raising this Pokémon!\p"
 	.string "For instance, may I suggest that\n"
-	.string "you give it more {POKEBLOCK}s?$"
+	.string "you give it more Pokéblocks?$"
 
 SlateportCity_PokemonFanClub_Text_20A719: @ 820A719
 	.string "Oh, my…\p"

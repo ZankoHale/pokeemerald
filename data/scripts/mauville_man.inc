@@ -597,12 +597,12 @@ MauvilleCity_PokemonCenter_1F_Text_28F751:: @ 828F751
 	.string "The Blend-Loving Trainer$"
 
 MauvilleCity_PokemonCenter_1F_Text_28F76A:: @ 828F76A
-	.string "Made {POKEBLOCK}s$"
+	.string "Made Pokéblocks$"
 
 MauvilleCity_PokemonCenter_1F_Text_28F776:: @ 828F776
 	.string "This is a tale of a Trainer\n"
 	.string "named {STR_VAR_3}.\p"
-	.string "This Trainer made {POKEBLOCK}s\n"
+	.string "This Trainer made Pokéblocks\n"
 	.string "{STR_VAR_1} times!\p"
 	.string "There is none better at using a Berry\n"
 	.string "Blender than {STR_VAR_3}!$"

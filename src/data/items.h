@@ -3783,7 +3783,7 @@ const struct Item gItems[] =
 
     [ITEM_POKEBLOCK_CASE] =
     {
-        .name = _("{POKEBLOCK} Case"),
+        .name = _("PokéblockCase"),
         .itemId = ITEM_POKEBLOCK_CASE,
         .price = 0,
         .description = sPokeblockCaseDesc,

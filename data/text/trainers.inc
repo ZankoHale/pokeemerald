@@ -2391,7 +2391,7 @@ Route117_Text_29C73E: @ 829C73E
 
 Route117_Text_29C75A: @ 829C75A
 	.string "Pokémon seem to like different kinds\n"
-	.string "of {POKEBLOCK}s, depending on their nature.$"
+	.string "of Pokéblocks, depending on their nature.$"
 
 Route117_Text_29C7A5: @ 829C7A5
 	.string "I'm in the middle of a triathlon, but,\n"

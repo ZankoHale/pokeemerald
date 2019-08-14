@@ -86,7 +86,7 @@ LilycoveCity_Text_2A72E3: @ 82A72E3
 LilycoveCity_Text_2A7321: @ 82A7321
 	.string "When it gets right down to it…\p"
 	.string "The way dignified simplicity suits me,\n"
-	.string "{POKEBLOCK}S perfectly suit Pokémon.$"
+	.string "PokéblockS perfectly suit Pokémon.$"
 
 Route123_BerryMastersHouse_Text_2A7386: @ 82A7386
 	.string "You may call me the Berry Master.\p"
