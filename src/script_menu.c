@@ -790,6 +790,18 @@ const struct MenuAction MultichoiceList_113[] =
     {gText_Exit, NULL},
 };
 
+const struct MenuAction MultichoiceList_114[] =
+{
+    {gUnknown_085EB2E4, NULL},
+    {gUnknown_085EB2F0, NULL},
+    {gText_Dome_fossil, NULL},
+    {gText_Helix_fossil, NULL},
+    {gText_Old_Amber, NULL},
+    {gText_Skull_fossil, NULL},
+    {gText_Armor_fossil, NULL},
+    {gText_Exit, NULL},
+};
+
 const struct MenuAction MultichoiceList_001[] =
 {
     {gText_Exit, NULL},
@@ -917,6 +929,7 @@ const struct MultichoiceListStruct gMultichoiceLists[] =
     {MultichoiceList_111, ARRAY_COUNT(MultichoiceList_111)},
     {MultichoiceList_112, ARRAY_COUNT(MultichoiceList_112)},
     {MultichoiceList_113, ARRAY_COUNT(MultichoiceList_113)},
+    {MultichoiceList_114, ARRAY_COUNT(MultichoiceList_114)},
 };
 
 const u8 *const gUnknown_0858BAF0[] =

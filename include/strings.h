@@ -2722,5 +2722,10 @@ extern const u8 gText_NumberRegistered[];
 extern const u8 gText_NumberOfBattles[];
 extern const u8 gText_Unknown[];
 extern const u8 gText_TrainerCloseBy[];
+extern const u8 gText_Dome_fossil[];
+extern const u8 gText_Helix_fossil[];
+extern const u8 gText_Old_Amber[];
+extern const u8 gText_Skull_fossil[];
+extern const u8 gText_Armor_fossil[];
 
 #endif // GUARD_STRINGS_H

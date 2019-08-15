@@ -73,6 +73,21 @@ RustboroCity_DevonCorp_2F_EventScript_2118F1:: @ 82118F1
 	checkitem ITEM_CLAW_FOSSIL, 1
 	compare VAR_RESULT, 1
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211991
+	checkitem ITEM_HELIX_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211991_H
+	checkitem ITEM_DOME_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211991_D
+	checkitem ITEM_OLD_AMBER, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211991_OA
+	checkitem ITEM_SKULL_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211991_S
+	checkitem ITEM_ARMOR_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211991_A
 	release
 	end
 
@@ -88,6 +103,7 @@ RustboroCity_DevonCorp_2F_EventScript_211933:: @ 8211933
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
 	checkitem ITEM_CLAW_FOSSIL, 1
 	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
 	goto RustboroCity_DevonCorp_2F_EventScript_211974
 	end
@@ -117,6 +133,86 @@ RustboroCity_DevonCorp_2F_EventScript_211991:: @ 8211991
 	goto RustboroCity_DevonCorp_2F_EventScript_2119D2
 	end
 
+RustboroCity_DevonCorp_2F_EventScript_211991_D::
+	closemessage
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	msgbox RustboroCity_DevonCorp_2F_Text_211FA6, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
+	checkitem ITEM_DOME_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
+	goto RustboroCity_DevonCorp_2F_EventScript_2119D2_D
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211991_H::
+	closemessage
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	msgbox RustboroCity_DevonCorp_2F_Text_211FA6, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
+	checkitem ITEM_HELIX_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
+	goto RustboroCity_DevonCorp_2F_EventScript_2119D2_H
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211991_OA::
+	closemessage
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	msgbox RustboroCity_DevonCorp_2F_Text_211FA6, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
+	checkitem ITEM_OLD_AMBER, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
+	goto RustboroCity_DevonCorp_2F_EventScript_2119D2_OA
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211991_S::
+	closemessage
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	msgbox RustboroCity_DevonCorp_2F_Text_211FA6, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
+	checkitem ITEM_SKULL_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
+	goto RustboroCity_DevonCorp_2F_EventScript_2119D2_S
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211991_A::
+	closemessage
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	msgbox RustboroCity_DevonCorp_2F_Text_211FA6, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
+	checkitem ITEM_ARMOR_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
+	goto RustboroCity_DevonCorp_2F_EventScript_2119D2_A
+	end
+
 RustboroCity_DevonCorp_2F_EventScript_2119D2:: @ 82119D2
 	bufferitemname 0, ITEM_CLAW_FOSSIL
 	msgbox RustboroCity_DevonCorp_2F_Text_212153, MSGBOX_DEFAULT
@@ -126,8 +222,58 @@ RustboroCity_DevonCorp_2F_EventScript_2119D2:: @ 82119D2
 	release
 	end
 
+RustboroCity_DevonCorp_2F_EventScript_2119D2_D::
+	bufferitemname 0, ITEM_DOME_FOSSIL
+	msgbox RustboroCity_DevonCorp_2F_Text_212153, MSGBOX_DEFAULT
+	takeitem ITEM_DOME_FOSSIL, 1
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 1
+	setvar VAR_WHICH_FOSSIL_REVIVED, 3
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_2119D2_H::
+	bufferitemname 0, ITEM_HELIX_FOSSIL
+	msgbox RustboroCity_DevonCorp_2F_Text_212153, MSGBOX_DEFAULT
+	takeitem ITEM_HELIX_FOSSIL, 1
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 1
+	setvar VAR_WHICH_FOSSIL_REVIVED, 4
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_2119D2_OA::
+	bufferitemname 0, ITEM_OLD_AMBER
+	msgbox RustboroCity_DevonCorp_2F_Text_212153, MSGBOX_DEFAULT
+	takeitem ITEM_OLD_AMBER, 1
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 1
+	setvar VAR_WHICH_FOSSIL_REVIVED, 5
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_2119D2_A::
+	bufferitemname 0, ITEM_ARMOR_FOSSIL
+	msgbox RustboroCity_DevonCorp_2F_Text_212153, MSGBOX_DEFAULT
+	takeitem ITEM_ARMOR_FOSSIL, 1
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 1
+	setvar VAR_WHICH_FOSSIL_REVIVED, 6
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_2119D2_S::
+	bufferitemname 0, ITEM_SKULL_FOSSIL
+	msgbox RustboroCity_DevonCorp_2F_Text_212153, MSGBOX_DEFAULT
+	takeitem ITEM_SKULL_FOSSIL, 1
+	setvar VAR_FOSSIL_RESURRECTION_STATE, 1
+	setvar VAR_WHICH_FOSSIL_REVIVED, 7
+	release
+	end
+
 RustboroCity_DevonCorp_2F_EventScript_2119EF:: @ 82119EF
 	msgbox RustboroCity_DevonCorp_2F_Text_212046, MSGBOX_DEFAULT
+	release
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_no::
+	msgbox RustboroCity_DevonCorp_2F_Text_no, MSGBOX_DEFAULT
 	release
 	end
 
@@ -141,6 +287,16 @@ RustboroCity_DevonCorp_2F_EventScript_211A03:: @ 8211A03
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A1A
 	compare VAR_WHICH_FOSSIL_REVIVED, 2
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C
+	compare VAR_WHICH_FOSSIL_REVIVED, 3
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_D
+	compare VAR_WHICH_FOSSIL_REVIVED, 4
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_H
+	compare VAR_WHICH_FOSSIL_REVIVED, 5
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_OA
+	compare VAR_WHICH_FOSSIL_REVIVED, 6
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_A
+	compare VAR_WHICH_FOSSIL_REVIVED, 7
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_S
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_211A1A:: @ 8211A1A
@@ -153,6 +309,36 @@ RustboroCity_DevonCorp_2F_EventScript_211A2C:: @ 8211A2C
 	bufferspeciesname 1, SPECIES_ANORITH
 	msgbox RustboroCity_DevonCorp_2F_Text_212251, MSGBOX_DEFAULT
 	goto RustboroCity_DevonCorp_2F_EventScript_211AE1
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211A2C_D::
+	bufferspeciesname 1, SPECIES_KABUTO
+	msgbox RustboroCity_DevonCorp_2F_Text_212251, MSGBOX_DEFAULT
+	goto RustboroCity_DevonCorp_2F_EventScript_211AE1_D
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211A2C_H::
+	bufferspeciesname 1, SPECIES_OMANYTE
+	msgbox RustboroCity_DevonCorp_2F_Text_212251, MSGBOX_DEFAULT
+	goto RustboroCity_DevonCorp_2F_EventScript_211AE1_H
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211A2C_OA::
+	bufferspeciesname 1, SPECIES_AERODACTYL
+	msgbox RustboroCity_DevonCorp_2F_Text_212251, MSGBOX_DEFAULT
+	goto RustboroCity_DevonCorp_2F_EventScript_211AE1_OA
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211A2C_S::
+	bufferspeciesname 1, SPECIES_CRANIDOS
+	msgbox RustboroCity_DevonCorp_2F_Text_212251, MSGBOX_DEFAULT
+	goto RustboroCity_DevonCorp_2F_EventScript_211AE1_S
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211A2C_A::
+	bufferspeciesname 1, SPECIES_SHIELDON
+	msgbox RustboroCity_DevonCorp_2F_Text_212251, MSGBOX_DEFAULT
+	goto RustboroCity_DevonCorp_2F_EventScript_211AE1_A
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_211A3E:: @ 8211A3E
@@ -214,6 +400,56 @@ RustboroCity_DevonCorp_2F_EventScript_211AE1:: @ 8211AE1
 	goto RustboroCity_DevonCorp_2F_EventScript_273811
 	end
 
+RustboroCity_DevonCorp_2F_EventScript_211AE1_D::
+	setvar VAR_TEMP_1, SPECIES_KABUTO
+	givemon SPECIES_KABUTO, 20, ITEM_NONE, 0x0, 0x0, 0
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_D
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B39_D
+	goto RustboroCity_DevonCorp_2F_EventScript_273811
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211AE1_H::
+	setvar VAR_TEMP_1, SPECIES_OMANYTE
+	givemon SPECIES_OMANYTE, 20, ITEM_NONE, 0x0, 0x0, 0
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_H
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B39_H
+	goto RustboroCity_DevonCorp_2F_EventScript_273811
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211AE1_OA::
+	setvar VAR_TEMP_1, SPECIES_AERODACTYL
+	givemon SPECIES_AERODACTYL, 20, ITEM_NONE, 0x0, 0x0, 0
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_OA
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B39_OA
+	goto RustboroCity_DevonCorp_2F_EventScript_273811
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211AE1_S::
+	setvar VAR_TEMP_1, SPECIES_CRANIDOS
+	givemon SPECIES_CRANIDOS, 20, ITEM_NONE, 0x0, 0x0, 0
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_S
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B39_S
+	goto RustboroCity_DevonCorp_2F_EventScript_273811
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211AE1_A::
+	setvar VAR_TEMP_1, SPECIES_SHIELDON
+	givemon SPECIES_SHIELDON, 20, ITEM_NONE, 0x0, 0x0, 0
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_A
+	compare VAR_RESULT, 1
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B39_A
+	goto RustboroCity_DevonCorp_2F_EventScript_273811
+	end
+
 RustboroCity_DevonCorp_2F_EventScript_211B11:: @ 8211B11
 	call RustboroCity_DevonCorp_2F_EventScript_211B67
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
@@ -226,6 +462,101 @@ RustboroCity_DevonCorp_2F_EventScript_211B11:: @ 8211B11
 
 RustboroCity_DevonCorp_2F_EventScript_211B39:: @ 8211B39
 	call RustboroCity_DevonCorp_2F_EventScript_211B67
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B5C
+	call RustboroCity_DevonCorp_2F_EventScript_273797
+	goto RustboroCity_DevonCorp_2F_EventScript_211B5C
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B11_D::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_D
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B7A
+	call RustboroCity_DevonCorp_2F_EventScript_27378B
+	call Common_EventScript_NameReceivedPokemon
+	goto RustboroCity_DevonCorp_2F_EventScript_211B7A
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B39_D::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_D
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B5C
+	call RustboroCity_DevonCorp_2F_EventScript_273797
+	goto RustboroCity_DevonCorp_2F_EventScript_211B5C
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B11_H::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_H
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B7A
+	call RustboroCity_DevonCorp_2F_EventScript_27378B
+	call Common_EventScript_NameReceivedPokemon
+	goto RustboroCity_DevonCorp_2F_EventScript_211B7A
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B39_H::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_H
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B5C
+	call RustboroCity_DevonCorp_2F_EventScript_273797
+	goto RustboroCity_DevonCorp_2F_EventScript_211B5C
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B11_OA::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_OA
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B7A
+	call RustboroCity_DevonCorp_2F_EventScript_27378B
+	call Common_EventScript_NameReceivedPokemon
+	goto RustboroCity_DevonCorp_2F_EventScript_211B7A
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B39_OA::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_OA
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B5C
+	call RustboroCity_DevonCorp_2F_EventScript_273797
+	goto RustboroCity_DevonCorp_2F_EventScript_211B5C
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B11_A::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_A
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B7A
+	call RustboroCity_DevonCorp_2F_EventScript_27378B
+	call Common_EventScript_NameReceivedPokemon
+	goto RustboroCity_DevonCorp_2F_EventScript_211B7A
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B39_A::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_A
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B5C
+	call RustboroCity_DevonCorp_2F_EventScript_273797
+	goto RustboroCity_DevonCorp_2F_EventScript_211B5C
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B11_S::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_S
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B7A
+	call RustboroCity_DevonCorp_2F_EventScript_27378B
+	call Common_EventScript_NameReceivedPokemon
+	goto RustboroCity_DevonCorp_2F_EventScript_211B7A
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211B39_S::
+	call RustboroCity_DevonCorp_2F_EventScript_211B67_S
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B5C
@@ -247,6 +578,51 @@ RustboroCity_DevonCorp_2F_EventScript_211B67:: @ 8211B67
 	bufferspeciesname 0, SPECIES_ANORITH
 	return
 
+RustboroCity_DevonCorp_2F_EventScript_211B67_D::
+	bufferspeciesname 1, SPECIES_KABUTO
+	playfanfare MUS_FANFA4
+	message RustboroCity_DevonCorp_2F_Text_2122CB
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_KABUTO
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_211B67_H::
+	bufferspeciesname 1, SPECIES_OMANYTE
+	playfanfare MUS_FANFA4
+	message RustboroCity_DevonCorp_2F_Text_2122CB
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_OMANYTE
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_211B67_OA::
+	bufferspeciesname 1, SPECIES_AERODACTYL
+	playfanfare MUS_FANFA4
+	message RustboroCity_DevonCorp_2F_Text_2122CB
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_AERODACTYL
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_211B67_A::
+	bufferspeciesname 1, SPECIES_SHIELDON
+	playfanfare MUS_FANFA4
+	message RustboroCity_DevonCorp_2F_Text_2122CB
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_SHIELDON
+	return
+
+RustboroCity_DevonCorp_2F_EventScript_211B67_S::
+	bufferspeciesname 1, SPECIES_CRANIDOS
+	playfanfare MUS_FANFA4
+	message RustboroCity_DevonCorp_2F_Text_2122CB
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_CRANIDOS
+	return
+
 RustboroCity_DevonCorp_2F_EventScript_211B7A:: @ 8211B7A
 	setvar VAR_FOSSIL_RESURRECTION_STATE, 0
 	setflag FLAG_RECEIVED_REVIVED_FOSSIL_MON
@@ -256,20 +632,66 @@ RustboroCity_DevonCorp_2F_EventScript_211B7A:: @ 8211B7A
 RustboroCity_DevonCorp_2F_EventScript_211B84:: @ 8211B84
 	message RustboroCity_DevonCorp_2F_Text_212092
 	waitmessage
-	multichoice 17, 6, 93, 0
+	multichoice 0, 0, 114, 0
 	switch VAR_RESULT
 	case 0, RustboroCity_DevonCorp_2F_EventScript_211BC1
 	case 1, RustboroCity_DevonCorp_2F_EventScript_211BC7
-	case 2, RustboroCity_DevonCorp_2F_EventScript_211BCD
+	case 2, RustboroCity_DevonCorp_2F_EventScript_211BC7_D
+	case 3, RustboroCity_DevonCorp_2F_EventScript_211BC7_H
+	case 4, RustboroCity_DevonCorp_2F_EventScript_211BC7_OA
+	case 5, RustboroCity_DevonCorp_2F_EventScript_211BC7_A
+	case 6, RustboroCity_DevonCorp_2F_EventScript_211BC7_S
+	case 7, RustboroCity_DevonCorp_2F_EventScript_211BCD
 	case 127, RustboroCity_DevonCorp_2F_EventScript_211BCD
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_211BC1:: @ 8211BC1
+	checkitem ITEM_CLAW_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
 	goto RustboroCity_DevonCorp_2F_EventScript_2119D2
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_211BC7:: @ 8211BC7
-	goto RustboroCity_DevonCorp_2F_EventScript_211974
+	checkitem ITEM_ROOT_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211974
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211BC7_D::
+	checkitem ITEM_DOME_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119D2_D
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211BC7_H::
+	checkitem ITEM_HELIX_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119D2_H
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211BC7_OA::
+	checkitem ITEM_OLD_AMBER, 1
+	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119D2_OA
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211BC7_S::
+	checkitem ITEM_SKULL_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119D2_S
+	end
+
+RustboroCity_DevonCorp_2F_EventScript_211BC7_A::
+	checkitem ITEM_ARMOR_FOSSIL, 1
+	compare VAR_RESULT, 1
+	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119D2_A
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_211BCD:: @ 8211BCD
@@ -352,6 +774,9 @@ RustboroCity_DevonCorp_2F_Text_212046: @ 8212046
 	.string "Oh, is that so?\p"
 	.string "Devon's technological expertise\n"
 	.string "is outstanding, I tell you.$"
+
+RustboroCity_DevonCorp_2F_Text_no: @ 8212046
+	.string "Oh, you don't have that fossil.$"
 
 RustboroCity_DevonCorp_2F_Text_212092: @ 8212092
 	.string "Oh, now that's a surprise!\n"

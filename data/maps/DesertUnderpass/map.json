@@ -29,7 +29,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_DOME_FOSSIL",
             "graphics_id": "EVENT_OBJ_GFX_FOSSIL",
             "movement_range_x": 1,
             "movement_range_y": 1,
@@ -42,7 +42,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_OLD_AMBER",
             "graphics_id": "EVENT_OBJ_GFX_FOSSIL",
             "movement_range_x": 1,
             "movement_range_y": 1,
@@ -55,7 +55,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_HELIX_FOSSIL",
             "graphics_id": "EVENT_OBJ_GFX_FOSSIL",
             "movement_range_x": 1,
             "movement_range_y": 1,
@@ -68,7 +68,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_SKULL_FOSSIL",
             "graphics_id": "EVENT_OBJ_GFX_FOSSIL",
             "movement_range_x": 1,
             "movement_range_y": 1,
@@ -81,7 +81,7 @@
         },
         {
             "elevation": 3,
-            "flag": "0",
+            "flag": "FLAG_ARMOR_FOSSIL",
             "graphics_id": "EVENT_OBJ_GFX_FOSSIL",
             "movement_range_x": 1,
             "movement_range_y": 1,
