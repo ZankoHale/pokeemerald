@@ -343,7 +343,7 @@ RustboroCity_DevonCorp_2F_EventScript_211A2C_A::
 
 RustboroCity_DevonCorp_2F_EventScript_211A3E:: @ 8211A3E
 	setvar VAR_TEMP_1, SPECIES_LILEEP
-	givemon SPECIES_LILEEP, 20, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_LILEEP, 15, ITEM_NONE, 0x0, 0x0, 0
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A6E
 	compare VAR_RESULT, 1
@@ -392,7 +392,7 @@ RustboroCity_DevonCorp_2F_EventScript_211AD7:: @ 8211AD7
 
 RustboroCity_DevonCorp_2F_EventScript_211AE1:: @ 8211AE1
 	setvar VAR_TEMP_1, SPECIES_ANORITH
-	givemon SPECIES_ANORITH, 20, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_ANORITH, 15, ITEM_NONE, 0x0, 0x0, 0
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11
 	compare VAR_RESULT, 1
@@ -402,7 +402,7 @@ RustboroCity_DevonCorp_2F_EventScript_211AE1:: @ 8211AE1
 
 RustboroCity_DevonCorp_2F_EventScript_211AE1_D::
 	setvar VAR_TEMP_1, SPECIES_KABUTO
-	givemon SPECIES_KABUTO, 20, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_KABUTO, 15, ITEM_NONE, 0x0, 0x0, 0
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_D
 	compare VAR_RESULT, 1
@@ -412,7 +412,7 @@ RustboroCity_DevonCorp_2F_EventScript_211AE1_D::
 
 RustboroCity_DevonCorp_2F_EventScript_211AE1_H::
 	setvar VAR_TEMP_1, SPECIES_OMANYTE
-	givemon SPECIES_OMANYTE, 20, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_OMANYTE, 15, ITEM_NONE, 0x0, 0x0, 0
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_H
 	compare VAR_RESULT, 1
@@ -422,7 +422,7 @@ RustboroCity_DevonCorp_2F_EventScript_211AE1_H::
 
 RustboroCity_DevonCorp_2F_EventScript_211AE1_OA::
 	setvar VAR_TEMP_1, SPECIES_AERODACTYL
-	givemon SPECIES_AERODACTYL, 20, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_AERODACTYL, 15, ITEM_NONE, 0x0, 0x0, 0
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_OA
 	compare VAR_RESULT, 1
@@ -432,7 +432,7 @@ RustboroCity_DevonCorp_2F_EventScript_211AE1_OA::
 
 RustboroCity_DevonCorp_2F_EventScript_211AE1_S::
 	setvar VAR_TEMP_1, SPECIES_CRANIDOS
-	givemon SPECIES_CRANIDOS, 20, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_CRANIDOS, 15, ITEM_NONE, 0x0, 0x0, 0
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_S
 	compare VAR_RESULT, 1
@@ -442,7 +442,7 @@ RustboroCity_DevonCorp_2F_EventScript_211AE1_S::
 
 RustboroCity_DevonCorp_2F_EventScript_211AE1_A::
 	setvar VAR_TEMP_1, SPECIES_SHIELDON
-	givemon SPECIES_SHIELDON, 20, ITEM_NONE, 0x0, 0x0, 0
+	givemon SPECIES_SHIELDON, 15, ITEM_NONE, 0x0, 0x0, 0
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B11_A
 	compare VAR_RESULT, 1

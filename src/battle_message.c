@@ -54,7 +54,7 @@ EWRAM_DATA struct BattleMsgData *gBattleMsgDataPtr = NULL;
 // todo: make some of those names less vague: attacker/target vs pkmn, etc.
 
 static const u8 sText_Trainer1LoseText[] = _("{B_TRAINER1_LOSE_TEXT}");
-static const u8 sText_PkmnGainedEXP[] = _("{B_BUFF1} gained{B_BUFF2}\n{B_BUFF3} EXP. Points!\p");
+static const u8 sText_PkmnGainedEXP[] = _("{B_BUFF1} gained{B_BUFF2}\n{B_BUFF3} Exp. Points!\p");
 static const u8 sText_EmptyString4[] = _("");
 static const u8 sText_ABoosted[] = _(" a boosted");
 static const u8 sText_PkmnGrewToLv[] = _("{B_BUFF1} grew to\nLV. {B_BUFF2}!{UNKNOWN_A}\p");
@@ -69,7 +69,7 @@ static const u8 sText_UseNextPkmn[] = _("Use next Pokémon?");
 static const u8 sText_AttackMissed[] = _("{B_ATK_NAME_WITH_PREFIX}'s\nattack missed!");
 static const u8 sText_PkmnProtectedItself[] = _("{B_DEF_NAME_WITH_PREFIX}\nprotected itself!");
 static const u8 sText_AvoidedDamage[] = _("{B_DEF_NAME_WITH_PREFIX} avoided\ndamage with {B_DEF_ABILITY}!");
-static const u8 sText_PkmnMakesGroundMiss[] = _("{B_DEF_NAME_WITH_PREFIX} makes GROUND\nmoves miss with {B_DEF_ABILITY}!");
+static const u8 sText_PkmnMakesGroundMiss[] = _("{B_DEF_NAME_WITH_PREFIX} makes Ground\nmoves miss with {B_DEF_ABILITY}!");
 static const u8 sText_PkmnAvoidedAttack[] = _("{B_DEF_NAME_WITH_PREFIX} avoided\nthe attack!");
 static const u8 sText_ItDoesntAffect[] = _("It doesn't affect\n{B_DEF_NAME_WITH_PREFIX}…");
 static const u8 sText_AttackerFainted[] = _("{B_ATK_NAME_WITH_PREFIX}\nfainted!\p");
@@ -200,13 +200,13 @@ static const u8 sText_PkmnFellIntoNightmare[] = _("{B_DEF_NAME_WITH_PREFIX} fell
 static const u8 sText_PkmnLockedInNightmare[] = _("{B_ATK_NAME_WITH_PREFIX} is locked\nin a Nightmare!");
 static const u8 sText_PkmnLaidCurse[] = _("{B_ATK_NAME_WITH_PREFIX} cut its own HP and\nlaid a Curse on {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnAfflictedByCurse[] = _("{B_ATK_NAME_WITH_PREFIX} is afflicted\nby the Curse!");
-static const u8 sText_SpikesScattered[] = _("SPIKES were scattered all around\nthe opponent's side!");
+static const u8 sText_SpikesScattered[] = _("Spikes were scattered all around\nthe opponent's side!");
 static const u8 sText_PkmnHurtBySpikes[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is hurt\nby Spikes!");
 static const u8 sText_PkmnIdentified[] = _("{B_ATK_NAME_WITH_PREFIX} identified\n{B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnPerishCountFell[] = _("{B_ATK_NAME_WITH_PREFIX}'s PERISH count\nfell to {B_BUFF1}!");
 static const u8 sText_PkmnBracedItself[] = _("{B_ATK_NAME_WITH_PREFIX} braced\nitself!");
 static const u8 sText_PkmnEnduredHit[] = _("{B_DEF_NAME_WITH_PREFIX} ENDURED\nthe hit!");
-static const u8 sText_MagnitudeStrength[] = _("MAGNITUDE {B_BUFF1}!");
+static const u8 sText_MagnitudeStrength[] = _("Magnitude {B_BUFF1}!");
 static const u8 sText_PkmnCutHPMaxedAttack[] = _("{B_ATK_NAME_WITH_PREFIX} cut its own HP\nand maximized Attack!");
 static const u8 sText_PkmnCopiedStatChanges[] = _("{B_ATK_NAME_WITH_PREFIX} copied\n{B_DEF_NAME_WITH_PREFIX}'s stat changes!");
 static const u8 sText_PkmnGotFree[] = _("{B_ATK_NAME_WITH_PREFIX} got free of\n{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}!");
@@ -1533,10 +1533,10 @@ const u8 gText_BattleSwitchWhich4[] = _("{ESCAPE 4}");
 const u8 gText_BattleSwitchWhich5[] = _("-");
 
 const u8 sText_HP[] = _("HP");
-const u8 gText_Attack[] = _("ATTACK");
-const u8 gText_Defense[] = _("DEFENSE");
-const u8 gText_SpAtk[] = _("SP. ATK");
-const u8 gText_SpDef[] = _("SP. DEF");
+const u8 gText_Attack[] = _("Attack");
+const u8 gText_Defense[] = _("Defense");
+const u8 gText_SpAtk[] = _("Sp. Atk");
+const u8 gText_SpDef[] = _("Sp. Def");
 
 const u8 * const gStatNamesTable2[] =
 {
@@ -1544,7 +1544,7 @@ const u8 * const gStatNamesTable2[] =
     gText_SpDef, gText_Defense, gText_Speed
 };
 
-const u8 gText_SafariBalls[] = _("{HIGHLIGHT DARK_GREY}SAFARI BALLS");
+const u8 gText_SafariBalls[] = _("{HIGHLIGHT DARK_GREY}Safari Balls");
 const u8 gText_SafariBallLeft[] = _("{HIGHLIGHT DARK_GREY}Left: $" "{HIGHLIGHT DARK_GREY}");
 const u8 gText_Sleep[] = _("sleep");
 const u8 gText_Poison[] = _("poison");
@@ -1560,8 +1560,8 @@ const u8 gText_ScrollTextUp[] = _("\l");
 const u8 gText_NewLine[] = _("\n");
 const u8 gText_Are[] = _("are");
 const u8 gText_Are2[] = _("are");
-const u8 gText_BadEgg[] = _("Bad EGG");
-const u8 gText_BattleWallyName[] = _("WALLY");
+const u8 gText_BadEgg[] = _("Bad Egg");
+const u8 gText_BattleWallyName[] = _("Wally");
 const u8 gText_Win[] = _("{HIGHLIGHT TRANSPARENT}Win");
 const u8 gText_Loss[] = _("{HIGHLIGHT TRANSPARENT}Loss");
 const u8 gText_Draw[] = _("{HIGHLIGHT TRANSPARENT}Draw");
@@ -1570,25 +1570,25 @@ static const u8 sText_ApostropheS[] = _("'s");
 
 static const u8 sATypeMove_Table[][17] =
 {
-    _("a NORMAL move"),
-    _("a FIGHTING move"),
-    _("a FLYING move"),
-    _("a POISON move"),
-    _("a GROUND move"),
-    _("a ROCK move"),
-    _("a BUG move"),
-    _("a GHOST move"),
-    _("a STEEL move"),
+    _("a Normal move"),
+    _("a Fighting move"),
+    _("a Flying move"),
+    _("a Poison move"),
+    _("a Ground move"),
+    _("a Rock move"),
+    _("a Bug move"),
+    _("a Ghost move"),
+    _("a Steel move"),
     _("a ??? move"),
-    _("a FIRE move"),
-    _("a WATER move"),
-    _("a GRASS move"),
-    _("an ELECTRIC move"),
-    _("a PSYCHIC move"),
-    _("an ICE move"),
-    _("a DRAGON move"),
-    _("a DARK move"),
-    _("a FAIRY move"),
+    _("a Fire move"),
+    _("a Water move"),
+    _("a Grass move"),
+    _("an Electric move"),
+    _("a Psychic move"),
+    _("an Ice move"),
+    _("a Dragon move"),
+    _("a Dark move"),
+    _("a Fairy move"),
 };
 
 const u8 gText_BattleTourney[] = _("BATTLE TOURNEY");

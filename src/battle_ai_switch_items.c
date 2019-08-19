@@ -230,6 +230,8 @@ static bool8 ShouldSwitchIfNaturalCure(void)
         return FALSE;
     if (gBattleMons[gActiveBattler].ability != ABILITY_NATURAL_CURE)
         return FALSE;
+    if (gBattleMons[gActiveBattler].ability != ABILITY_FOREST_GUARD)
+        return FALSE;
     if (gBattleMons[gActiveBattler].hp < gBattleMons[gActiveBattler].maxHP / 2)
         return FALSE;
 

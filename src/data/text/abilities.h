@@ -220,6 +220,12 @@ static const u8 sPsychicSurgeDescription[] = _("Field becomes weird.");
 static const u8 sMistySurgeDescription[] = _("Field becomes misty.");
 static const u8 sGrassySurgeDescription[] = _("Field becomes grassy.");
 static const u8 sFullMetalBodyDescription[] = _("Prevents stat reduction.");
+static const u8 sSeaGuardDescription[] = _("The Sea's Guardian.");
+static const u8 sSkyGuardDescription[] = _("The Sky's Guardian.");
+static const u8 sForestGuardDescription[] = _("The Forest's Guardian.");
+static const u8 sNightKingDescription[] = _("Boosts Psychic moves.");
+static const u8 sMysticDescription[] = _("Not hit by Ground attacks.");
+static const u8 sSpiritPowerDescription[] = _("Boosts Sp. Atk.");
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN7][ABILITY_NAME_LENGTH + 1] =
 {
@@ -457,6 +463,12 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN7][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_FULL_METAL_BODY] = _("FullMetalBod"),
     [ABILITY_SHADOW_SHIELD] = _("ShadowShield"),
     [ABILITY_PRISM_ARMOR] = _("Prism Armor"),
+    [ABILITY_SEA_GUARD] = _("Sea Guardian"),
+    [ABILITY_SKY_GUARD] = _("Sky Guardian"),
+    [ABILITY_FOREST_GUARD] = _("ForestGuard."),
+    [ABILITY_NIGHT_KING] = _("Night King"),
+    [ABILITY_MYSTIC] = _("Mystic"),
+    [ABILITY_SPIRIT_POWER] = _("Spirit Power"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN7] =
@@ -695,4 +707,10 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN7] =
     [ABILITY_FULL_METAL_BODY] = sFullMetalBodyDescription,
     [ABILITY_SHADOW_SHIELD] = sMultiscaleDescription,
     [ABILITY_PRISM_ARMOR] = sFilterDescription,
+    [ABILITY_SEA_GUARD] = sSkyGuardDescription,
+    [ABILITY_SKY_GUARD] = sSeaGuardDescription,
+    [ABILITY_FOREST_GUARD] = sForestGuardDescription,
+    [ABILITY_NIGHT_KING] = sNightKingDescription,
+    [ABILITY_MYSTIC] = sMysticDescription,
+    [ABILITY_SPIRIT_POWER] = sSpiritPowerDescription,
 };

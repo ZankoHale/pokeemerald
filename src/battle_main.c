@@ -3750,6 +3750,10 @@ u8 IsRunningFromBattleImpossible(void)
         }
         if (side != GetBattlerSide(i)
          && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE
+         && gBattleMons[gActiveBattler].ability != ABILITY_SEA_GUARD
+         && gBattleMons[gActiveBattler].ability != ABILITY_SKY_GUARD
+         && gBattleMons[gActiveBattler].ability != ABILITY_FOREST_GUARD
+         && gBattleMons[gActiveBattler].ability != ABILITY_MYSTIC
          && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
          && gBattleMons[i].ability == ABILITY_ARENA_TRAP)
         {

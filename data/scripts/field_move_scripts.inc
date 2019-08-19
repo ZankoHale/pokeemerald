@@ -127,7 +127,7 @@ Text_CantSmash: @ 829087F
 
 EventScript_Headbutt::
 	lockall
-	goto_if_unset FLAG_BADGE03_GET, EventScript_CantHeadbutt
+//	goto_if_unset FLAG_BADGE03_GET, EventScript_CantHeadbutt
 	checkpartymove MOVE_HEADBUTT
 	compare VAR_RESULT, 6
 	goto_if_eq EventScript_CantHeadbutt

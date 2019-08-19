@@ -1726,6 +1726,7 @@ u8 DoBattlerEndTurnEffects(void)
                     gStatuses3[gActiveBattler] -= 0x800;
                     if (!(gStatuses3[gActiveBattler] & STATUS3_YAWN) && !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
                      && gBattleMons[gActiveBattler].ability != ABILITY_VITAL_SPIRIT
+                    && gBattleMons[gActiveBattler].ability != ABILITY_NIGHT_KING
                      && gBattleMons[gActiveBattler].ability != ABILITY_INSOMNIA && !UproarWakeUpCheck(gActiveBattler))
                     {
                         CancelMultiTurnMoves(gActiveBattler);
@@ -3093,6 +3094,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             switch (gLastUsedAbility)
             {
             case ABILITY_VOLT_ABSORB:
+    //        case ABILITY_MYSTIC:
                 if (moveType == TYPE_ELECTRIC)
                     effect = 1;
                 break;
@@ -3336,6 +3338,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
                  && GetBattlerAbility(gBattlerAttacker) != ABILITY_INSOMNIA
+                 && GetBattlerAbility(gBattlerAttacker) != ABILITY_NIGHT_KING
                  && GetBattlerAbility(gBattlerAttacker) != ABILITY_VITAL_SPIRIT
                  && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
                  && !IsFlowerVeilProtected(gBattlerAttacker)
@@ -3470,6 +3473,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
             case ABILITY_INSOMNIA:
+            case ABILITY_NIGHT_KING:
             case ABILITY_VITAL_SPIRIT:
                 if (gBattleMons[battler].status1 & STATUS1_SLEEP)
                 {
@@ -4862,6 +4866,14 @@ bool32 IsBattlerGrounded(u8 battlerId)
         return FALSE;
     else if (GetBattlerAbility(battlerId) == ABILITY_LEVITATE)
         return FALSE;
+    else if (GetBattlerAbility(battlerId) == ABILITY_SKY_GUARD)
+        return FALSE;
+    else if (GetBattlerAbility(battlerId) == ABILITY_SEA_GUARD)
+        return FALSE;
+    else if (GetBattlerAbility(battlerId) == ABILITY_FOREST_GUARD)
+        return FALSE;
+    else if (GetBattlerAbility(battlerId) == ABILITY_MYSTIC)
+        return FALSE;
     else if (IS_BATTLER_OF_TYPE(battlerId, TYPE_FLYING))
         return FALSE;
 
@@ -5324,6 +5336,26 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == TYPE_STEEL)
            MulModifier(&modifier, UQ_4_12(1.5));
         break;
+    case ABILITY_SKY_GUARD:
+        if (moveType == TYPE_FLYING)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_SEA_GUARD:
+        if (moveType == TYPE_FLYING)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_FOREST_GUARD:
+        if (moveType == TYPE_FAIRY)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_NIGHT_KING:
+        if (moveType == TYPE_PSYCHIC)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_MYSTIC:
+        if (moveType == TYPE_GROUND)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
     case ABILITY_PIXILATE:
         if (moveType == TYPE_FAIRY && gBattleStruct->ateBoost[battlerAtk])
             MulModifier(&modifier, UQ_4_12(1.2));
@@ -5616,6 +5648,10 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         if (IS_MOVE_PHYSICAL(move))
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
+    case ABILITY_SPIRIT_POWER:
+        if (IS_MOVE_SPECIAL(move))
+            MulModifier(&modifier, UQ_4_12(2.0));
+        break;
     }
 
     // target's abilities
@@ -5858,6 +5894,7 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
     switch (abilityDef)
     {
     case ABILITY_MULTISCALE:
+    case ABILITY_SEA_GUARD:
         if (BATTLER_MAX_HP(battlerDef))
             MulModifier(&finalModifier, UQ_4_12(0.5));
         break;
@@ -6041,6 +6078,32 @@ static u16 CalcTypeEffectivenessMultiplierInternal(u16 move, u8 moveType, u8 bat
             RecordAbilityBattle(battlerDef, ABILITY_LEVITATE);
         }
     }
+
+    if (moveType == TYPE_GROUND && !IsBattlerGrounded(battlerDef))
+    {
+        modifier = UQ_4_12(0.0);
+        if (recordAbilities && GetBattlerAbility(battlerDef) == ABILITY_MYSTIC)
+        {
+            gLastUsedAbility = ABILITY_MYSTIC;
+            gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
+            gLastLandedMoves[battlerDef] = 0;
+            gBattleCommunication[6] = moveType;
+            RecordAbilityBattle(battlerDef, ABILITY_MYSTIC);
+          }
+    }
+
+    if (moveType == TYPE_ELECTRIC && GetBattlerAbility(battlerDef) == ABILITY_MYSTIC)
+    {
+        modifier = UQ_4_12(0.0);
+        if (recordAbilities && GetBattlerAbility(battlerDef) == ABILITY_MYSTIC)
+        {
+            gLastUsedAbility = ABILITY_MYSTIC;
+            gMoveResultFlags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+            gLastLandedMoves[battlerDef] = 0;
+            gBattleCommunication[6] = 3;
+            RecordAbilityBattle(battlerDef, ABILITY_MYSTIC);
+          }
+    }
     if (GetBattlerAbility(battlerDef) == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
     {
         modifier = UQ_4_12(0.0);
@@ -6085,6 +6148,14 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u8 ability
             MulByTypeEffectiveness(&modifier, move, moveType, 0, gBaseStats[speciesDef].type2, 0, FALSE);
 
         if (moveType == TYPE_GROUND && abilityDef == ABILITY_LEVITATE && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
+            modifier = UQ_4_12(0.0);
+        if (moveType == TYPE_GROUND && abilityDef == ABILITY_SKY_GUARD && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
+            modifier = UQ_4_12(0.0);
+        if (moveType == TYPE_GROUND && abilityDef == ABILITY_SEA_GUARD && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
+            modifier = UQ_4_12(0.0);
+        if (moveType == TYPE_GROUND && abilityDef == ABILITY_FOREST_GUARD && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
+            modifier = UQ_4_12(0.0);
+        if (moveType == TYPE_GROUND && abilityDef == ABILITY_MYSTIC && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
         if (abilityDef == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
             modifier = UQ_4_12(0.0);

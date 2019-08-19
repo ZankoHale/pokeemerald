@@ -6,6 +6,7 @@
 #define ROCK_WILD_COUNT     5
 #define FISH_WILD_COUNT     10
 #define HEADBUTT_WILD_COUNT     7
+//#define HONEY_WILD_COUNT     5
 
 struct WildPokemon
 {
@@ -29,6 +30,7 @@ struct WildPokemonHeader
     const struct WildPokemonInfo *rockSmashMonsInfo;
     const struct WildPokemonInfo *fishingMonsInfo;
     const struct WildPokemonInfo *headbuttMonsInfo;
+   // const struct WildPokemonInfo *HoneyMonsInfo;
 };
 
 extern bool8 gIsFishingEncounter;
@@ -40,6 +42,7 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
 void ScrSpecial_RockSmashWildEncounter(void);
 bool8 HeadbuttWildEncounter(void);
 bool8 SweetScentWildEncounter(void);
+//bool8 HoneyWildEncounter(void);
 bool8 DoesCurrentMapHaveFishingMons(void);
 void FishingWildEncounter(u8 rod);
 u16 GetLocalWildMon(bool8 *isWaterMon);

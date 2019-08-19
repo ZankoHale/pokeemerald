@@ -2119,6 +2119,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
                 break;
             if (GetBattlerAbility(gEffectBattler) == ABILITY_VITAL_SPIRIT
                 || GetBattlerAbility(gEffectBattler) == ABILITY_INSOMNIA
+                || GetBattlerAbility(gEffectBattler) == ABILITY_NIGHT_KING
                 || IsAbilityOnSide(gEffectBattler, ABILITY_SWEET_VEIL)
                 || IsFlowerVeilProtected(gEffectBattler))
                 break;
@@ -7429,7 +7430,7 @@ static void atk76_various(void)
         }
         else if (gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP)
         {
-            if (GetBattlerAbility(gBattlerTarget) == ABILITY_INSOMNIA || GetBattlerAbility(gBattlerTarget) == ABILITY_VITAL_SPIRIT)
+            if (GetBattlerAbility(gBattlerTarget) == ABILITY_INSOMNIA || GetBattlerAbility(gBattlerTarget) == ABILITY_VITAL_SPIRIT || GetBattlerAbility(gBattlerTarget) == ABILITY_NIGHT_KING)
             {
                 gBattlerAbility = gBattlerTarget;
                 // BattleScriptPush(T1_READ_PTR(gBattlescriptCurrInstr + 3));
@@ -7988,7 +7989,7 @@ static void atk84_jumpifcantmakeasleep(void)
     {
         gBattlescriptCurrInstr = jumpPtr;
     }
-    else if (ability == ABILITY_INSOMNIA || ability == ABILITY_VITAL_SPIRIT)
+    else if (ability == ABILITY_INSOMNIA || ability == ABILITY_VITAL_SPIRIT || ability == ABILITY_NIGHT_KING)
     {
         gLastUsedAbility = ability;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;
@@ -8805,6 +8806,7 @@ static void atk96_weatherdamage(void)
                 && ability != ABILITY_SAND_FORCE
                 && ability != ABILITY_SAND_RUSH
                 && ability != ABILITY_OVERCOAT
+                && ability != ABILITY_MYSTIC
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER)
                 && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_SAFETY_GOOGLES)
@@ -10776,7 +10778,20 @@ static void atkE2_switchoutabilities(void)
         BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, gBitTable[*(gBattleStruct->field_58 + gActiveBattler)], 4, &gBattleMons[gActiveBattler].status1);
         MarkBattlerForControllerExec(gActiveBattler);
         break;
+    case ABILITY_FOREST_GUARD:
+        gBattleMons[gActiveBattler].status1 = 0;
+        BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, gBitTable[*(gBattleStruct->field_58 + gActiveBattler)], 4, &gBattleMons[gActiveBattler].status1);
+        MarkBattlerForControllerExec(gActiveBattler);
+        break;
     case ABILITY_REGENERATOR:
+        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 3;
+        gBattleMoveDamage += gBattleMons[gActiveBattler].hp;
+        if (gBattleMoveDamage > gBattleMons[gActiveBattler].maxHP)
+            gBattleMons[gActiveBattler].maxHP = gBattleMons[gActiveBattler].maxHP;
+        BtlController_EmitSetMonData(0, REQUEST_HP_BATTLE, gBitTable[*(gBattleStruct->field_58 + gActiveBattler)], 2, &gBattleMoveDamage);
+        MarkBattlerForControllerExec(gActiveBattler);
+        break;
+    case ABILITY_SKY_GUARD:
         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 3;
         gBattleMoveDamage += gBattleMons[gActiveBattler].hp;
         if (gBattleMoveDamage > gBattleMons[gActiveBattler].maxHP)
