@@ -493,8 +493,8 @@ RustboroCity_EventScript_1E0B2E:: @ 81E0B2E
 	compare VAR_TEMP_1, 3
 	call_if_eq RustboroCity_EventScript_1E0BF3
 	setflag FLAG_INTERACTED_WITH_DEVON_EMPLOYEE_GOODS_STOLEN
-	setvar VAR_RUSTBORO_STATE, 3
-	moveobjectoffscreen 9
+	setvar VAR_RUSTBORO_CITY_STATE, 3
+	copyobjectxytoperm 9
 	msgbox RustboroCity_Text_1E183E, MSGBOX_DEFAULT
 	releaseall
 	end
