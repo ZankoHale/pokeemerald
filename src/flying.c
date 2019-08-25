@@ -1800,7 +1800,7 @@ void sub_810EEF8(struct Sprite *sprite)
     sprite->data[2] = gBattleAnimArgs[0];
 
     if (sprite->data[2])
-        sprite->oam.matrixNum = ST_OAM_HFLIP;
+        sprite->oam.matrixNum = 8;
 
     if (gBattleAnimArgs[1] == 0)
     {

@@ -30,7 +30,6 @@
 #include "constants/easy_chat.h"
 #include "constants/event_objects.h"
 #include "constants/flags.h"
-#include "constants/lilycove_lady.h"
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/rgb.h"
@@ -241,7 +240,6 @@ struct Unk8597530
     MainCallback callback;
 };
 
-// Lilycove Quiz Lady
 static const struct Unk8597530 sUnknown_08597530[] = {
     {
         .word = 26,
@@ -1307,15 +1305,15 @@ void ShowEasyChatScreen(void)
         displayedPersonType = EASY_CHAT_PERSON_BOY;
         break;
     case EASY_CHAT_TYPE_QUIZ_ANSWER:
-        words = &gSaveBlock1Ptr->lilycoveLady.quiz.playerAnswer;
+        words = &gSaveBlock1Ptr->lilycoveLady.quiz.unk_016;
         break;
     case EASY_CHAT_TYPE_QUIZ_QUESTION:
         return;
     case EASY_CHAT_TYPE_QUIZ_SET_QUESTION:
-        words = gSaveBlock1Ptr->lilycoveLady.quiz.question;
+        words = gSaveBlock1Ptr->lilycoveLady.quiz.unk_002;
         break;
     case EASY_CHAT_TYPE_QUIZ_SET_ANSWER:
-        words = &gSaveBlock1Ptr->lilycoveLady.quiz.correctAnswer;
+        words = &gSaveBlock1Ptr->lilycoveLady.quiz.unk_014;
         break;
     case EASY_CHAT_TYPE_APPRENTICE:
         words = gSaveBlock2Ptr->apprentices[0].easyChatWords;
@@ -1331,7 +1329,7 @@ void ShowEasyChatScreen(void)
     DoEasyChatScreen(gSpecialVar_0x8004, words, CB2_ReturnToFieldContinueScript, displayedPersonType);
 }
 
-static void CB2_QuizLadyQuestion(void)
+static void sub_811A7E4(void)
 {
     LilycoveLady *lilycoveLady;
 
@@ -1345,7 +1343,7 @@ static void CB2_QuizLadyQuestion(void)
         if (!gPaletteFade.active)
         {
             lilycoveLady = &gSaveBlock1Ptr->lilycoveLady;
-            lilycoveLady->quiz.playerAnswer = -1;
+            lilycoveLady->quiz.unk_016 = -1;
             CleanupOverworldWindowsAndTilemaps();
             DoQuizQuestionEasyChatScreen();
         }
@@ -1354,9 +1352,9 @@ static void CB2_QuizLadyQuestion(void)
     gMain.state ++;
 }
 
-void QuizLadyShowQuizQuestion(void)
+void sub_811A858(void)
 {
-    SetMainCallback2(CB2_QuizLadyQuestion);
+    SetMainCallback2(sub_811A7E4);
 }
 
 static int sub_811A868(u16 word)
@@ -1389,7 +1387,7 @@ static void DoQuizAnswerEasyChatScreen(void)
 {
     DoEasyChatScreen(
         EASY_CHAT_TYPE_QUIZ_ANSWER,
-        &gSaveBlock1Ptr->lilycoveLady.quiz.playerAnswer,
+        &gSaveBlock1Ptr->lilycoveLady.quiz.unk_016,
         CB2_ReturnToFieldContinueScript,
         EASY_CHAT_PERSON_DISPLAY_NONE);
 }
@@ -1397,7 +1395,7 @@ static void DoQuizAnswerEasyChatScreen(void)
 static void DoQuizQuestionEasyChatScreen(void)
 {
     DoEasyChatScreen(EASY_CHAT_TYPE_QUIZ_QUESTION,
-        gSaveBlock1Ptr->lilycoveLady.quiz.question,
+        gSaveBlock1Ptr->lilycoveLady.quiz.unk_002,
         CB2_ReturnToFieldContinueScript,
         EASY_CHAT_PERSON_DISPLAY_NONE);
 }
@@ -1405,7 +1403,7 @@ static void DoQuizQuestionEasyChatScreen(void)
 static void DoQuizSetAnswerEasyChatScreen(void)
 {
     DoEasyChatScreen(EASY_CHAT_TYPE_QUIZ_SET_ANSWER,
-        &gSaveBlock1Ptr->lilycoveLady.quiz.correctAnswer,
+        &gSaveBlock1Ptr->lilycoveLady.quiz.unk_014,
         CB2_ReturnToFieldContinueScript,
         EASY_CHAT_PERSON_DISPLAY_NONE);
 }
@@ -1413,7 +1411,7 @@ static void DoQuizSetAnswerEasyChatScreen(void)
 static void DoQuizSetQuestionEasyChatScreen(void)
 {
     DoEasyChatScreen(EASY_CHAT_TYPE_QUIZ_SET_QUESTION,
-        gSaveBlock1Ptr->lilycoveLady.quiz.question,
+        gSaveBlock1Ptr->lilycoveLady.quiz.unk_002,
         CB2_ReturnToFieldContinueScript,
         EASY_CHAT_PERSON_DISPLAY_NONE);
 }
@@ -2662,9 +2660,9 @@ static int sub_811BD64(void)
         return sub_811BCF4();
 
     saveBlock1 = gSaveBlock1Ptr;
-    for (i = 0; i < QUIZ_QUESTION_LEN; i++)
+    for (i = 0; i < 9; i++)
     {
-        if (saveBlock1->lilycoveLady.quiz.question[i] != 0xFFFF)
+        if (saveBlock1->lilycoveLady.quiz.unk_002[i] != 0xFFFF)
             return 0;
     }
 
@@ -2678,7 +2676,7 @@ static int sub_811BDB0(void)
         return sub_811BCF4();
 
     quiz = &gSaveBlock1Ptr->lilycoveLady.quiz;
-    return quiz->correctAnswer == 0xFFFF ? 1 : 0;
+    return quiz->unk_014 == 0xFFFF ? 1 : 0;
 }
 
 static void sub_811BDF0(u8 *arg0)

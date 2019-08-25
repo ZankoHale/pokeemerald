@@ -118,9 +118,9 @@ void sub_81AD9C0(u8);
 void sub_81ADB14(u8);
 void sub_81ADA7C(u8);
 void sub_81ADC0C(u8);
+void bag_menu_leave_maybe_3(void);
+void bag_menu_leave_maybe_2(void);
 void bag_menu_leave_maybe(void);
-void CB2_FavorLadyExitBagMenu(void);
-void CB2_QuizLadyExitBagMenu(void);
 void sub_81ABA6C(void);
 static void SetPocketListPositions(void);
 void sub_81ABAE0(void);
@@ -493,20 +493,20 @@ void sub_81AAC14(void)
 
 void sub_81AAC28(void)
 {
-    GoToBagMenu(RETURN_LOCATION_FIELD_6, POCKETS_COUNT, bag_menu_leave_maybe);
+    GoToBagMenu(RETURN_LOCATION_FIELD_6, POCKETS_COUNT, bag_menu_leave_maybe_3);
     gSpecialVar_0x8005 = 0;
     gSpecialVar_Result = 0;
 }
 
-void FavorLadyOpenBagMenu(void)
+void sub_81AAC50(void)
 {
-    GoToBagMenu(RETURN_LOCATION_FIELD_4, POCKETS_COUNT, CB2_FavorLadyExitBagMenu);
+    GoToBagMenu(RETURN_LOCATION_FIELD_4, POCKETS_COUNT, bag_menu_leave_maybe_2);
     gSpecialVar_Result = 0;
 }
 
-void QuizLadyOpenBagMenu(void)
+void sub_81AAC70(void)
 {
-    GoToBagMenu(RETURN_LOCATION_FIELD_5, POCKETS_COUNT, CB2_QuizLadyExitBagMenu);
+    GoToBagMenu(RETURN_LOCATION_FIELD_5, POCKETS_COUNT, bag_menu_leave_maybe);
     gSpecialVar_Result = 0;
 }
 
@@ -2202,7 +2202,7 @@ void unknown_ItemMenu_Show(u8 taskId)
     unknown_ItemMenu_Confirm(taskId);
 }
 
-void bag_menu_leave_maybe(void)
+void bag_menu_leave_maybe_3(void)
 {
     gFieldCallback = Apprentice_EnableBothScriptContexts;
     SetMainCallback2(CB2_ReturnToField);
@@ -2216,9 +2216,9 @@ void unknown_ItemMenu_Give2(u8 taskId)
     unknown_ItemMenu_Confirm(taskId);
 }
 
-void CB2_FavorLadyExitBagMenu(void)
+void bag_menu_leave_maybe_2(void)
 {
-    gFieldCallback = FieldCallback_FavorLadyEnableScriptContexts;
+    gFieldCallback = sub_818DEF4;
     SetMainCallback2(CB2_ReturnToField);
 }
 
@@ -2229,9 +2229,9 @@ void unknown_ItemMenu_Confirm2(u8 taskId)
     unknown_ItemMenu_Confirm(taskId);
 }
 
-void CB2_QuizLadyExitBagMenu(void)
+void bag_menu_leave_maybe(void)
 {
-    gFieldCallback = FieldCallback_QuizLadyEnableScriptContexts;
+    gFieldCallback = sub_818E564;
     SetMainCallback2(CB2_ReturnToField);
 }
 

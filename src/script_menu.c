@@ -42,11 +42,11 @@ const struct MenuAction MultichoiceList_003[] =
 
 const struct MenuAction MultichoiceList_004[] =
 {
-    {gText_CoolnessContest, NULL},
-    {gText_BeautyContest, NULL},
-    {gText_CutenessContest, NULL},
-    {gText_SmartnessContest, NULL},
-    {gText_ToughnessContest, NULL},
+    {gUnknown_085EADA4, NULL},
+    {gUnknown_085EADB5, NULL},
+    {gUnknown_085EADC4, NULL},
+    {gUnknown_085EADD5, NULL},
+    {gUnknown_085EADE7, NULL},
     {gText_Exit, NULL},
 };
 

@@ -993,9 +993,9 @@ void sub_810D874(struct Sprite *sprite)
     }
 
     if (IsContest())
-        sprite->oam.matrixNum |= ST_OAM_HFLIP;
+        sprite->oam.matrixNum |= 0x8;
     else if (GetBattlerSide(battler) == B_SIDE_PLAYER)
-        sprite->oam.matrixNum |= (ST_OAM_HFLIP | ST_OAM_VFLIP);
+        sprite->oam.matrixNum |= 0x18;
 
     sprite->data[0] = 16;
     sprite->data[1] = sprite->pos1.x;

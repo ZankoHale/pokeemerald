@@ -6,9 +6,6 @@
 #include "battle.h"
 #include "gym_leader_rematch.h"
 #include "match_call.h"
-#include "pokenav.h"
-#include "constants/region_map_sections.h"
-#include "constants/trainers.h"
 
 // Static type declarations
 
@@ -20,13 +17,13 @@ typedef struct MatchCallTextDataStruct {
 
 struct MatchCallStructCommon {
     u8 type;
-    u8 mapSec;
+    u8 v1;
     u16 flag;
 };
 
 struct MatchCallStruct0 {
     u8 type;
-    u8 mapSec;
+    u8 v1;
     u16 flag;
     const u8 *desc;
     const u8 *name;
@@ -35,7 +32,7 @@ struct MatchCallStruct0 {
 
 struct MatchCallStruct1 {
     u8 type;
-    u8 mapSec;
+    u8 v1;
     u16 flag;
     u16 rematchTableIdx;
     const u8 *desc;
@@ -45,12 +42,12 @@ struct MatchCallStruct1 {
 
 struct MatchCallSubstruct2 {
     u16 flag;
-    u8 mapSec;
+    u8 v2;
 };
 
 struct MatchCallStruct2 {
     u8 type;
-    u8 mapSec;
+    u8 v1;
     u16 flag;
     u16 rematchTableIdx;
     const u8 *desc;
@@ -60,7 +57,7 @@ struct MatchCallStruct2 {
 
 struct MatchCallStruct3 {
     u8 type;
-    u8 mapSec;
+    u8 v1;
     u16 flag;
     const u8 *desc;
     const u8 *name;
@@ -78,7 +75,7 @@ struct MatchCallStruct4 {
 // Note: Type1 and Type5 have identical struct layouts.
 struct MatchCallStruct5 {
     u8 type;
-    u8 mapSec;
+    u8 v1;
     u16 flag;
     u16 rematchTableIdx;
     const u8 *desc;
@@ -96,11 +93,11 @@ typedef union {
     const struct MatchCallStruct5 *type5;
 } match_call_t;
 
-struct MatchCallOverride {
+struct UnkStruct_08625388 {
     u16 idx;
-    u16 facilityClass;
-    u32 flag;
-    const u8 *flavorTexts[4];
+    u16 v2;
+    u32 v4;
+    const u8 *v8[4];
 };
 
 // Static RAM declarations
@@ -113,11 +110,11 @@ static bool32 MatchCallGetFlag_Type2(match_call_t);
 static bool32 MatchCallGetFlag_Type3(match_call_t);
 static bool32 MatchCallGetFlag_Type4(match_call_t);
 
-static u8 MatchCallGetMapSec_Type0(match_call_t);
-static u8 MatchCallGetMapSec_Type1(match_call_t);
-static u8 MatchCallGetMapSec_Type2(match_call_t);
-static u8 MatchCallGetMapSec_Type3(match_call_t);
-static u8 MatchCallGetMapSec_Type4(match_call_t);
+static u8 sub_81D1714(match_call_t);
+static u8 sub_81D1718(match_call_t);
+static u8 sub_81D171C(match_call_t);
+static u8 sub_81D1750(match_call_t);
+static u8 sub_81D1754(match_call_t);
 
 static bool32 MatchCall_IsRematchable_Type0(match_call_t);
 static bool32 MatchCall_IsRematchable_Type1(match_call_t);
@@ -125,11 +122,11 @@ static bool32 MatchCall_IsRematchable_Type2(match_call_t);
 static bool32 MatchCall_IsRematchable_Type3(match_call_t);
 static bool32 MatchCall_IsRematchable_Type4(match_call_t);
 
-static bool32 MatchCall_HasCheckPage_Type0(match_call_t);
-static bool32 MatchCall_HasCheckPage_Type1(match_call_t);
-static bool32 MatchCall_HasCheckPage_Type2(match_call_t);
-static bool32 MatchCall_HasCheckPage_Type3(match_call_t);
-static bool32 MatchCall_HasCheckPage_Type4(match_call_t);
+static bool32 sub_81D1840(match_call_t);
+static bool32 sub_81D1844(match_call_t);
+static bool32 sub_81D1848(match_call_t);
+static bool32 sub_81D184C(match_call_t);
+static bool32 sub_81D1850(match_call_t);
 
 static u32 MatchCall_GetRematchTableIdx_Type0(match_call_t);
 static u32 MatchCall_GetRematchTableIdx_Type1(match_call_t);
@@ -328,7 +325,7 @@ static const match_call_text_data_t sMrStoneTextScripts[] = {
 static const struct MatchCallStruct0 sMrStoneMatchCallHeader =
 {
     .type = 0,
-    .mapSec = MAPSEC_RUSTBORO_CITY,
+    .v1 = 10,
     .flag = 0xFFFF,
     .desc = gMrStoneMatchCallDesc,
     .name = gMrStoneMatchCallName,
@@ -351,7 +348,7 @@ static const match_call_text_data_t sNormanTextScripts[] = {
 static const struct MatchCallStruct5 sNormanMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_PETALBURG_CITY,
+    .v1 = 7,
     .flag = FLAG_ENABLE_NORMAN_MATCH_CALL,
     .rematchTableIdx = REMATCH_NORMAN,
     .desc = gNormanMatchCallDesc,
@@ -362,7 +359,7 @@ static const struct MatchCallStruct5 sNormanMatchCallHeader =
 static const struct MatchCallStruct3 sProfBirchMatchCallHeader =
 {
     .type = 3,
-    .mapSec = 0,
+    .v1 = 0,
     .flag = FLAG_ENABLE_PROF_BIRCH_MATCH_CALL,
     .desc = gProfBirchMatchCallDesc,
     .name = gProfBirchMatchCallName
@@ -378,7 +375,7 @@ static const match_call_text_data_t sMomTextScripts[] = {
 static const struct MatchCallStruct0 sMomMatchCallHeader =
 {
     .type = 0,
-    .mapSec = MAPSEC_LITTLEROOT_TOWN,
+    .v1 = 0,
     .flag = FLAG_ENABLE_MOM_MATCH_CALL,
     .desc = gMomMatchCallDesc,
     .name = gMomMatchCallName,
@@ -399,7 +396,7 @@ static const match_call_text_data_t sStevenTextScripts[] = {
 static const struct MatchCallStruct0 sStevenMatchCallHeader =
 {
     .type = 0,
-    .mapSec = MAPSEC_NONE,
+    .v1 = 0xD5,
     .flag = FLAG_REGISTERED_STEVEN_POKENAV,
     .desc = gStevenMatchCallDesc,
     .name = gStevenMatchCallName,
@@ -425,10 +422,10 @@ static const match_call_text_data_t sMayTextScripts[] = {
     { NULL,                     0xFFFF,              0xFFFF }
 };
 
-static const struct MatchCallStruct4 sMayMatchCallHeader =
+static const struct MatchCallStruct4 sBrendanMatchCallHeader =
 {
     .type = 4,
-    .gender = MALE, //Gender of player
+    .gender = MALE,
     .flag = FLAG_ENABLE_RIVAL_MATCH_CALL,
     .desc = gMayBrendanMatchCallDesc,
     .name = gExpandedPlaceholder_May,
@@ -454,10 +451,10 @@ static const match_call_text_data_t sBrendanTextScripts[] = {
     { NULL,                         0xFFFF,              0xFFFF }
 };
 
-static const struct MatchCallStruct4 sBrendanMatchCallHeader =
+static const struct MatchCallStruct4 sMayMatchCallHeader =
 {
     .type = 4,
-    .gender = FEMALE, //Gender of player
+    .gender = FEMALE,
     .flag = FLAG_ENABLE_RIVAL_MATCH_CALL,
     .desc = gMayBrendanMatchCallDesc,
     .name = gExpandedPlaceholder_Brendan,
@@ -476,16 +473,16 @@ static const match_call_text_data_t sWallyTextScripts[] = {
 };
 
 const struct MatchCallSubstruct2 sWallyAdditionalData[] = {
-    { FLAG_HIDE_MAUVILLE_CITY_WALLY,          MAPSEC_VERDANTURF_TOWN },
-    { FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT,    MAPSEC_NONE },
-    { FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY,  MAPSEC_VICTORY_ROAD },
-    { 0xFFFF,                                 MAPSEC_NONE }
+    { FLAG_HIDE_MAUVILLE_CITY_WALLY, 0x05 },
+    { FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 0xD5 },
+    { FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY, 0x46 },
+    { 0xFFFF,     0xD5 }
 };
 
 static const struct MatchCallStruct2 sWallyMatchCallHeader =
 {
     .type = 2,
-    .mapSec = 0,
+    .v1 = 0,
     .flag = FLAG_ENABLE_WALLY_MATCH_CALL,
     .rematchTableIdx = REMATCH_WALLY_3,
     .desc = gWallyMatchCallDesc,
@@ -508,7 +505,7 @@ static const match_call_text_data_t sScottTextScripts[] = {
 static const struct MatchCallStruct0 sScottMatchCallHeader =
 {
     .type = 0,
-    .mapSec = MAPSEC_NONE,
+    .v1 = 0xD5,
     .flag = FLAG_ENABLE_SCOTT_MATCH_CALL,
     .desc = gScottMatchCallDesc,
     .name = gScottMatchCallName,
@@ -526,7 +523,7 @@ static const match_call_text_data_t sRoxanneTextScripts[] = {
 static const struct MatchCallStruct5 sRoxanneMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_RUSTBORO_CITY,
+    .v1 = 10,
     .flag = FLAG_ENABLE_ROXANNE_MATCH_CALL,
     .rematchTableIdx = REMATCH_ROXANNE,
     .desc = gRoxanneMatchCallDesc,
@@ -545,7 +542,7 @@ static const match_call_text_data_t sBrawlyTextScripts[] = {
 static const struct MatchCallStruct5 sBrawlyMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_DEWFORD_TOWN,
+    .v1 = 2,
     .flag = FLAG_ENABLE_BRAWLY_MATCH_CALL,
     .rematchTableIdx = REMATCH_BRAWLY,
     .desc = gBrawlyMatchCallDesc,
@@ -564,7 +561,7 @@ static const match_call_text_data_t sWattsonTextScripts[] = {
 static const struct MatchCallStruct5 sWattsonMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_MAUVILLE_CITY,
+    .v1 = 9,
     .flag = FLAG_ENABLE_WATTSON_MATCH_CALL,
     .rematchTableIdx = REMATCH_WATTSON,
     .desc = gWattsonMatchCallDesc,
@@ -583,7 +580,7 @@ static const match_call_text_data_t sFlanneryTextScripts[] = {
 static const struct MatchCallStruct5 sFlanneryMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_LAVARIDGE_TOWN,
+    .v1 = 3,
     .flag = FLAG_ENABLE_FLANNERY_MATCH_CALL,
     .rematchTableIdx = REMATCH_FLANNERY,
     .desc = gFlanneryMatchCallDesc,
@@ -602,7 +599,7 @@ static const match_call_text_data_t sWinonaTextScripts[] = {
 static const struct MatchCallStruct5 sWinonaMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_FORTREE_CITY,
+    .v1 = 11,
     .flag = FLAG_ENABLE_WINONA_MATCH_CALL,
     .rematchTableIdx = REMATCH_WINONA,
     .desc = gWinonaMatchCallDesc,
@@ -621,7 +618,7 @@ static const match_call_text_data_t sTateLizaTextScripts[] = {
 static const struct MatchCallStruct5 sTateLizaMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_MOSSDEEP_CITY,
+    .v1 = 13,
     .flag = FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL,
     .rematchTableIdx = REMATCH_TATE_AND_LIZA,
     .desc = gTateLizaMatchCallDesc,
@@ -640,7 +637,7 @@ static const match_call_text_data_t sJuanTextScripts[] = {
 static const struct MatchCallStruct5 sJuanMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_SOOTOPOLIS_CITY,
+    .v1 = 14,
     .flag = FLAG_ENABLE_JUAN_MATCH_CALL,
     .rematchTableIdx = REMATCH_JUAN,
     .desc = gJuanMatchCallDesc,
@@ -656,7 +653,7 @@ static const match_call_text_data_t sSidneyTextScripts[] = {
 static const struct MatchCallStruct5 sSidneyMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_EVER_GRANDE_CITY,
+    .v1 = 15,
     .flag = FLAG_REMATCH_SIDNEY,
     .rematchTableIdx = REMATCH_SIDNEY,
     .desc = gEliteFourMatchCallDesc,
@@ -672,7 +669,7 @@ static const match_call_text_data_t sPhoebeTextScripts[] = {
 static const struct MatchCallStruct5 sPhoebeMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_EVER_GRANDE_CITY,
+    .v1 = 15,
     .flag = FLAG_REMATCH_PHOEBE,
     .rematchTableIdx = REMATCH_PHOEBE,
     .desc = gEliteFourMatchCallDesc,
@@ -688,7 +685,7 @@ static const match_call_text_data_t sGlaciaTextScripts[] = {
 static const struct MatchCallStruct5 sGlaciaMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_EVER_GRANDE_CITY,
+    .v1 = 15,
     .flag = FLAG_REMATCH_GLACIA,
     .rematchTableIdx = REMATCH_GLACIA,
     .desc = gEliteFourMatchCallDesc,
@@ -704,7 +701,7 @@ static const match_call_text_data_t sDrakeTextScripts[] = {
 static const struct MatchCallStruct5 sDrakeMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_EVER_GRANDE_CITY,
+    .v1 = 15,
     .flag = FLAG_REMATCH_DRAKE,
     .rematchTableIdx = REMATCH_DRAKE,
     .desc = gEliteFourMatchCallDesc,
@@ -720,7 +717,7 @@ static const match_call_text_data_t sWallaceTextScripts[] = {
 static const struct MatchCallStruct5 sWallaceMatchCallHeader =
 {
     .type = 5,
-    .mapSec = MAPSEC_EVER_GRANDE_CITY,
+    .v1 = 15,
     .flag = FLAG_REMATCH_WALLACE,
     .rematchTableIdx = REMATCH_WALLACE,
     .desc = gChampionMatchCallDesc,
@@ -729,90 +726,90 @@ static const struct MatchCallStruct5 sWallaceMatchCallHeader =
 };
 
 static const match_call_t sMatchCallHeaders[] = {
-    [MC_HEADER_MR_STONE]   = {.type0 = &sMrStoneMatchCallHeader},
-    [MC_HEADER_PROF_BIRCH] = {.type3 = &sProfBirchMatchCallHeader},
-    [MC_HEADER_BRENDAN]    = {.type4 = &sBrendanMatchCallHeader},
-    [MC_HEADER_MAY]        = {.type4 = &sMayMatchCallHeader},
-    [MC_HEADER_WALLY]      = {.type2 = &sWallyMatchCallHeader},
-    [MC_HEADER_NORMAN]     = {.type5 = &sNormanMatchCallHeader},
-    [MC_HEADER_MOM]        = {.type0 = &sMomMatchCallHeader},
-    [MC_HEADER_STEVEN]     = {.type0 = &sStevenMatchCallHeader},
-    [MC_HEADER_SCOTT]      = {.type0 = &sScottMatchCallHeader},
-    [MC_HEADER_ROXANNE]    = {.type5 = &sRoxanneMatchCallHeader},
-    [MC_HEADER_BRAWLY]     = {.type5 = &sBrawlyMatchCallHeader},
-    [MC_HEADER_WATTSON]    = {.type5 = &sWattsonMatchCallHeader},
-    [MC_HEADER_FLANNERY]   = {.type5 = &sFlanneryMatchCallHeader},
-    [MC_HEADER_WINONA]     = {.type5 = &sWinonaMatchCallHeader},
-    [MC_HEADER_TATE_LIZA]  = {.type5 = &sTateLizaMatchCallHeader},
-    [MC_HEADER_JUAN]       = {.type5 = &sJuanMatchCallHeader},
-    [MC_HEADER_SIDNEY]     = {.type5 = &sSidneyMatchCallHeader},
-    [MC_HEADER_PHOEBE]     = {.type5 = &sPhoebeMatchCallHeader},
-    [MC_HEADER_GLACIA]     = {.type5 = &sGlaciaMatchCallHeader},
-    [MC_HEADER_DRAKE]      = {.type5 = &sDrakeMatchCallHeader},
-    [MC_HEADER_WALLACE]    = {.type5 = &sWallaceMatchCallHeader}
+    {.type0 = &sMrStoneMatchCallHeader},
+    {.type3 = &sProfBirchMatchCallHeader},
+    {.type4 = &sMayMatchCallHeader},
+    {.type4 = &sBrendanMatchCallHeader},
+    {.type2 = &sWallyMatchCallHeader},
+    {.type5 = &sNormanMatchCallHeader},
+    {.type0 = &sMomMatchCallHeader},
+    {.type0 = &sStevenMatchCallHeader},
+    {.type0 = &sScottMatchCallHeader},
+    {.type5 = &sRoxanneMatchCallHeader},
+    {.type5 = &sBrawlyMatchCallHeader},
+    {.type5 = &sWattsonMatchCallHeader},
+    {.type5 = &sFlanneryMatchCallHeader},
+    {.type5 = &sWinonaMatchCallHeader},
+    {.type5 = &sTateLizaMatchCallHeader},
+    {.type5 = &sJuanMatchCallHeader},
+    {.type5 = &sSidneyMatchCallHeader},
+    {.type5 = &sPhoebeMatchCallHeader},
+    {.type5 = &sGlaciaMatchCallHeader},
+    {.type5 = &sDrakeMatchCallHeader},
+    {.type5 = &sWallaceMatchCallHeader}
 };
 
 static bool32 (*const sMatchCallGetFlagFuncs[])(match_call_t) = {
     MatchCallGetFlag_Type0,
     MatchCallGetFlag_Type1,
     MatchCallGetFlag_Type2,
-    MatchCallGetFlag_Type4,
-    MatchCallGetFlag_Type3
+    MatchCallGetFlag_Type3,
+    MatchCallGetFlag_Type4
 };
 
-static u8 (*const sMatchCallGetMapSecFuncs[])(match_call_t) = {
-    MatchCallGetMapSec_Type0,
-    MatchCallGetMapSec_Type1,
-    MatchCallGetMapSec_Type2,
-    MatchCallGetMapSec_Type4,
-    MatchCallGetMapSec_Type3
+static u8 (*const gUnknown_08625310[])(match_call_t) = {
+    sub_81D1714,
+    sub_81D1718,
+    sub_81D171C,
+    sub_81D1750,
+    sub_81D1754
 };
 
 static bool32 (*const sMatchCall_IsRematchableFunctions[])(match_call_t) = {
     MatchCall_IsRematchable_Type0,
     MatchCall_IsRematchable_Type1,
     MatchCall_IsRematchable_Type2,
-    MatchCall_IsRematchable_Type4,
-    MatchCall_IsRematchable_Type3
+    MatchCall_IsRematchable_Type3,
+    MatchCall_IsRematchable_Type4
 };
 
-static bool32 (*const sMatchCall_HasCheckPageFunctions[])(match_call_t) = {
-    MatchCall_HasCheckPage_Type0,
-    MatchCall_HasCheckPage_Type1,
-    MatchCall_HasCheckPage_Type2,
-    MatchCall_HasCheckPage_Type4,
-    MatchCall_HasCheckPage_Type3
+static bool32 (*const gUnknown_08625338[])(match_call_t) = {
+    sub_81D1840,
+    sub_81D1844,
+    sub_81D1848,
+    sub_81D184C,
+    sub_81D1850
 };
 
 static u32 (*const sMatchCall_GetRematchTableIdxFunctions[])(match_call_t) = {
     MatchCall_GetRematchTableIdx_Type0,
     MatchCall_GetRematchTableIdx_Type1,
     MatchCall_GetRematchTableIdx_Type2,
-    MatchCall_GetRematchTableIdx_Type4,
-    MatchCall_GetRematchTableIdx_Type3
+    MatchCall_GetRematchTableIdx_Type3,
+    MatchCall_GetRematchTableIdx_Type4
 };
 
 static void (*const sMatchCall_GetMessageFunctions[])(match_call_t, u8 *) = {
     MatchCall_GetMessage_Type0,
     MatchCall_GetMessage_Type1,
     MatchCall_GetMessage_Type2,
-    MatchCall_GetMessage_Type4,
-    MatchCall_GetMessage_Type3
+    MatchCall_GetMessage_Type3,
+    MatchCall_GetMessage_Type4
 };
 
 static void (*const sMatchCall_GetNameAndDescFunctions[])(match_call_t, const u8 **, const u8 **) = {
     MatchCall_GetNameAndDesc_Type0,
     MatchCall_GetNameAndDesc_Type1,
     MatchCall_GetNameAndDesc_Type2,
-    MatchCall_GetNameAndDesc_Type4,
-    MatchCall_GetNameAndDesc_Type3
+    MatchCall_GetNameAndDesc_Type3,
+    MatchCall_GetNameAndDesc_Type4
 };
 
-static const struct MatchCallOverride sMatchCallCheckPageOverrides[] = {
-    { MC_HEADER_STEVEN,  FACILITY_CLASS_STEVEN,  0xFFFF,                     { gMatchCallStevenStrategyText, gMatchCall_StevenTrainersPokemonText, gMatchCall_StevenSelfIntroductionText_Line1_BeforeMeteorFallsBattle, gMatchCall_StevenSelfIntroductionText_Line2_BeforeMeteorFallsBattle } }, // STEVEN
-    { MC_HEADER_STEVEN,  FACILITY_CLASS_STEVEN,  FLAG_DEFEATED_MOSSDEEP_GYM, { gMatchCallStevenStrategyText, gMatchCall_StevenTrainersPokemonText, gMatchCall_StevenSelfIntroductionText_Line1_AfterMeteorFallsBattle, gMatchCall_StevenSelfIntroductionText_Line2_AfterMeteorFallsBattle } }, // STEVEN
-    { MC_HEADER_BRENDAN, FACILITY_CLASS_BRENDAN, 0xFFFF,                     { gMatchCall_BrendanStrategyText, gMatchCall_BrendanTrainersPokemonText, gMatchCall_BrendanSelfIntroductionText_Line1, gMatchCall_BrendanSelfIntroductionText_Line2 } }, // Brendan
-    { MC_HEADER_MAY,     FACILITY_CLASS_MAY,     0xFFFF,                     { gMatchCall_MayStrategyText, gMatchCall_MayTrainersPokemonText, gMatchCall_MaySelfIntroductionText_Line1, gMatchCall_MaySelfIntroductionText_Line2 } } // May
+static const struct UnkStruct_08625388 sMatchCallCheckPageOverrides[] = {
+    { 7, 0x4B, 0xffff, { gMatchCallStevenStrategyText, gMatchCall_StevenTrainersPokemonText, gMatchCall_StevenSelfIntroductionText_Line1_BeforeMeteorFallsBattle, gMatchCall_StevenSelfIntroductionText_Line2_BeforeMeteorFallsBattle } }, // STEVEN
+    { 7, 0x4B, FLAG_DEFEATED_MOSSDEEP_GYM, { gMatchCallStevenStrategyText, gMatchCall_StevenTrainersPokemonText, gMatchCall_StevenSelfIntroductionText_Line1_AfterMeteorFallsBattle, gMatchCall_StevenSelfIntroductionText_Line2_AfterMeteorFallsBattle } }, // STEVEN
+    { 2, 0x3c, 0xffff, { gMatchCall_BrendanStrategyText, gMatchCall_BrendanTrainersPokemonText, gMatchCall_BrendanSelfIntroductionText_Line1, gMatchCall_BrendanSelfIntroductionText_Line2 } }, // Brendan
+    { 3, 0x3f, 0xffff, { gMatchCall_MayStrategyText, gMatchCall_MayTrainersPokemonText, gMatchCall_MaySelfIntroductionText_Line1, gMatchCall_MaySelfIntroductionText_Line2 } } // May
 };
 
 // .text
@@ -886,7 +883,7 @@ static bool32 MatchCallGetFlag_Type2(match_call_t matchCall)
     return FlagGet(matchCall.type2->flag);
 }
 
-static bool32 MatchCallGetFlag_Type4(match_call_t matchCall)
+static bool32 MatchCallGetFlag_Type3(match_call_t matchCall)
 {
     if (matchCall.type4->gender != gSaveBlock2Ptr->playerGender)
         return FALSE;
@@ -895,12 +892,12 @@ static bool32 MatchCallGetFlag_Type4(match_call_t matchCall)
     return FlagGet(matchCall.type4->flag);
 }
 
-static bool32 MatchCallGetFlag_Type3(match_call_t matchCall)
+static bool32 MatchCallGetFlag_Type4(match_call_t matchCall)
 {
     return FlagGet(matchCall.type3->flag);
 }
 
-u8 MatchCallMapSecGetByIndex(u32 idx)
+u8 sub_81D16DC(u32 idx)
 {
     match_call_t matchCall;
     u32 i;
@@ -909,20 +906,20 @@ u8 MatchCallMapSecGetByIndex(u32 idx)
         return 0;
     matchCall = sMatchCallHeaders[idx];
     i = MatchCallGetFunctionIndex(matchCall);
-    return sMatchCallGetMapSecFuncs[i](matchCall);
+    return gUnknown_08625310[i](matchCall);
 }
 
-static u8 MatchCallGetMapSec_Type0(match_call_t matchCall)
+static u8 sub_81D1714(match_call_t matchCall)
 {
-    return matchCall.type0->mapSec;
+    return matchCall.type0->v1;
 }
 
-static u8 MatchCallGetMapSec_Type1(match_call_t matchCall)
+static u8 sub_81D1718(match_call_t matchCall)
 {
-    return matchCall.type1->mapSec;
+    return matchCall.type1->v1;
 }
 
-static u8 MatchCallGetMapSec_Type2(match_call_t matchCall)
+static u8 sub_81D171C(match_call_t matchCall)
 {
     s32 i;
 
@@ -931,17 +928,17 @@ static u8 MatchCallGetMapSec_Type2(match_call_t matchCall)
         if (!FlagGet(matchCall.type2->v10[i].flag))
             break;
     }
-    return matchCall.type2->v10[i].mapSec;
+    return matchCall.type2->v10[i].v2;
 }
 
-static u8 MatchCallGetMapSec_Type4(match_call_t matchCall)
+static u8 sub_81D1750(match_call_t matchCall)
 {
-    return MAPSEC_NONE;
+    return 0xd5;
 }
 
-static u8 MatchCallGetMapSec_Type3(match_call_t matchCall)
+static u8 sub_81D1754(match_call_t matchCall)
 {
-    return MAPSEC_NONE;
+    return 0xd5;
 }
 
 bool32 MatchCall_IsRematchable(u32 idx)
@@ -973,17 +970,17 @@ static bool32 MatchCall_IsRematchable_Type2(match_call_t matchCall)
     return gSaveBlock1Ptr->trainerRematches[matchCall.type2->rematchTableIdx] ? TRUE : FALSE;
 }
 
-static bool32 MatchCall_IsRematchable_Type4(match_call_t matchCall)
-{
-    return FALSE;
-}
-
 static bool32 MatchCall_IsRematchable_Type3(match_call_t matchCall)
 {
     return FALSE;
 }
 
-bool32 MatchCall_HasCheckPage(u32 idx)
+static bool32 MatchCall_IsRematchable_Type4(match_call_t matchCall)
+{
+    return FALSE;
+}
+
+bool32 sub_81D17E8(u32 idx)
 {
     match_call_t matchCall;
     u32 i;
@@ -992,7 +989,7 @@ bool32 MatchCall_HasCheckPage(u32 idx)
         return FALSE;
     matchCall = sMatchCallHeaders[idx];
     i = MatchCallGetFunctionIndex(matchCall);
-    if (sMatchCall_HasCheckPageFunctions[i](matchCall))
+    if (gUnknown_08625338[i](matchCall))
         return TRUE;
     for (i = 0; i < ARRAY_COUNT(sMatchCallCheckPageOverrides); i++)
     {
@@ -1002,27 +999,27 @@ bool32 MatchCall_HasCheckPage(u32 idx)
     return FALSE;
 }
 
-static bool32 MatchCall_HasCheckPage_Type0(match_call_t matchCall)
+static bool32 sub_81D1840(match_call_t matchCall)
 {
     return FALSE;
 }
 
-static bool32 MatchCall_HasCheckPage_Type1(match_call_t matchCall)
+static bool32 sub_81D1844(match_call_t matchCall)
 {
     return TRUE;
 }
 
-static bool32 MatchCall_HasCheckPage_Type2(match_call_t matchCall)
+static bool32 sub_81D1848(match_call_t matchCall)
 {
     return TRUE;
 }
 
-static bool32 MatchCall_HasCheckPage_Type4(match_call_t matchCall) 
+static bool32 sub_81D184C(match_call_t matchCall)
 {
     return FALSE;
 }
 
-static bool32 MatchCall_HasCheckPage_Type3(match_call_t matchCall) 
+static bool32 sub_81D1850(match_call_t matchCall)
 {
     return FALSE;
 }
@@ -1054,12 +1051,12 @@ static u32 MatchCall_GetRematchTableIdx_Type2(match_call_t matchCall)
     return matchCall.type2->rematchTableIdx;
 }
 
-static u32 MatchCall_GetRematchTableIdx_Type4(match_call_t matchCall)
+static u32 MatchCall_GetRematchTableIdx_Type3(match_call_t matchCall)
 {
     return REMATCH_TABLE_ENTRIES;
 }
 
-static u32 MatchCall_GetRematchTableIdx_Type3(match_call_t matchCall)
+static u32 MatchCall_GetRematchTableIdx_Type4(match_call_t matchCall)
 {
     return REMATCH_TABLE_ENTRIES;
 }
@@ -1094,12 +1091,12 @@ static void MatchCall_GetMessage_Type2(match_call_t matchCall, u8 *dest)
     sub_81D1920(matchCall.type2->textData, dest);
 }
 
-static void MatchCall_GetMessage_Type4(match_call_t matchCall, u8 *dest)
+static void MatchCall_GetMessage_Type3(match_call_t matchCall, u8 *dest)
 {
     sub_81D1920(matchCall.type4->textData, dest);
 }
 
-static void MatchCall_GetMessage_Type3(match_call_t matchCall, u8 *dest)
+static void MatchCall_GetMessage_Type4(match_call_t matchCall, u8 *dest)
 {
     sub_8197080(dest);
 }
@@ -1193,13 +1190,13 @@ static void MatchCall_GetNameAndDesc_Type2(match_call_t matchCall, const u8 **de
     *desc = matchCall.type2->desc;
 }
 
-static void MatchCall_GetNameAndDesc_Type4(match_call_t matchCall, const u8 **desc, const u8 **name)
+static void MatchCall_GetNameAndDesc_Type3(match_call_t matchCall, const u8 **desc, const u8 **name)
 {
     *desc = matchCall.type4->desc;
     *name = matchCall.type4->name;
 }
 
-static void MatchCall_GetNameAndDesc_Type3(match_call_t matchCall, const u8 **desc, const u8 **name)
+static void MatchCall_GetNameAndDesc_Type4(match_call_t matchCall, const u8 **desc, const u8 **name)
 {
     *desc = matchCall.type3->desc;
     *name = matchCall.type3->name;
@@ -1212,7 +1209,7 @@ static void MatchCall_GetNameAndDescByRematchIdx(u32 idx, const u8 **desc, const
     *name = trainer->trainerName;
 }
 
-const u8 *MatchCall_GetOverrideFlavorText(u32 idx, u32 offset)
+const u8 *sub_81D1B40(u32 idx, u32 offset)
 {
     u32 i;
 
@@ -1226,24 +1223,24 @@ const u8 *MatchCall_GetOverrideFlavorText(u32 idx, u32 offset)
                     break;
                 if (sMatchCallCheckPageOverrides[i + 1].idx != idx)
                     break;
-                if (!FlagGet(sMatchCallCheckPageOverrides[i + 1].flag))
+                if (!FlagGet(sMatchCallCheckPageOverrides[i + 1].v4))
                     break;
                 i++;
             }
-            return sMatchCallCheckPageOverrides[i].flavorTexts[offset];
+            return sMatchCallCheckPageOverrides[i].v8[offset];
         }
     }
     return NULL;
 }
 
-int MatchCall_GetOverrideFacilityClass(u32 idx)
+int sub_81D1BD0(u32 idx)
 {
     u32 i;
 
     for (i = 0; i < ARRAY_COUNT(sMatchCallCheckPageOverrides); i++)
     {
         if (sMatchCallCheckPageOverrides[i].idx == idx)
-            return sMatchCallCheckPageOverrides[i].facilityClass;
+            return sMatchCallCheckPageOverrides[i].v2;
     }
     return -1;
 }

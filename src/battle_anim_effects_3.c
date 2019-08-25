@@ -1662,7 +1662,7 @@ void sub_815AAA4(struct Sprite *sprite)
 
     if (gBattleAnimArgs[2] == 0)
     {
-        sprite->oam.matrixNum = ST_OAM_HFLIP;
+        sprite->oam.matrixNum = 8;
         sprite->pos2.x = -12;
         sprite->data[1] = 2;
     }
@@ -4221,7 +4221,7 @@ void AnimSmellingSaltsHand(struct Sprite *sprite)
     sprite->pos1.y = GetBattlerSpriteCoord(battler, 3);
     if (gBattleAnimArgs[1] == 0)
     {
-        sprite->oam.matrixNum |= ST_OAM_HFLIP;
+        sprite->oam.matrixNum |= 0x8;
         sprite->pos1.x = GetBattlerSpriteCoordAttr(battler, BATTLER_COORD_ATTR_LEFT) - 8;
     }
     else
@@ -4371,7 +4371,7 @@ void AnimHelpingHandClap(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[0] == 0)
     {
-        sprite->oam.matrixNum |= ST_OAM_HFLIP;
+        sprite->oam.matrixNum |= 0x8; // horizontal flip
         sprite->pos1.x = 100;
         sprite->data[7] = 1;
     }
@@ -4599,7 +4599,7 @@ void AnimForesightMagnifyingGlass(struct Sprite *sprite)
     }
 
     if (GetBattlerSide(sprite->data[7]) == B_SIDE_OPPONENT)
-        sprite->oam.matrixNum = ST_OAM_HFLIP;
+        sprite->oam.matrixNum = 8; // horizontal flip
 
     sprite->oam.priority = GetBattlerSpriteBGPriority(sprite->data[7]);
     sprite->oam.objMode = ST_OAM_OBJ_BLEND;
