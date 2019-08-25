@@ -101,7 +101,7 @@ RustboroCity_DevonCorp_2F_EventScript_211933:: @ 8211933
 	msgbox RustboroCity_DevonCorp_2F_Text_211FA6, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
-	checkitem ITEM_CLAW_FOSSIL, 1
+	checkitem ITEM_ROOT_FOSSIL, 1
 	compare VAR_RESULT, 1
 	goto_if_lt RustboroCity_DevonCorp_2F_EventScript_no
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
@@ -127,7 +127,7 @@ RustboroCity_DevonCorp_2F_EventScript_211991:: @ 8211991
 	msgbox RustboroCity_DevonCorp_2F_Text_211FA6, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_2119EF
-	checkitem ITEM_ROOT_FOSSIL, 1
+	checkitem ITEM_CLAW_FOSSIL, 1
 	compare VAR_RESULT, 1
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211B84
 	goto RustboroCity_DevonCorp_2F_EventScript_2119D2
@@ -294,9 +294,9 @@ RustboroCity_DevonCorp_2F_EventScript_211A03:: @ 8211A03
 	compare VAR_WHICH_FOSSIL_REVIVED, 5
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_OA
 	compare VAR_WHICH_FOSSIL_REVIVED, 6
-	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_A
-	compare VAR_WHICH_FOSSIL_REVIVED, 7
 	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_S
+	compare VAR_WHICH_FOSSIL_REVIVED, 7
+	goto_if_eq RustboroCity_DevonCorp_2F_EventScript_211A2C_A
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_211A1A:: @ 8211A1A

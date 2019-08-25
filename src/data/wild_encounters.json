@@ -11860,38 +11860,38 @@
             "encounter_rate": 50,
             "mons": [
               {
-                "min_level": 10,
+                "min_level": 5,
                 "max_level": 15,
                 "species": "SPECIES_TAILLOW"
               },
               {
-                "min_level": 10,
-                "max_level": 20,
+                "min_level": 5,
+                "max_level": 15,
                 "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 5,
-                "max_level": 10,
+                "max_level": 15,
                 "species": "SPECIES_SHROOMISH"
               },
               {
                 "min_level": 5,
-                "max_level": 10,
+                "max_level": 15,
                 "species": "SPECIES_SLAKOTH"
               },
               {
                 "min_level": 5,
-                "max_level": 10,
+                "max_level": 15,
                 "species": "SPECIES_NATU"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 5,
+                "max_level": 15,
                 "species": "SPECIES_PINSIR"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 5,
+                "max_level": 15,
                 "species": "SPECIES_HERACROSS"
               }
             ]

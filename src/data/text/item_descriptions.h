@@ -735,27 +735,27 @@ static const u8 sIapapaBerryDesc[] = _(
 static const u8 sRazzBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow RAZZ.");
+    "to grow Razz.");
 
 static const u8 sBlukBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow BLUK.");
+    "to grow Bluk.");
 
 static const u8 sNanabBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow NANAB.");
+    "to grow Nanab.");
 
 static const u8 sWepearBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow WEPEAR.");
+    "to grow Wepear.");
 
 static const u8 sPinapBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow PINAP.");
+    "to grow Pinap.");
 
 static const u8 sPomegBerryDesc[] = _(
     "Makes a Pokémon\n"
@@ -765,96 +765,96 @@ static const u8 sPomegBerryDesc[] = _(
 static const u8 sKelpsyBerryDesc[] = _(
     "Makes a Pokémon\n"
     "friendly but lowers\n"
-    "base ATTACK.");
+    "base Attack.");
 
 static const u8 sQualotBerryDesc[] = _(
     "Makes a Pokémon\n"
     "friendly but lowers\n"
-    "base DEFENSE.");
+    "base Defense.");
 
 static const u8 sHondewBerryDesc[] = _(
     "Makes a Pokémon\n"
     "friendly but lowers\n"
-    "base SP. ATK.");
+    "base Sp. Atk.");
 
 static const u8 sGrepaBerryDesc[] = _(
     "Makes a Pokémon\n"
     "friendly but lowers\n"
-    "base SP. DEF.");
+    "base Sp. Def.");
 
 static const u8 sTamatoBerryDesc[] = _(
     "Makes a Pokémon\n"
     "friendly but lowers\n"
-    "base SPEED.");
+    "base Speed.");
 
 static const u8 sCornnBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow CORNN.");
+    "to grow Cornn.");
 
 static const u8 sMagostBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow MAGOST.");
+    "to grow Magost.");
 
 static const u8 sRabutaBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow RABUTA.");
+    "to grow Rabuta.");
 
 static const u8 sNomelBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow NOMEL.");
+    "to grow Nomel.");
 
 static const u8 sSpelonBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow SPELON.");
+    "to grow Spelon.");
 
 static const u8 sPamtreBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow PAMTRE.");
+    "to grow Pamtre.");
 
 static const u8 sWatmelBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow WATMEL.");
+    "to grow Watmel.");
 
 static const u8 sDurinBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow DURIN.");
+    "to grow Durin.");
 
 static const u8 sBelueBerryDesc[] = _(
     "Pokéblock ingredient.\n"
     "Plant in loamy soil\n"
-    "to grow BELUE.");
+    "to grow Belue.");
 
 static const u8 sLiechiBerryDesc[] = _(
     "A hold item that\n"
-    "raises ATTACK in\n"
+    "raises Attack in\n"
     "a pinch.");
 
 static const u8 sGanlonBerryDesc[] = _(
     "A hold item that\n"
-    "raises DEFENSE in\n"
+    "raises Defense in\n"
     "a pinch.");
 
 static const u8 sSalacBerryDesc[] = _(
     "A hold item that\n"
-    "raises SPEED in\n"
+    "raises Speed in\n"
     "a pinch.");
 
 static const u8 sPetayaBerryDesc[] = _(
     "A hold item that\n"
-    "raises SP. ATK in\n"
+    "raises Sp. Atk in\n"
     "a pinch.");
 
 static const u8 sApicotBerryDesc[] = _(
     "A hold item that\n"
-    "raises SP. DEF in\n"
+    "raises Sp. Def in\n"
     "a pinch.");
 
 static const u8 sLansatBerryDesc[] = _(
@@ -976,7 +976,7 @@ static const u8 sWhiteHerbDesc[] = _(
 static const u8 sMachoBraceDesc[] = _(
     "A hold item that\n"
     "promotes growth,\n"
-    "but reduces SPEED.");
+    "but reduces Speed.");
 
 static const u8 sExpShareDesc[] = _(
     "A hold item that\n"
@@ -1025,18 +1025,18 @@ static const u8 sCleanseTagDesc[] = _(
 
 static const u8 sSoulDewDesc[] = _(
     "Hold item: raises\n"
-    "SP. ATK & SP. DEF of\n"
-    "LATIOS & LATIAS.");
+    "Sp. Atk & Sp. Def of\n"
+    "Latios & Latias.");
 
 static const u8 sDeepSeaToothDesc[] = _(
     "A hold item that\n"
-    "raises the SP. ATK\n"
-    "of CLAMPERL.");
+    "raises the Sp. Atk\n"
+    "of Clamperl.");
 
 static const u8 sDeepSeaScaleDesc[] = _(
     "A hold item that\n"
-    "raises the SP. DEF\n"
-    "of CLAMPERL.");
+    "raises the Sp. Def\n"
+    "of Clamperl.");
 
 static const u8 sSmokeBallDesc[] = _(
     "A hold item that\n"
@@ -1135,7 +1135,7 @@ static const u8 sSachetDesc[] = _(
 
 static const u8 sLightBallDesc[] = _(
     "A hold item that\n"
-    "raises the SP. ATK\n"
+    "raises the Sp. Atk\n"
     "of Pikachu.");
 
 static const u8 sSoftSandDesc[] = _(

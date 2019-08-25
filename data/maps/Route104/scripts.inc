@@ -417,7 +417,7 @@ Route104_EventScript_1ED139:: @ 81ED139
 	resetobjectpriority EVENT_OBJ_ID_PLAYER, MAP_ROUTE104
 	resetobjectpriority 2, MAP_DEWFORD_TOWN
 	copyobjectxytoperm 2
-	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
+	setvar VAR_BOARD_BRINEY_BOAT_ROUTE104_STATE, 0
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, Route104_EventScript_1ED1B4
 	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, Route104_EventScript_1ED1BE
 	end

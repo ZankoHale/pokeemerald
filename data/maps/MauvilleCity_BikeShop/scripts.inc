@@ -57,7 +57,7 @@ MauvilleCity_BikeShop_EventScript_20EC6D:: @ 820EC6D
 
 MauvilleCity_BikeShop_EventScript_20EC87:: @ 820EC87
 	msgbox MauvilleCity_BikeShop_Text_20F1BD, MSGBOX_DEFAULT
-	special SwapRegisteredBike
+//	special SwapRegisteredBike
 	release
 	end
 
@@ -99,8 +99,8 @@ MauvilleCity_BikeShop_EventScript_20ECEF:: @ 820ECEF
 MauvilleCity_BikeShop_EventScript_20ED10:: @ 820ED10
 	incrementgamestat 4
 	msgbox MauvilleCity_BikeShop_Text_20F263, MSGBOX_DEFAULT
-	takeitem ITEM_MACH_BIKE, 1
-	//giveitem_std ITEM_ACRO_BIKE
+	//takeitem ITEM_MACH_BIKE, 1
+	giveitem_std ITEM_ACRO_BIKE
 	setflag FLAG_RECEIVED_OTHER_BIKE
 //	goto MauvilleCity_BikeShop_EventScript_20EC87
 	goto MauvilleCity_BikeShop_EventScript_20ECE5

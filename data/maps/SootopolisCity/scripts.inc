@@ -1367,14 +1367,14 @@ SootopolisCity_EventScript_1E64B2:: @ 81E64B2
 	applymovement 18, SootopolisCity_Movement_1E64EC
 	waitmovement 0
 	copyobjectxytoperm 18
-	setvar VAR_SOOTOPOLIS_WALLACE_STATE, 1
+	setvar VAR_SOOTOPOLIS_STATE, 1
 	return
 
 SootopolisCity_EventScript_1E64C5:: @ 81E64C5
 	applymovement 18, SootopolisCity_Movement_1E64EF
 	waitmovement 0
 	copyobjectxytoperm 18
-	setvar VAR_SOOTOPOLIS_WALLACE_STATE, 2
+	setvar VAR_SOOTOPOLIS_STATE, 2
 	return
 
 SootopolisCity_EventScript_1E64D8:: @ 81E64D8

@@ -3,7 +3,7 @@ SkyPillar_3F_MapScripts:: @ 823965B
 	.byte 0
 
 SkyPillar_3F_OnTransition: @ 8239661
-	compare VAR_SKY_PILLAR_STATE, 2
+	compare VAR_SKY_PILLAR_STATE, 10
 	call_if_lt SkyPillar_3F_EventScript_CleanFloor
 	end
 

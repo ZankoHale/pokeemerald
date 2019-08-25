@@ -707,7 +707,7 @@ MauvilleCity_GameCorner_Text_21060D: @ 821060D
 
 MauvilleCity_GameCorner_Text_210629: @ 8210629
 	.string "So your choice is\n"
-	.string "the {STR_VAR_1} {STR_VAR_2}?$"
+	.string "the {STR_VAR_1}?$"
 
 MauvilleCity_GameCorner_Text_210646: @ 8210646
 	.string "Thank you!\n"
