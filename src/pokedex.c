@@ -2714,6 +2714,7 @@ void sub_80BE470(struct Sprite *sprite)
 
 void sub_80BE4E0(struct Sprite *sprite)
 {
+    u32 var;
     u8 data1 = sprite->data[1];
 
     if (sPokedexView->unk64A != 0 && sPokedexView->unk64A != 3)
@@ -2723,10 +2724,8 @@ void sub_80BE4E0(struct Sprite *sprite)
     }
     else
     {
-        u32 var;
-
         sprite->pos2.y = gSineTable[(u8)sprite->data[5]] * 76 / 256;
-        var = 0x10000 / gSineTable[sprite->data[5] + 0x40];
+        var = SAFE_DIV(0x10000, gSineTable[sprite->data[5] + 0x40]);
         if (var > 0xFFFF)
             var = 0xFFFF;
         SetOamMatrix(sprite->data[1] + 1, 0x100, 0, 0, var);
