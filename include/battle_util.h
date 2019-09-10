@@ -19,7 +19,8 @@
 #define ABILITYEFFECT_ATK_SYNCHRONIZE            0x8
 #define ABILITYEFFECT_INTIMIDATE1                0x9
 #define ABILITYEFFECT_INTIMIDATE2                0xA
-#define ABILITYEFFECT_TRACE                      0xB
+#define ABILITYEFFECT_TRACE1                     0xB
+#define ABILITYEFFECT_TRACE2                     0xC
 #define ABILITYEFFECT_SWITCH_IN_WEATHER          0xFF
 
 #define ITEMEFFECT_ON_SWITCH_IN                 0x0
@@ -84,6 +85,7 @@ void BattleScriptPushCursorAndCallback(const u8* BS_ptr);
 u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn);
 void ClearFuryCutterDestinyBondGrudge(u8 battlerId);
 void HandleAction_RunBattleScript(void);
+u32 SetRandomTarget(u32 battlerId);
 u8 GetMoveTarget(u16 move, u8 setTarget);
 u8 IsMonDisobedient(void);
 u32 GetBattlerHoldEffect(u8 battlerId, bool32 checkNegating);
