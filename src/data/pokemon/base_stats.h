@@ -5532,11 +5532,11 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_MAGCARGO] =
     {
-        .baseHP        = 70, //60
+        .baseHP        = 90, //60
         .baseAttack    = 50,
         .baseDefense   = 120,
         .baseSpeed     = 30,
-        .baseSpAttack  = 110, //90
+        .baseSpAttack  = 120, //90
         .baseSpDefense = 120, //80
         .type1 = TYPE_FIRE,
         .type2 = TYPE_ROCK,
