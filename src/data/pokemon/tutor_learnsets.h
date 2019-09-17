@@ -63,7 +63,8 @@ const u16 gTutorMoves[] =
     [TUTOR_MOVE_FURY_CUTTER] = MOVE_FURY_CUTTER,
 };
 
-#define TUTOR(move) (1u << (TUTOR_##move))
+#define TUTOR_LEARNSET(moves) ((u32)(moves))
+#define TUTOR(move) ((u64)1 << (TUTOR_##move))
 
 static const u32 sTutorLearnsets[] =
 {

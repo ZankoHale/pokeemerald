@@ -4246,12 +4246,12 @@ u16 GetPokedexHeightWeight(u16 dexNum, u8 data)
 {
     switch (data)
     {
-    case 0:  // height
-        return gPokedexEntries[dexNum].height;
-    case 1:  // weight
-        return gPokedexEntries[dexNum].weight;
-    default:
-        return 1;
+        case 0:  // height
+            return gPokedexEntries[dexNum].height;
+        case 1:  // weight
+            return gPokedexEntries[dexNum].weight;
+        default:
+            return 1;
     }
 }
 
@@ -4328,23 +4328,23 @@ u16 GetHoennPokedexCount(u8 caseID)
     return count;
 }
 
-u16 GetKantoPokedexCount(u8 caseID)
+u16 sub_80C089C(u8 caseID)
 {
     u16 count = 0;
     u16 i;
 
-    for (i = 0; i < KANTO_DEX_COUNT; i++)
+    for (i = 0; i < 151; i++)
     {
         switch (caseID)
         {
-        case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
-                count++;
-            break;
-        case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-                count++;
-            break;
+            case FLAG_GET_SEEN:
+                if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
+                    count++;
+                break;
+            case FLAG_GET_CAUGHT:
+                if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+                    count++;
+                break;
         }
     }
     return count;
@@ -4354,7 +4354,7 @@ bool16 HasAllHoennMons(void)
 {
     u16 i;
 
-    for (i = 0; i < HOENN_DEX_COUNT - 2; i++)
+    for (i = 0; i < 200; i++)
     {
         if (!GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_CAUGHT))
             return FALSE;
@@ -4362,11 +4362,11 @@ bool16 HasAllHoennMons(void)
     return TRUE;
 }
 
-bool8 HasAllKantoMons(void)
+bool8 sub_80C0918(void)
 {
     u16 i;
 
-    for (i = 0; i < KANTO_DEX_COUNT - 1; i++)
+    for (i = 0; i < 150; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
             return FALSE;
@@ -4374,26 +4374,26 @@ bool8 HasAllKantoMons(void)
     return TRUE;
 }
 
-bool16 HasAllMons(void)
+u16 sub_80C0944(void)
 {
     u16 i;
 
-    for (i = 0; i < NATIONAL_DEX_MEWTWO; i++)
+    for (i = 0; i < 150; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return FALSE;
+            return 0;
     }
-    for (i = NATIONAL_DEX_MEW; i < NATIONAL_DEX_TYRANITAR; i++)
+    for (i = 151; i < 248; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return FALSE;
+            return 0;
     }
-    for (i = NATIONAL_DEX_CELEBI; i < NATIONAL_DEX_RAYQUAZA; i++)
+    for (i = 251; i < 384; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return FALSE;
+            return 0;
     }
-    return TRUE;
+    return 1;
 }
 
 void sub_80C09B0(u16 a)

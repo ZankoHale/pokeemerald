@@ -1,27 +1,4 @@
-TOOLCHAIN := $(DEVKITARM)
-COMPARE ?= 0
-
-ifeq ($(CC),)
-HOSTCC := gcc
-else
-HOSTCC := $(CC)
-endif
-
-ifeq ($(CXX),)
-HOSTCXX := g++
-else
-HOSTCXX := $(CXX)
-endif
-
-ifneq (,$(wildcard $(TOOLCHAIN)/base_tools))
-include $(TOOLCHAIN)/base_tools
-else
-export PATH := $(TOOLCHAIN)/bin:$(PATH)
-PREFIX := arm-none-eabi-
-OBJCOPY := $(PREFIX)objcopy
-export CC := $(PREFIX)gcc
-export AS := $(PREFIX)as
-endif
+include $(DEVKITARM)/base_tools
 export CPP := $(PREFIX)cpp
 export LD := $(PREFIX)ld
 
@@ -89,17 +66,7 @@ JSONPROC := tools/jsonproc/jsonproc$(EXE)
 # Secondary expansion is required for dependency variables in object rules.
 .SECONDEXPANSION:
 
-.PHONY: all rom clean compare tidy tools mostlyclean clean-tools $(TOOLDIRS) berry_fix
-
-infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
-
-# Build tools when building the rom
-# Disable dependency scanning for clean/tidy/tools
-ifeq (,$(filter-out all compare,$(MAKECMDGOALS)))
-$(call infoshell, $(MAKE) tools)
-else
-NODEP := 1
-endif
+.PHONY: rom clean compare tidy
 
 C_SRCS := $(wildcard $(C_SUBDIR)/*.c $(C_SUBDIR)/*/*.c $(C_SUBDIR)/*/*/*.c)
 C_OBJS := $(patsubst $(C_SUBDIR)/%.c,$(C_BUILDDIR)/%.o,$(C_SRCS))
@@ -125,20 +92,11 @@ AUTO_GEN_TARGETS :=
 
 $(shell mkdir -p $(SUBDIRS))
 
-all: rom
-
-tools: $(TOOLDIRS)
-
-$(TOOLDIRS):
-	@$(MAKE) -C $@ CC=$(HOSTCC) CXX=$(HOSTCXX)
-
-rom: berry_fix $(ROM)
-ifeq ($(COMPARE),1)
-	@$(SHA1) rom.sha1
-endif
+rom: $(ROM)
 
 # For contributors to make sure a change didn't affect the contents of the ROM.
-compare: ; @$(MAKE) COMPARE=1
+compare: $(ROM)
+	@$(SHA1) rom.sha1
 
 clean: tidy
 	rm -f sound/direct_sound_samples/*.bin
@@ -148,7 +106,6 @@ clean: tidy
 	rm -f $(DATA_ASM_SUBDIR)/maps/connections.inc $(DATA_ASM_SUBDIR)/maps/events.inc $(DATA_ASM_SUBDIR)/maps/groups.inc $(DATA_ASM_SUBDIR)/maps/headers.inc
 	find $(DATA_ASM_SUBDIR)/maps \( -iname 'connections.inc' -o -iname 'events.inc' -o -iname 'header.inc' \) -exec rm {} +
 	rm -f $(AUTO_GEN_TARGETS)
-	@$(MAKE) clean -C berry_fix
 
 tidy:
 	rm -f $(ROM) $(ELF) $(MAP)
@@ -193,7 +150,7 @@ $(C_BUILDDIR)/record_mixing.o: CFLAGS += -ffreestanding
 ifeq ($(NODEP),1)
 $(C_BUILDDIR)/%.o: c_dep :=
 else
-$(C_BUILDDIR)/%.o: c_dep = $(shell $(SCANINC) -I include -I tools/agbcc/include $(C_SUBDIR)/$*.c)
+$(C_BUILDDIR)/%.o: c_dep = $(shell $(SCANINC) -I include $(C_SUBDIR)/$*.c)
 endif
 
 ifeq ($(DINFO),1)
@@ -244,11 +201,4 @@ $(ELF): $(OBJ_DIR)/ld_script.ld $(OBJS)
 
 $(ROM): $(ELF)
 	$(OBJCOPY) -O binary $< $@
-	$(FIX) $@ -p --silent
-
-modern: ; @$(MAKE) MODERN=1
-
-berry_fix/berry_fix.gba: berry_fix
-
-berry_fix:
-	@$(MAKE) -C berry_fix COMPARE=$(COMPARE)
+	$(FIX) $@ -p -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) --silent

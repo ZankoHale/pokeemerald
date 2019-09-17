@@ -145,47 +145,47 @@ static void FeebasSeedRng(u16 seed)
 
 static u8 ChooseWildMonIndex_Land(void)
 {
-    u8 rand = Random() % ENCOUNTER_CHANCE_LAND_MONS_TOTAL;
+    u8 rand = Random() % 100;
 
-    if (rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_0)
+    if (rand < 20)                  // 20% chance
         return 0;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_1)
+    else if (rand >= 20 && rand < 40)    // 20% chance
         return 1;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_1 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_2)
+    else if (rand >= 40 && rand < 50)    // 10% chance
         return 2;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_3)
+    else if (rand >= 50 && rand < 60)    // 10% chance
         return 3;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_3 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_4)
+    else if (rand >= 60 && rand < 70)    // 10% chance
         return 4;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_4 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_5)
+    else if (rand >= 70 && rand < 80)    // 10% chance
         return 5;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_5 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_6)
+    else if (rand >= 80 && rand < 85)    // 5% chance
         return 6;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_6 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_7)
+    else if (rand >= 85 && rand < 90)    // 5% chance
         return 7;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_7 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_8)
+    else if (rand >= 90 && rand < 94)    // 4% chance
         return 8;
-    else if (rand >= ENCOUNTER_CHANCE_LAND_MONS_SLOT_8 && rand < ENCOUNTER_CHANCE_LAND_MONS_SLOT_9)
+    else if (rand >= 94 && rand < 98)    // 4% chance
         return 9;
-    else if (rand == ENCOUNTER_CHANCE_LAND_MONS_SLOT_9)
+    else if (rand == 98)                 // 1% chance
         return 10;
-    else
+    else                            // 1% chance
         return 11;
 }
 
 static u8 ChooseWildMonIndex_WaterRock(void)
 {
-    u8 rand = Random() % ENCOUNTER_CHANCE_WATER_MONS_TOTAL;
+    u8 rand = Random() % 100;
 
-    if (rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_0)
+    if (rand < 60)                  // 60% chance
         return 0;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_1)
+    else if (rand >= 60 && rand < 90)    // 30% chance
         return 1;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_1 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_2)
+    else if (rand >= 90 && rand < 95)    // 5% chance
         return 2;
-    else if (rand >= ENCOUNTER_CHANCE_WATER_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_WATER_MONS_SLOT_3)
+    else if (rand >= 95 && rand < 99)    // 4% chance
         return 3;
-    else
+    else                            // 1% chance
         return 4;
 }
 
@@ -219,34 +219,34 @@ enum
 static u8 ChooseWildMonIndex_Fishing(u8 rod)
 {
     u8 wildMonIndex = 0;
-    u8 rand = Random() % ENCOUNTER_CHANCE_FISHING_MONS_TOTAL;
+    u8 rand = Random() % 100;
 
     switch (rod)
     {
     case OLD_ROD:
-        if (rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_0)
+        if (rand < 70)  // 70% chance
             wildMonIndex = 0;
-        else
+        else            // 30% chance
             wildMonIndex = 1;
         break;
     case GOOD_ROD:
-        if (rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_2)
+        if (rand < 60)                  // 60% chance
             wildMonIndex = 2;
-        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SLOT_2 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_3)
+        if (rand >= 60 && rand < 80)    // 20% chance
             wildMonIndex = 3;
-        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SLOT_3 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_4)
+        if (rand >= 80 && rand < 100)   // 20% chance
             wildMonIndex = 4;
         break;
     case SUPER_ROD:
-        if (rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_5)
+        if (rand < 40)                  // 40% chance
             wildMonIndex = 5;
-        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SLOT_5 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_6)
+        if (rand >= 40 && rand < 80)    // 40% chance
             wildMonIndex = 6;
-        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SLOT_6 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_7)
+        if (rand >= 80 && rand < 95)    // 15% chance
             wildMonIndex = 7;
-        if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_SLOT_7 && rand < ENCOUNTER_CHANCE_FISHING_MONS_SLOT_8)
+        if (rand >= 95 && rand < 99)    // 4% chance
             wildMonIndex = 8;
-        if (rand == ENCOUNTER_CHANCE_FISHING_MONS_SLOT_8)
+        if (rand == 99)                 // 1% chance
             wildMonIndex = 9;
         break;
     }
