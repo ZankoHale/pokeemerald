@@ -4869,6 +4869,12 @@ bool32 IsBattlerGrounded(u8 battlerId)
         return FALSE;
     else if (GetBattlerAbility(battlerId) == ABILITY_MYSTIC)
         return FALSE;
+    else if (GetBattlerAbility(battlerId) == ABILITY_SHIELD_DUST2)
+        return FALSE;
+    else if (GetBattlerAbility(battlerId) == ABILITY_STURDY2)
+        return FALSE;
+    else if (GetBattlerAbility(battlerId) == ABILITY_MAGNET_PULL2)
+        return FALSE;
     else if (IS_BATTLER_OF_TYPE(battlerId, TYPE_FLYING))
         return FALSE;
 
@@ -6151,6 +6157,8 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u8 ability
         if (moveType == TYPE_GROUND && abilityDef == ABILITY_FOREST_GUARD && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
         if (moveType == TYPE_GROUND && abilityDef == ABILITY_MYSTIC && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
+            modifier = UQ_4_12(0.0);
+        if (moveType == TYPE_GROUND && abilityDef == ABILITY_SHIELD_DUST2 && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
         if (abilityDef == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
             modifier = UQ_4_12(0.0);

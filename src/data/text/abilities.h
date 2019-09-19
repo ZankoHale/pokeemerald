@@ -40,7 +40,7 @@ static const u8 sPoisonPointDescription[] = _("Poisons foe on contact.");
 static const u8 sInnerFocusDescription[] = _("Prevents flinching.");
 static const u8 sMagmaArmorDescription[] = _("Prevents freezing.");
 static const u8 sWaterVeilDescription[] = _("Prevents burns.");
-static const u8 sMagnetPullDescription[] = _("Traps Steel-type POKéMON.");
+static const u8 sMagnetPullDescription[] = _("Traps Steel-type Pokémon.");
 static const u8 sSoundproofDescription[] = _("Avoids sound-based moves.");
 static const u8 sRainDishDescription[] = _("Slight HP recovery in rain.");
 static const u8 sSandStreamDescription[] = _("Summons a sandstorm.");
@@ -226,6 +226,9 @@ static const u8 sForestGuardDescription[] = _("The Forest's Guardian.");
 static const u8 sNightKingDescription[] = _("Boosts Psychic moves.");
 static const u8 sMysticDescription[] = _("Not hit by Ground attacks.");
 static const u8 sSpiritPowerDescription[] = _("Boosts Sp. Atk.");
+static const u8 sShieldDust2Description[] = _("Prevents added effects.");
+static const u8 sSturdy2Description[] = _("Negates 1-hit KO attacks.");
+static const u8 sMagnetPull2Description[] = _("Traps Steel-type Pokémon.");
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN7][ABILITY_NAME_LENGTH + 1] =
 {
@@ -275,7 +278,7 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN7][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SOUNDPROOF] = _("Soundproof"),
     [ABILITY_RAIN_DISH] = _("Rain Dish"),
     [ABILITY_SAND_STREAM] = _("Sand Stream"),
-    [ABILITY_PRESSURE] = _("PRESSURE"),
+    [ABILITY_PRESSURE] = _("Pressure"),
     [ABILITY_THICK_FAT] = _("Thick Fat"),
     [ABILITY_EARLY_BIRD] = _("Early Bird"),
     [ABILITY_FLAME_BODY] = _("Flame Body"),
@@ -469,6 +472,9 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN7][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_NIGHT_KING] = _("Night King"),
     [ABILITY_MYSTIC] = _("Mystic"),
     [ABILITY_SPIRIT_POWER] = _("Spirit Power"),
+    [ABILITY_SHIELD_DUST2] = _("Shield Dust+"),
+    [ABILITY_STURDY2] = _("Sturdy+"),
+    [ABILITY_MAGNET_PULL2] = _("Magnet Pull+"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN7] =
@@ -713,4 +719,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN7] =
     [ABILITY_NIGHT_KING] = sNightKingDescription,
     [ABILITY_MYSTIC] = sMysticDescription,
     [ABILITY_SPIRIT_POWER] = sSpiritPowerDescription,
+    [ABILITY_SHIELD_DUST2] = sShieldDust2Description,
+    [ABILITY_STURDY2] = sSturdy2Description,
+    [ABILITY_MAGNET_PULL2] = sMagnetPull2Description,
 };

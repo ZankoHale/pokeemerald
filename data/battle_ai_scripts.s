@@ -3584,6 +3584,9 @@ AI_DoubleBattleAllHittingGroundMove:
 	if_ability AI_USER_PARTNER, ABILITY_SKY_GUARD, Score_Plus2
 	if_ability AI_USER_PARTNER, ABILITY_SEA_GUARD, Score_Plus2
 	if_ability AI_USER_PARTNER, ABILITY_FOREST_GUARD, Score_Plus2
+	if_ability AI_USER_PARTNER, ABILITY_STURDY2, Score_Plus2
+	if_ability AI_USER_PARTNER, ABILITY_SHIELD_DUST2, Score_Plus2
+	if_ability AI_USER_PARTNER, ABILITY_MAGNET_PULL2, Score_Plus2
 	if_type AI_USER_PARTNER, TYPE_FLYING, Score_Plus2
 	if_type AI_USER_PARTNER, TYPE_FIRE, Score_Minus10
 	if_type AI_USER_PARTNER, TYPE_ELECTRIC, Score_Minus10
