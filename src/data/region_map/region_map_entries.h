@@ -200,6 +200,7 @@ static const u8 sMapName_DesertUnderpass[] = _("Desert Underpass");
 static const u8 sMapName_TrainerHill[] = _("Trainer Hill");
 static const u8 sMapName_DewfordBeach[] = _("Dewford Beach");
 static const u8 sMapName_CapeLilycove[] = _("Cape Lilycove");
+static const u8 sMapName_TidalCave[] = _("Tidal Cave");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ABANDONED_SHIP]            = {6, 14, 1, 1, sMapName_AbandonedShip},
@@ -390,6 +391,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_THREE_ISLAND]              = {0, 0, 1, 1, sMapName_ThreeIsland},
     [MAPSEC_THREE_ISLE_PATH]           = {0, 0, 1, 1, sMapName_ThreeIslePath},
     [MAPSEC_THREE_ISLE_PORT]           = {0, 0, 1, 1, sMapName_ThreeIslePort},
+    [MAPSEC_TIDAL_CAVE]                = {0, 0, 1, 1, sMapName_TidalCave},
     [MAPSEC_TRAINER_HILL]              = {8, 4, 1, 1, sMapName_TrainerHill},
     [MAPSEC_TRAINER_TOWER]             = {0, 0, 1, 1, sMapName_TrainerTower},
     [MAPSEC_TRAINER_TOWER_2]           = {0, 0, 1, 1, sMapName_TrainerTower2},

@@ -47,7 +47,8 @@ Route109_EventScript_ItemPotion:: @ 8290D67
 	end
 
 Route110_EventScript_ItemRareCandy:: @ 8290D74
-	giveitem_std ITEM_RARE_CANDY, 1, 1
+giveitem_std ITEM_EON_TICKET, 1, 1
+setflag FLAG_SYS_HAS_EON_TICKET
 	end
 
 Route110_EventScript_ItemDireHit:: @ 8290D81
@@ -399,7 +400,9 @@ MeteorFalls_B1F_2R_EventScript_ItemTM02:: @ 82911DF
 	end
 
 NewMauville_Inside_EventScript_ItemUltraRope:: @ 82911EC
-	giveitem_std ITEM_ULTRA_BALL, 1, 1
+ giveitem_std ITEM_AURORA_TICKET, 1, 1
+ setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
+ setflag FLAG_RECEIVED_AURORA_TICKET
 	end
 
 NewMauville_Inside_EventScript_ItemEscapeRope:: @ 82911F9
@@ -423,7 +426,9 @@ AbandonedShip_Rooms_1F_EventScript_ItemHarborMail:: @ 829122D
 	end
 
 AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope:: @ 829123A
-	giveitem_std ITEM_ESCAPE_ROPE, 1, 1
+ giveitem_std ITEM_MYSTIC_TICKET, 1, 1
+ setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
+ setflag FLAG_RECEIVED_MYSTIC_TICKET
 	end
 
 AbandonedShip_Rooms2_B1F_EventScript_ItemDiveBall:: @ 8291247
@@ -515,7 +520,9 @@ AquaHideout_B1F_EventScript_ItemMasterBall:: @ 8291358
 	end
 
 AquaHideout_B1F_EventScript_ItemNugget:: @ 8291365
-	giveitem_std ITEM_NUGGET, 1, 1
+ giveitem_std ITEM_OLD_SEA_MAP, 1, 1
+ setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+ setflag FLAG_RECEIVED_OLD_SEA_MAP
 	end
 
 AquaHideout_B1F_EventScript_ItemMaxElixir:: @ 8291372

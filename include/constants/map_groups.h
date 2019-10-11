@@ -399,6 +399,8 @@
 #define MAP_ALTERING_CAVE                            (106 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (24 << 8))
 #define MAP_PETALBURG_WOODS_EXTENSION                (108 | (24 << 8))
+#define MAP_TIDAL_CAVE                               (109 | (24 << 8))
+#define MAP_TIDAL_CAVE_ICE_ROOM                      (110 | (24 << 8))
 
 // Map Group 25
 #define MAP_SECRET_BASE_RED_CAVE1           (0 | (25 << 8))

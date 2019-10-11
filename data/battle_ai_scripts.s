@@ -72,6 +72,11 @@ AI_CBM_CheckIfNegatesType: @ 82DBF92
 	if_equal ABILITY_SEA_GUARD, CheckIfLevitateCancelsGroundMove
 	if_equal ABILITY_FOREST_GUARD, CheckIfLevitateCancelsGroundMove
 	if_equal ABILITY_MYSTIC, CheckIfLevitateCancelsGroundMove
+	if_equal ABILITY_STURDY2, CheckIfLevitateCancelsGroundMove
+	if_equal ABILITY_MAGNET_PULL2, CheckIfLevitateCancelsGroundMove
+	if_equal ABILITY_SHIELD_DUST2, CheckIfLevitateCancelsGroundMove
+	if_equal ABILITY_NATURAL_CURE2, CheckIfLevitateCancelsGroundMove
+	if_equal ABILITY_MYSTIC, CheckIfLevitateCancelsGroundMove
 	if_equal ABILITY_SOUNDPROOF, CheckIfSoundproofCancelsMove
 	goto AI_CheckBadMove_CheckEffect
 
@@ -3587,6 +3592,8 @@ AI_DoubleBattleAllHittingGroundMove:
 	if_ability AI_USER_PARTNER, ABILITY_STURDY2, Score_Plus2
 	if_ability AI_USER_PARTNER, ABILITY_SHIELD_DUST2, Score_Plus2
 	if_ability AI_USER_PARTNER, ABILITY_MAGNET_PULL2, Score_Plus2
+	if_ability AI_USER_PARTNER, ABILITY_FLAME_BODY2, Score_Plus2
+	if_ability AI_USER_PARTNER, ABILITY_NATURAL_CURE2, Score_Plus2
 	if_type AI_USER_PARTNER, TYPE_FLYING, Score_Plus2
 	if_type AI_USER_PARTNER, TYPE_FIRE, Score_Minus10
 	if_type AI_USER_PARTNER, TYPE_ELECTRIC, Score_Minus10

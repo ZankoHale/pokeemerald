@@ -1614,6 +1614,7 @@ static s32 AI_GetAbility(u32 battlerId, bool32 guess)
     // Abilities that prevent fleeing.
     if (gBattleMons[battlerId].ability == ABILITY_SHADOW_TAG
     || gBattleMons[battlerId].ability == ABILITY_MAGNET_PULL
+    || gBattleMons[battlerId].ability == ABILITY_MAGNET_PULL2
     || gBattleMons[battlerId].ability == ABILITY_ARENA_TRAP)
         return gBattleMons[battlerId].ability;
 

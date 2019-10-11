@@ -4439,6 +4439,26 @@
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Lilycove",
             "width": 60
+        },
+        {
+            "blockdata_filepath": "data/layouts/TidalCave/map.bin",
+            "border_filepath": "data/layouts/TidalCave/border.bin",
+            "height": 40,
+            "id": "LAYOUT_TIDAL_CAVE",
+            "name": "TidalCave_Layout",
+            "primary_tileset": "gTileset_General",
+            "secondary_tileset": "gTileset_Cave",
+            "width": 20
+        },
+        {
+            "blockdata_filepath": "data/layouts/TidalCaveIceRoom/map.bin",
+            "border_filepath": "data/layouts/TidalCaveIceRoom/border.bin",
+            "height": 20,
+            "id": "LAYOUT_TIDAL_CAVE_ICE_ROOM",
+            "name": "TidalCaveIceRoom_Layout",
+            "primary_tileset": "gTileset_General",
+            "secondary_tileset": "gTileset_Cave",
+            "width": 20
         }
     ],
     "layouts_table_label": "gMapLayouts"

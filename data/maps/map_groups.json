@@ -324,7 +324,9 @@
         "TerraCave_End",
         "AlteringCave",
         "MeteorFalls_StevensCave",
-        "PetalburgWoodsExtension"
+        "PetalburgWoodsExtension",
+        "TidalCave",
+        "TidalCaveIceRoom"
     ],
     "gMapGroup25": [
         "SecretBase_RedCave1",

@@ -7150,3 +7150,7 @@ gText_082C877B:: @ 82C877B
 	.include "data/maps/PetalburgWoodsExtension/scripts.inc"
 
 	.include "data/maps/CapeLilycove/scripts.inc"
+
+	.include "data/maps/TidalCave/scripts.inc"
+
+	.include "data/maps/TidalCaveIceRoom/scripts.inc"

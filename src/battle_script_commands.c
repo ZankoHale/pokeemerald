@@ -1521,6 +1521,11 @@ static void atk07_adjustdamage(void)
         RecordAbilityBattle(gBattlerTarget, ABILITY_STURDY);
         gSpecialStatuses[gBattlerTarget].sturdied = 1;
     }
+    else if (GetBattlerAbility(gBattlerTarget) == ABILITY_STURDY2 && BATTLER_MAX_HP(gBattlerTarget))
+    {
+        RecordAbilityBattle(gBattlerTarget, ABILITY_STURDY2);
+        gSpecialStatuses[gBattlerTarget].sturdied = 1;
+    }
 
     if (gBattleMoves[gCurrentMove].effect != EFFECT_FALSE_SWIPE
         && !gProtectStructs[gBattlerTarget].endured
@@ -1545,6 +1550,11 @@ static void atk07_adjustdamage(void)
     {
         gMoveResultFlags |= MOVE_RESULT_STURDIED;
         gLastUsedAbility = ABILITY_STURDY;
+    }
+    else if (gSpecialStatuses[gBattlerTarget].sturdied)
+    {
+        gMoveResultFlags |= MOVE_RESULT_STURDIED;
+        gLastUsedAbility = ABILITY_STURDY2;
     }
 
 END:
@@ -8734,6 +8744,14 @@ static void atk93_tryKO(void)
         gBattlescriptCurrInstr = BattleScript_SturdyPreventsOHKO;
         RecordAbilityBattle(gBattlerTarget, ABILITY_STURDY);
     }
+
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_STURDY2)
+    {
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        gLastUsedAbility = ABILITY_STURDY2;
+        gBattlescriptCurrInstr = BattleScript_SturdyPreventsOHKO;
+        RecordAbilityBattle(gBattlerTarget, ABILITY_STURDY2);
+    }
     else
     {
         u16 chance;
@@ -10792,6 +10810,11 @@ static void atkE2_switchoutabilities(void)
     switch (GetBattlerAbility(gActiveBattler))
     {
     case ABILITY_NATURAL_CURE:
+        gBattleMons[gActiveBattler].status1 = 0;
+        BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, gBitTable[*(gBattleStruct->field_58 + gActiveBattler)], 4, &gBattleMons[gActiveBattler].status1);
+        MarkBattlerForControllerExec(gActiveBattler);
+        break;
+    case ABILITY_NATURAL_CURE2:
         gBattleMons[gActiveBattler].status1 = 0;
         BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, gBitTable[*(gBattleStruct->field_58 + gActiveBattler)], 4, &gBattleMons[gActiveBattler].status1);
         MarkBattlerForControllerExec(gActiveBattler);

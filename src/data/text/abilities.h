@@ -229,6 +229,7 @@ static const u8 sSpiritPowerDescription[] = _("Boosts Sp. Atk.");
 static const u8 sShieldDust2Description[] = _("Prevents added effects.");
 static const u8 sSturdy2Description[] = _("Negates 1-hit KO attacks.");
 static const u8 sMagnetPull2Description[] = _("Traps Steel-type Pokémon.");
+static const u8 sFlameBody2Description[] = _("Burns the foe on contact.");
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN7][ABILITY_NAME_LENGTH + 1] =
 {
@@ -475,6 +476,8 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN7][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SHIELD_DUST2] = _("Shield Dust+"),
     [ABILITY_STURDY2] = _("Sturdy+"),
     [ABILITY_MAGNET_PULL2] = _("Magnet Pull+"),
+    [ABILITY_FLAME_BODY2] = _("Flame Body+"),
+    [ABILITY_NATURAL_CURE2] = _("Natural Cure"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN7] =
@@ -722,4 +725,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN7] =
     [ABILITY_SHIELD_DUST2] = sShieldDust2Description,
     [ABILITY_STURDY2] = sSturdy2Description,
     [ABILITY_MAGNET_PULL2] = sMagnetPull2Description,
+    [ABILITY_FLAME_BODY2] = sFlameBody2Description,
+    [ABILITY_NATURAL_CURE2] = sNaturalCureDescription,
 };

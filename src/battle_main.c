@@ -3753,7 +3753,12 @@ u8 IsRunningFromBattleImpossible(void)
          && gBattleMons[gActiveBattler].ability != ABILITY_SEA_GUARD
          && gBattleMons[gActiveBattler].ability != ABILITY_SKY_GUARD
          && gBattleMons[gActiveBattler].ability != ABILITY_FOREST_GUARD
+         && gBattleMons[gActiveBattler].ability != ABILITY_NATURAL_CURE2
          && gBattleMons[gActiveBattler].ability != ABILITY_MYSTIC
+         && gBattleMons[gActiveBattler].ability != ABILITY_MAGNET_PULL2
+         && gBattleMons[gActiveBattler].ability != ABILITY_SHIELD_DUST2
+         && gBattleMons[gActiveBattler].ability != ABILITY_STURDY2
+         && gBattleMons[gActiveBattler].ability != ABILITY_FLAME_BODY2
          && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
          && gBattleMons[i].ability == ABILITY_ARENA_TRAP)
         {
@@ -3764,6 +3769,14 @@ u8 IsRunningFromBattleImpossible(void)
         }
     }
     i = IsAbilityOnFieldExcept(gActiveBattler, ABILITY_MAGNET_PULL);
+    if (i != 0 && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL))
+    {
+        gBattleScripting.battler = i - 1;
+        gLastUsedAbility = gBattleMons[i - 1].ability;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+        return 2;
+    }
+    i = IsAbilityOnFieldExcept(gActiveBattler, ABILITY_MAGNET_PULL2);
     if (i != 0 && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL))
     {
         gBattleScripting.battler = i - 1;
@@ -3959,6 +3972,8 @@ static void HandleTurnActionSelectionState(void)
                                  && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
                                  && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE)
                              || ((i = IsAbilityOnFieldExcept(gActiveBattler, ABILITY_MAGNET_PULL))
+                                 && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL))
+                             || ((i = IsAbilityOnFieldExcept(gActiveBattler, ABILITY_MAGNET_PULL2))
                                  && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)))
                     {
                         BtlController_EmitChoosePokemon(0, ((i - 1) << 4) | PARTY_ABILITY_PREVENTS, 6, gLastUsedAbility, gBattleStruct->field_60[gActiveBattler]);

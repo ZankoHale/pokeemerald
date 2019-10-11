@@ -873,7 +873,7 @@ u8 GetEggStepsToSubtract(void)
         if (!GetMonData(&gPlayerParty[i], MON_DATA_SANITY_IS_EGG))
         {
             u8 ability = GetMonAbility(&gPlayerParty[i]);
-            if (ability == ABILITY_MAGMA_ARMOR || ability == ABILITY_FLAME_BODY)
+            if (ability == ABILITY_MAGMA_ARMOR || ability == ABILITY_FLAME_BODY|| ability == ABILITY_FLAME_BODY2)
                 return 2;
         }
     }
