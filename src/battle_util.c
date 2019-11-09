@@ -100,6 +100,7 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_QUEENLY_MAJESTY] = 1,
     [ABILITY_WATER_BUBBLE] = 1,
     [ABILITY_STURDY2] = 1,
+    [ABILITY_STEEL_ARMOR] = 1,
 };
 
 static const u8 sHoldEffectToType[][2] =
@@ -5666,6 +5667,10 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     {
     case ABILITY_THICK_FAT:
         if (moveType == TYPE_FIRE || moveType == TYPE_ICE)
+            MulModifier(&modifier, UQ_4_12(0.5));
+        break;
+    case ABILITY_STEEL_ARMOR:
+        if (moveType == TYPE_FIRE || moveType == TYPE_GROUND)
             MulModifier(&modifier, UQ_4_12(0.5));
         break;
     }
